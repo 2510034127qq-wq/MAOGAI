@@ -8,7 +8,13 @@ ROOT=Path(__file__).resolve().parent
 RENDERS=ROOT.parents[1]/"assets"/"renders"
 stats={s:json.loads((ROOT/f"{s}_render_stats.json").read_text()) for s in ("title","poli")}
 qa={s:json.loads((ROOT/f"leadtype_{s}_qa.json").read_text()) for s in ("title","poli")}
-audits={s:json.loads((ROOT/f"{s}_scene_audit.json").read_text(encoding="utf8")) for s in ("title","poli")}
+audits={s:json.loads((ROOT/f"{s}_{'side_audit' if s=='poli' else 'scene_audit'}.json").read_text(encoding="utf8")) for s in ("title","poli")}
+preserved=json.loads((ROOT/'title_preservation_audit.json').read_text(encoding='utf8'))
+visual=json.loads((ROOT/'final_visual_review.json').read_text(encoding='utf8'))
+assert preserved['geometry_material_light_camera_unchanged']
+assert visual['completed'] and audits['poli']['all_180_frames_body_and_faces_inside']
+for shot,count in [('title',210),('poli',180)]:
+    assert len(stats[shot]['frames'])==count and qa[shot]['decoded_frames']==count
 rows=[]
 for shot in ("title","poli"):
     times=[f["seconds"] for f in stats[shot]["frames"]]
@@ -24,7 +30,7 @@ text=f"""# 铅字镜头交付报告
 
 ## 完成内容
 
-已按 `BRIEF.md`、`../COMMON.md`、`../../docs/导演阐述.md` 和导演 `FEEDBACK_1.md` 制作两个可编辑 Blender 镜头，完成六轮低清修订、正式序列检查及封装／工程复开检查。详细发现和修订证据见 [REVIEW.md](REVIEW.md)。
+已按 `HANDOFF.md`、`BRIEF.md`、`../COMMON.md`、`../../docs/导演阐述.md` 和两次导演反馈完成全部交付。A1 保留导演批准的 round6 / readability 造型、灯光与镜头；A2 以 `FEEDBACK_2.md` 为准改为侧卧，并完成 round7 起的低清复核、正式序列检查、封装与工程复开验证。详细证据见 [REVIEW.md](REVIEW.md)。
 
 | 镜头 | 正式帧序列 | 数量 / 时长 | 预览 | 联系表 |
 |---|---|---|---|---|
@@ -40,13 +46,16 @@ text=f"""# 铅字镜头交付报告
 ## 编辑工程与可复现源文件
 
 - [leadtype_title.blend](leadtype_title.blend)：片名镜头，包含相机／焦点动画、手托、主角与背景铅字、材质和灯光。
-- [leadtype_poli.blend](leadtype_poli.blend)：破立镜头，包含铅字、卷边旧纸、实际压痕、印迹、相机环绕和移焦。
+- [leadtype_poli.blend](leadtype_poli.blend)：破立镜头，包含侧卧铅字、旧纸、实际压痕、印迹、轻微推近／横移和移焦。
 - [build_leadtype.py](build_leadtype.py)：程序化建模、材质、布光和逐帧平滑动画。
 - [make_textures.py](make_textures.py)：固定随机种子的纤维、实墨、针孔和轻微晕染纹理。
+- [build_poli_side.py](build_poli_side.py)、[prepare_poli_textures.py](prepare_poli_textures.py)：A2 最新版重建入口与独立纸张纹理；不要用旧 `build_leadtype.py -- poli` 重建终版 A2。
 - [textures/glyph_meshes.json](textures/glyph_meshes.json)：从凸字顶面导出的共用字形，供纸面镜像对应。
 - [render_delivery.py](render_delivery.py)、[render_worker.py](render_worker.py)：GPU 锁队列、正式渲染、断点续渲、每帧计时和工程复开。
 - [finish_delivery.py](finish_delivery.py)：编码、完整解码、逐帧 PNG 校验、联系表、逐帧审查表、SHA-256 与时域异常筛查。
 - [audit_scene.py](audit_scene.py)：尺寸、法线、实体拓扑和字面构图检查。
+- [audit_poli_side.py](audit_poli_side.py)：A2 全部 180 帧的完整入画、接触关系、移焦与纸面覆盖检查。
+- [review_delivery.html](review_delivery.html)：本地复核页面，可播放预览、逐帧查看 PNG 和显示下三分之一参考线。
 
 主角与陪体汉字均来自 `C:\\Windows\\Fonts\\STSONG.TTF`，已转为真实网格。所需纸纹和印迹图像已打包进 `.blend`；工程复开无需重新生成纹理。独立从脚本重建仍需任务目录的脚本／纹理和 COMMON 指定的 Blender、Python、字体。
 
@@ -57,7 +66,7 @@ text=f"""# 铅字镜头交付报告
 3. **油墨**：顶面和极小的笔画顶缘覆墨，保留轻微光泽、磨薄露铅与肩部残墨。片名用铅字黑，破立用朱砂 `#B5302A`。
 4. **A1 取景**：开头完整呈现“系”的字面，焦点依次经过五字；后段升起并后拉到导演认可的手托全景。第 210 帧五字排列仍为左至右“系关大十论”，各字左右镜像。
 5. **A1 光线**：保留左侧低角度暖光，压低补光与后光，暗部仍有层次。
-6. **A2 取景**：约 45° 俯角，环绕总角度 15°；两枚铅字整体及字面完整入画；焦点由凸字转到纸面印迹。
+6. **A2 取景**：两枚铅字平行侧卧，字身间净距约 4 mm，字面朝左前方。约 30° 俯角，只有轻微推近和横移。第 1–60 帧聚焦字面，第 61–138 帧平滑移焦，第 139–180 帧停在正向印迹；底部 360 像素为安静纸面，供后期两行释义使用。
 7. **A2 印迹**：由同一凸字顶面网格反向投影，保持相同物理尺寸。纸上是正向“破”“立”，实墨、纤维针孔、微晕染和约 16 微米的凹痕共同形成压印感；纸色基准为 `#EDE5D4`。
 
 ## 渲染参数与实测耗时
@@ -77,19 +86,22 @@ text=f"""# 铅字镜头交付报告
 
 ## 验证结果
 
-| 镜头 | PNG / 视频解码帧数 | 帧率 / 时长 | 最大纯黑 / 纯白像素占比 | 保存工程复开渲染 |
+| 镜头 | PNG / 视频解码帧数 | 帧率 / 时长 | 最大近黑 / 近白像素占比 | 保存工程复开渲染 |
 |---|---:|---:|---:|---|
 {chr(10).join(qa_rows)}
 
-两组 PNG 全部成功读取，分辨率、RGB 模式、连续编号符合规格；两段 H.264 通过 FFmpeg 全片严格解码。主角凸字均为封闭实体、非流形边 0、正体积、顶面外法线朝上。工程复开后重渲首帧，与交付首帧比较通过。
+两组 PNG 全部成功读取，分辨率、RGB 模式、连续编号符合规格；两段 H.264 通过 FFmpeg 全片严格解码。主角凸字均为封闭实体、非流形边 0、正体积、外法线正确。A2 全 180 帧的完整字身与字面都在画内。工程复开后重渲首帧，与交付首帧比较通过。
+
+A1 交接快照与正式工程的几何、材质、灯光及 210 帧相机动画比对一致，见 `title_preservation_audit.json`。A2 字身底部与纸面高度的最大误差为 {audits['poli']['max_contact_error_mm']:.9f} mm，属于浮点计算精度。
 
 详尽证据：
 
-- `title_scene_audit.json`、`poli_scene_audit.json`
+- `title_scene_audit.json`、`poli_side_audit.json`、`poli_side_composition.json`（旧 `poli_scene_audit.json` 属于已被退回的站立版，仅留档）
 - `leadtype_title_qa.json`、`leadtype_poli_qa.json`
 - `leadtype_title_sha256.json`、`leadtype_poli_sha256.json`
 - `review/final_all_frames/`：所有 390 帧的分组联系表
 - `review/reopened_blend/`：保存工程复开后的重渲帧
+- `final_visual_review.json`：本轮人工图像审核与连续播放记录
 
 最终完整图像、时域变化和异常帧的人工结论记录在 REVIEW 的终审部分。技术检查能核验文件、拓扑和时序，并不能替代导演的美术判断。
 
@@ -100,7 +112,7 @@ text=f"""# 铅字镜头交付报告
 ```powershell
 python make_textures.py
 python run_blender.py rebuild_title --factory-startup --python build_leadtype.py -- title
-python run_blender.py rebuild_poli --factory-startup --python build_leadtype.py -- poli
+python run_blender.py rebuild_poli --factory-startup --python build_poli_side.py
 python render_delivery.py
 python finish_delivery.py
 ```

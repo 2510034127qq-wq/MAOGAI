@@ -1,0 +1,32 @@
+{
+  "font": "STSONG.TTF",
+  "seed": 1976,
+  "resolution": [
+    4096,
+    4096
+  ],
+  "paper_size_units": [
+    14.0,
+    16.0
+  ],
+  "paper_centre": [
+    0,
+    1.0
+  ],
+  "stamp_centres": [
+    [
+      -1.2105503839792175,
+      -1.10660190124894
+    ],
+    [
+      0.7590651220451986,
+      -1.4538982565828007
+    ]
+  ],
+  "stamp_local_y": -1.3,
+  "rotation_degrees": -10.0,
+  "source": "../glyph_meshes.json",
+  "ink_srgb": "#B5302A",
+  "paper_srgb": "#EDE5D4",
+  "physical_unit_metres": 0.004
+}

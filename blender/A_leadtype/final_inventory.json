@@ -1,0 +1,15 @@
+{
+  "all_manifest_hashes_match": true,
+  "artifact_entries": 42,
+  "outputs": {
+    "leadtype_title": {
+      "frames": 210,
+      "bytes": 393467100
+    },
+    "leadtype_poli": {
+      "frames": 180,
+      "bytes": 318911181
+    }
+  },
+  "gpu_lock_exists": false
+}

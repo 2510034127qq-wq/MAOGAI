@@ -1,0 +1,27 @@
+{
+  "browser": "Edge",
+  "page": "http://127.0.0.1:8768/blender/C_desk/verification.html",
+  "method": "UI button playback and replay, visible end-state verification",
+  "desk_open": {
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 6,
+    "end_time_seconds": 6,
+    "complete_plays": 2,
+    "replay_reached_end": true,
+    "cumulative_presented_or_dropped_frames": 360,
+    "cumulative_browser_dropped_frames": 3
+  },
+  "desk_close": {
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 11,
+    "end_time_seconds": 11,
+    "complete_plays": 2,
+    "replay_reached_end": true,
+    "cumulative_presented_or_dropped_frames": 660,
+    "cumulative_browser_dropped_frames": 2
+  },
+  "pass_playback_and_replay": true,
+  "note": "Browser presentation dropped a few frames; full encoded-file decode separately confirmed all 180/330 frames. This is not a claim of zero browser drops."
+}

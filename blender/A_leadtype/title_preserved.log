@@ -1,0 +1,8 @@
+00:00.578  blend            | Read blend: "D:\MAOGAI\blender\A_leadtype\review\handoff_snapshot\leadtype_title.blend"
+D:\MAOGAI\blender\A_leadtype\verify_title_preserved.py:28: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not mat.use_nodes:continue
+00:00.859  blend            | Read blend: "D:\MAOGAI\blender\A_leadtype\leadtype_title.blend"
+APPROVED_A1_PRESERVED
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+
+Blender quit

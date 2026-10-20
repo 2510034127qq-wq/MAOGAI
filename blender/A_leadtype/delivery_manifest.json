@@ -1,0 +1,217 @@
+{
+  "blender": "5.2.1 LTS / 9e2066aef7ef",
+  "font": "STSONG.TTF",
+  "font_sha256": "c5cc2ed5e2c0e6385013fe82d950eee6960d805bd602b86c53ff454783f382c4",
+  "artifacts": [
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\leadtype_title.blend",
+      "bytes": 1350375,
+      "sha256": "74aefb6f8b89b864a9172c2640d05a1dc83d3f76942edb2366588b51d280c442"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\leadtype_poli.blend",
+      "bytes": 17224412,
+      "sha256": "8a0067dc645f186952b4e43b50f6d16008faec06fe10c239d4c3e51d0ab7ac86"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\build_leadtype.py",
+      "bytes": 24775,
+      "sha256": "6632393963a8282b6333d273e0bf6b8fc2321dfe6ad07cbd1193a9916e61e2fe"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\make_textures.py",
+      "bytes": 3868,
+      "sha256": "6ede4078a1da3303a4bc2bf4c417b6eecf6eab73e536fab554f81a3202291a02"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\render_delivery.py",
+      "bytes": 2360,
+      "sha256": "e60c96a9d58c83fbe6126251412e0a591725b8d9f192ca23c3c5f3c25081e679"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\render_worker.py",
+      "bytes": 4137,
+      "sha256": "1e9964fb95e4cc2f0e4f35977412f67e7347614c3b1b57bd899968d20d4a50cf"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\finish_delivery.py",
+      "bytes": 9402,
+      "sha256": "3bcfaa354ccebf4d521c095e4e8f143393b82b0355a504def4961c18a4252d3e"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\audit_scene.py",
+      "bytes": 2925,
+      "sha256": "8c8418dd0333e6b677b8edb938be0bb08aa9db3d0e61f0aa091a9a93a58d6e3c"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\BRIEF.md",
+      "bytes": 2901,
+      "sha256": "844a54441b14532c928f18a78ebdc05cc4717b62848d885fb5f0745dfb1a22b0"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\FEEDBACK_1.md",
+      "bytes": 1728,
+      "sha256": "99dbde51d5b0b42a2f276aac01fc1af99ca6c1f6ee900b431b0960aaf7ee108e"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\FEEDBACK_2.md",
+      "bytes": 1187,
+      "sha256": "3f5288a6ed2af9295058db27adede4d5affa4eac85280940bc862fc17eb44ece"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\HANDOFF.md",
+      "bytes": 1200,
+      "sha256": "3889e77f0979581ec9db53a130b48d40a65394297d782f128a2de0374ceee84a"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\build_poli_side.py",
+      "bytes": 10158,
+      "sha256": "dce92bbd5d5c75e9a0bce35c2e0cd25ad9cbaf02dc380c6ab33bfb733884b622"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\prepare_poli_textures.py",
+      "bytes": 2943,
+      "sha256": "ac11019271f07afada6811135fc9fd5b4698755f2dcb4a62d4437cbdad1093e4"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\review_saved_poli.py",
+      "bytes": 864,
+      "sha256": "5df4b4a77fa5d46536f01fd95fbd09ae2d0a0d7587168f4cdb6fc1b0c93bc95f"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\queue_poli_review.py",
+      "bytes": 682,
+      "sha256": "ede3a7bb54149e8c4090d9dbd2887b899f9a8db87b967d8bb5208c3650fe17a8"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\audit_poli_side.py",
+      "bytes": 4602,
+      "sha256": "bf4abc63125b4245a1bd9c077a54e5073fb279f8cf620bef3c52692e91966204"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\write_report.py",
+      "bytes": 9975,
+      "sha256": "be2f1f2c43497c86b89329f049bf3013416c206fd687ca11cbac5dd077861d04"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\review_delivery.html",
+      "bytes": 5184,
+      "sha256": "33c90bfbb4529c515766d880840066f98418f0d8e153c7e0a2aa85613467c425"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\verify_title_preserved.py",
+      "bytes": 3591,
+      "sha256": "04106a6f22d71635824cf10a3809d24ecb5a62928df30427f467e9b6163d361c"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\title_preservation_audit.json",
+      "bytes": 384,
+      "sha256": "eba981af19e717aea801eaa62372e46299250de1fafe562870b5cc4aaf91ae64"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\poli_side_composition.json",
+      "bytes": 7756,
+      "sha256": "66c0f81ef035fc8c72961f583e8b3a7faacdb13f951865cf0987d01ecd1fbbe1"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\poli_side_audit.json",
+      "bytes": 217347,
+      "sha256": "5467aad7eb4f96257b6b791c54955f083c8bdfe72ccbe13bebf225d8309175f6"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\browser_review.json",
+      "bytes": 638,
+      "sha256": "67b4ad8cef2b8432c262c5b75854c5a992f947600071d5c3d6c1eb083ea6203d"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\final_visual_review.json",
+      "bytes": 1200,
+      "sha256": "50689108f76d52f51edf8f9d2661947e6ea1aa54f221b2a8bb0b3e0697b469a8"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\REVIEW.md",
+      "bytes": 11999,
+      "sha256": "e3501b1f6251b4aebddfbd39e390751fb258197ec377fefec0cd10eb4e443074"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\REPORT.md",
+      "bytes": 8410,
+      "sha256": "6bae446a99601b082eb8e4fea0ba317601df4f41f63df74ca444d167b387b111"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\title_render_stats.json",
+      "bytes": 18547,
+      "sha256": "e5d1d29dbbc8bdad020d05cd2dc053a3e5b3074ca088f6f058a1cad046a16510"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\poli_render_stats.json",
+      "bytes": 15906,
+      "sha256": "2740df34af98a1c433a842cdac9377ebe8267fa7ab81876e4c7ddab0d6e8fa6e"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\title_scene_audit.json",
+      "bytes": 14229,
+      "sha256": "1e657cbed319b7ded380d755533d884c60783bad9514bc2ce8bffb51113846d3"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\leadtype_title_qa.json",
+      "bytes": 47134,
+      "sha256": "00879c3d5efbeec8e171220cac3a6865bccf64d0c0d3b7401d3f762150a03b4f"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\leadtype_poli_qa.json",
+      "bytes": 39887,
+      "sha256": "aac053d0748ac1041eb059922a1bd7592c805ae58bd1ddb61af7f8c0546a3847"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\leadtype_title_sha256.json",
+      "bytes": 29823,
+      "sha256": "f485d8b86390cd2385fb1d84d192d73d145533ac399e17fe70eb8cc8083e5106"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\leadtype_poli_sha256.json",
+      "bytes": 25383,
+      "sha256": "eaf2148036084ff4a97f2d33bd521496207efa6fa69f04b50576ec428f29934a"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\textures\\glyph_meshes.json",
+      "bytes": 47812,
+      "sha256": "f479584de9ca4c5b3bfbc2e1db8695a9997ca3c200534628784fc724d068a7d4"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\textures\\manifest.json",
+      "bytes": 406,
+      "sha256": "e49f5b5992aa5c053e176e9295b5e5ef435fdb99132a0730c66818c8482cd883"
+    },
+    {
+      "path": "D:\\MAOGAI\\blender\\A_leadtype\\textures\\poli_side\\manifest.json",
+      "bytes": 532,
+      "sha256": "890e390c8d5daed6f9b074bea1d16256c15202ac4feed67ed95a11464814cac1"
+    },
+    {
+      "path": "D:\\MAOGAI\\assets\\renders\\leadtype_title\\preview.mp4",
+      "bytes": 2010052,
+      "sha256": "8bc526d36d30dec1ff46d4690e63b7fc9f9b4aa2424f88ec245af4d143a749fd"
+    },
+    {
+      "path": "D:\\MAOGAI\\assets\\renders\\leadtype_title\\contact.png",
+      "bytes": 796486,
+      "sha256": "c1495022060218ed10a41347bf7839bcd3da4cb854b116aa22d4f7d8fddaad0a"
+    },
+    {
+      "path": "D:\\MAOGAI\\assets\\renders\\leadtype_poli\\preview.mp4",
+      "bytes": 663693,
+      "sha256": "d0ab6fa7f00864a8ebde001c595e5c7223d52b8db26e2ba33fc219ca0e680738"
+    },
+    {
+      "path": "D:\\MAOGAI\\assets\\renders\\leadtype_poli\\contact.png",
+      "bytes": 637898,
+      "sha256": "94a3662780773b3ea21aad6535319e8c315d988e02f9a4de02b4cd27778200d0"
+    },
+    {
+      "path": "D:\\MAOGAI\\assets\\renders\\leadtype_title\\still_4k.png",
+      "bytes": 6799212,
+      "sha256": "9302876d67955074ab9ceb8440ce5019ccbb49cf9f20bdc0ceab5e317ac16f37"
+    }
+  ]
+}

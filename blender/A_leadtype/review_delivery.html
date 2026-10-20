@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>铅字镜头 · 交付复核</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#e4d9c3;color:#1c1a17;font-family:system-ui,'Microsoft YaHei',sans-serif}main{max-width:1240px;margin:auto;padding:30px}h1{font-family:'STSong',serif;font-size:32px;margin:0 0 8px}p{line-height:1.7}a{color:#852b25}section{margin:28px 0;background:#ede5d4;padding:22px;border:1px solid #b8ab91;border-radius:8px}h2{font-size:20px;margin:0 0 15px}.stage{position:relative;background:#181714;aspect-ratio:16/9;width:100%;overflow:hidden}.stage video,.stage img{width:100%;height:100%;object-fit:contain}.caption-zone{pointer-events:none;position:absolute;left:0;right:0;top:66.6667%;bottom:0;border-top:1px dashed #b5302a;color:#b5302a;padding:10px;display:none;background:rgba(237,229,212,.05);font-size:13px}.stage.guide .caption-zone{display:block}.controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:15px}button,input,select{font:inherit;accent-color:#b5302a}button{background:#e4d9c3;color:#1c1a17;border:1px solid #998a71;border-radius:4px;padding:6px 12px;cursor:pointer}input[type=range]{flex:1;min-width:150px}.readout{font-variant-numeric:tabular-nums;min-width:150px}footer{font-size:14px;color:#6b655b}details{margin-top:16px}code{font-size:13px}.hidden{display:none!important}
+</style>
+<main><h1>铅字与朱砂</h1><p>《破立并举 统筹兼顾》· A1 / A2 镜头复核<br>1920 × 1080 · 30 fps · 可编辑 Blender 工程</p>
+<p><a href="REPORT.md">中文交付报告</a> · <a href="REVIEW.md">自审记录</a> · <a href="../../assets/renders/leadtype_title/still_4k.png">A1 4K 终帧</a></p>
+<section data-shot="title" data-count="210"><h2>A1 片名 · 7 秒</h2><div class="stage"><video controls muted preload="metadata" src="../../assets/renders/leadtype_title/preview.mp4"></video><img class="hidden" alt="A1 原始帧"><div class="caption-zone">下三分之一参考区</div></div><div class="controls"><button class="play">从头播放</button><button class="mode">查看原始帧</button><button class="prev">前一帧</button><input aria-label="A1 帧位置" type="range" min="1" max="210" value="1"><button class="next">后一帧</button><span class="readout">0001 / 0210</span></div><p><a href="leadtype_title.blend">Blender 工程</a> · <a href="../../assets/renders/leadtype_title/contact.png">联系表</a> · <a href="../../assets/renders/leadtype_title/preview.mp4">MP4 预览</a></p></section>
+<section data-shot="poli" data-count="180"><h2>A2 破立 · 6 秒</h2><div class="stage"><video controls muted preload="metadata" src="../../assets/renders/leadtype_poli/preview.mp4"></video><img class="hidden" alt="A2 原始帧"><div class="caption-zone">释义文字预留区 · y ≥ 720 px</div></div><div class="controls"><button class="play">从头播放</button><button class="mode">查看原始帧</button><button class="prev">前一帧</button><input aria-label="A2 帧位置" type="range" min="1" max="180" value="1"><button class="next">后一帧</button><span class="readout">0001 / 0180</span><label><input class="guide" type="checkbox">留白参考线</label></div><p><a href="leadtype_poli.blend">Blender 工程</a> · <a href="../../assets/renders/leadtype_poli/contact.png">联系表</a> · <a href="../../assets/renders/leadtype_poli/preview.mp4">MP4 预览</a></p></section>
+<footer>预览均为无声镜头素材。原始帧模式直接读取正式 PNG；参考线仅用于复核，不进入交付画面。</footer></main>
+<script>
+for(const section of document.querySelectorAll('section')){
+ const shot=section.dataset.shot,count=+section.dataset.count,video=section.querySelector('video'),image=section.querySelector('img'),slider=section.querySelector('input[type=range]'),readout=section.querySelector('.readout'),mode=section.querySelector('.mode');
+ let png=false;
+ function showFrame(frame){frame=Math.min(count,Math.max(1,frame));slider.value=frame;readout.textContent=String(frame).padStart(4,'0')+' / '+String(count).padStart(4,'0')+' · '+((frame-1)/30).toFixed(2)+' s';if(png)image.src='../../assets/renders/leadtype_'+shot+'/frames/'+String(frame).padStart(4,'0')+'.png';}
+ function setMode(value){png=value;video.classList.toggle('hidden',png);image.classList.toggle('hidden',!png);mode.textContent=png?'返回视频':'查看原始帧';if(png)video.pause();showFrame(+slider.value);}
+ mode.onclick=()=>setMode(!png);
+ slider.oninput=()=>{if(!png)video.currentTime=(+slider.value-1)/30;showFrame(+slider.value);};
+ section.querySelector('.prev').onclick=()=>{setMode(true);showFrame(+slider.value-1);};
+ section.querySelector('.next').onclick=()=>{setMode(true);showFrame(+slider.value+1);};
+ section.querySelector('.play').onclick=()=>{setMode(false);video.currentTime=0;video.play();};
+ video.ontimeupdate=()=>{if(!png)showFrame(Math.min(count,Math.floor(video.currentTime*30)+1));};
+ const guide=section.querySelector('input.guide');if(guide)guide.onchange=()=>section.querySelector('.stage').classList.toggle('guide',guide.checked);
+ showFrame(1);
+}
+</script></html>

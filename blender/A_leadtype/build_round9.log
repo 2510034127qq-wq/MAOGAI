@@ -1,0 +1,7 @@
+D:\MAOGAI\blender\A_leadtype\build_poli_side.py:149: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world=bpy.data.worlds.new('暖灰环境');scene.world.use_nodes=True
+00:07.656  reports          | WARNING Path 'C:/Windows/Fonts/STSONG.TTF' cannot be made relative for Font 'STSong Regular'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+Info: Saved as "leadtype_poli.blend"
+
+Blender quit

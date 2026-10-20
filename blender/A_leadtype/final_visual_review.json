@@ -1,0 +1,26 @@
+{
+  "completed": true,
+  "date": "2026-10-20",
+  "method": "亲自查看首中尾原图、覆盖全部390帧的分组联系表、4K静帧；结合光流残差筛查与浏览器完整播放验证。",
+  "title": {
+    "approved_scene_preserved": true,
+    "all_frame_sheets_viewed": 11,
+    "frames_covered": [1, 210],
+    "full_resolution_frames_viewed": [1, 150, 210],
+    "still_4k_viewed": true,
+    "browser_played_to_end": true,
+    "result": "通过。保留批准版造型和镜头；横移与后拉连续，无观察到的突跳或块状降噪瑕疵。",
+    "note": "批准版为暗调画面，近黑像素最大占比2.69575%，已在REVIEW及QA数据中如实记录。"
+  },
+  "poli": {
+    "low_resolution_rounds_viewed": [7, 8, 9],
+    "approved_self_review_round": 9,
+    "all_frame_sheets_viewed": 9,
+    "frames_covered": [1, 180],
+    "full_resolution_frames_viewed": [1, 90, 180],
+    "browser_played_to_end": true,
+    "caption_bottom_third_clear": true,
+    "result": "通过。铅字侧卧完整入画，字面为反字，纸上印迹为正字；朱砂色饱满，焦点平滑由字面移到印迹，下三分之一为安静旧纸。"
+  },
+  "unresolved_blocking_findings": []
+}

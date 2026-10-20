@@ -1,0 +1,368 @@
+00:00.563  blend            | Read blend: "D:\MAOGAI\blender\A_leadtype\leadtype_poli.blend"
+00:06.000  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0001.png'
+信息: 已另存为 "leadtype_poli.blend"
+FRAME_DONE poli 1 5.2098
+00:10.610  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0002.png'
+FRAME_DONE poli 2 4.603
+00:15.328  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0003.png'
+FRAME_DONE poli 3 4.7121
+00:20.391  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0004.png'
+FRAME_DONE poli 4 5.0581
+00:25.141  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0005.png'
+FRAME_DONE poli 5 4.7488
+00:29.781  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0006.png'
+FRAME_DONE poli 6 4.6416
+00:34.469  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0007.png'
+FRAME_DONE poli 7 4.6896
+00:39.078  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0008.png'
+FRAME_DONE poli 8 4.6138
+00:43.688  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0009.png'
+FRAME_DONE poli 9 4.6058
+00:48.266  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0010.png'
+FRAME_DONE poli 10 4.5733
+00:52.828  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0011.png'
+FRAME_DONE poli 11 4.5609
+00:57.485  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0012.png'
+FRAME_DONE poli 12 4.6602
+01:02.250  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0013.png'
+FRAME_DONE poli 13 4.766
+01:06.844  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0014.png'
+FRAME_DONE poli 14 4.5812
+01:11.531  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0015.png'
+FRAME_DONE poli 15 4.6875
+01:16.188  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0016.png'
+FRAME_DONE poli 16 4.6533
+01:21.016  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0017.png'
+FRAME_DONE poli 17 4.8267
+01:25.844  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0018.png'
+FRAME_DONE poli 18 4.8317
+01:30.750  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0019.png'
+FRAME_DONE poli 19 4.9054
+01:35.594  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0020.png'
+FRAME_DONE poli 20 4.8367
+01:40.406  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0021.png'
+FRAME_DONE poli 21 4.8181
+01:45.235  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0022.png'
+FRAME_DONE poli 22 4.8296
+01:50.016  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0023.png'
+FRAME_DONE poli 23 4.7754
+01:54.703  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0024.png'
+FRAME_DONE poli 24 4.6883
+01:59.438  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0025.png'
+FRAME_DONE poli 25 4.7263
+02:04.141  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0026.png'
+FRAME_DONE poli 26 4.6989
+02:08.797  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0027.png'
+FRAME_DONE poli 27 4.6583
+02:13.485  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0028.png'
+FRAME_DONE poli 28 4.6876
+02:18.141  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0029.png'
+FRAME_DONE poli 29 4.6631
+02:22.891  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0030.png'
+FRAME_DONE poli 30 4.7415
+02:27.547  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0031.png'
+FRAME_DONE poli 31 4.655
+02:32.172  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0032.png'
+FRAME_DONE poli 32 4.6288
+02:36.860  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0033.png'
+FRAME_DONE poli 33 4.6832
+02:41.547  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0034.png'
+FRAME_DONE poli 34 4.6895
+02:46.172  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0035.png'
+FRAME_DONE poli 35 4.6213
+02:50.860  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0036.png'
+FRAME_DONE poli 36 4.6767
+02:55.547  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0037.png'
+FRAME_DONE poli 37 4.6974
+03:00.219  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0038.png'
+FRAME_DONE poli 38 4.6578
+03:04.922  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0039.png'
+FRAME_DONE poli 39 4.7028
+03:09.594  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0040.png'
+FRAME_DONE poli 40 4.6666
+03:14.250  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0041.png'
+FRAME_DONE poli 41 4.6547
+03:18.922  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0042.png'
+FRAME_DONE poli 42 4.6783
+03:23.563  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0043.png'
+FRAME_DONE poli 43 4.6414
+03:28.266  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0044.png'
+FRAME_DONE poli 44 4.6989
+03:33.031  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0045.png'
+FRAME_DONE poli 45 4.7657
+03:37.750  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0046.png'
+FRAME_DONE poli 46 4.7095
+03:42.422  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0047.png'
+FRAME_DONE poli 47 4.6795
+03:47.141  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0048.png'
+FRAME_DONE poli 48 4.7075
+03:51.750  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0049.png'
+FRAME_DONE poli 49 4.6115
+03:56.422  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0050.png'
+FRAME_DONE poli 50 4.6746
+04:01.141  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0051.png'
+FRAME_DONE poli 51 4.7174
+04:05.781  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0052.png'
+FRAME_DONE poli 52 4.6386
+04:10.469  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0053.png'
+FRAME_DONE poli 53 4.69
+04:15.141  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0054.png'
+FRAME_DONE poli 54 4.6672
+04:19.781  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0055.png'
+FRAME_DONE poli 55 4.6373
+04:24.453  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0056.png'
+FRAME_DONE poli 56 4.6649
+04:29.141  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0057.png'
+FRAME_DONE poli 57 4.6936
+04:33.766  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0058.png'
+FRAME_DONE poli 58 4.6255
+04:38.422  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0059.png'
+FRAME_DONE poli 59 4.6492
+04:43.172  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0060.png'
+FRAME_DONE poli 60 4.7433
+04:47.828  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0061.png'
+FRAME_DONE poli 61 4.6618
+04:52.500  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0062.png'
+FRAME_DONE poli 62 4.665
+04:57.156  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0063.png'
+FRAME_DONE poli 63 4.6663
+05:01.906  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0064.png'
+FRAME_DONE poli 64 4.7463
+05:06.563  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0065.png'
+FRAME_DONE poli 65 4.6421
+05:11.266  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0066.png'
+FRAME_DONE poli 66 4.7017
+05:15.922  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0067.png'
+FRAME_DONE poli 67 4.6625
+05:20.578  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0068.png'
+FRAME_DONE poli 68 4.648
+05:25.000  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0069.png'
+FRAME_DONE poli 69 4.4309
+05:29.703  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0070.png'
+FRAME_DONE poli 70 4.6914
+05:34.391  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0071.png'
+FRAME_DONE poli 71 4.6952
+05:39.094  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0072.png'
+FRAME_DONE poli 72 4.7025
+05:43.735  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0073.png'
+FRAME_DONE poli 73 4.6389
+05:48.297  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0074.png'
+FRAME_DONE poli 74 4.5543
+05:52.985  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0075.png'
+FRAME_DONE poli 75 4.683
+05:57.656  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0076.png'
+FRAME_DONE poli 76 4.6815
+06:02.219  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0077.png'
+FRAME_DONE poli 77 4.5643
+06:06.953  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0078.png'
+FRAME_DONE poli 78 4.7323
+06:11.641  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0079.png'
+FRAME_DONE poli 79 4.684
+06:16.313  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0080.png'
+FRAME_DONE poli 80 4.6592
+06:20.985  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0081.png'
+FRAME_DONE poli 81 4.6825
+06:25.688  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0082.png'
+FRAME_DONE poli 82 4.688
+06:30.344  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0083.png'
+FRAME_DONE poli 83 4.6624
+06:35.016  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0084.png'
+FRAME_DONE poli 84 4.6679
+06:39.735  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0085.png'
+FRAME_DONE poli 85 4.725
+06:44.422  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0086.png'
+FRAME_DONE poli 86 4.6779
+06:49.110  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0087.png'
+FRAME_DONE poli 87 4.6948
+06:53.094  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0088.png'
+FRAME_DONE poli 88 3.9804
+06:57.813  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0089.png'
+FRAME_DONE poli 89 4.7118
+07:02.547  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0090.png'
+FRAME_DONE poli 90 4.7405
+07:07.203  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0091.png'
+FRAME_DONE poli 91 4.6518
+07:12.047  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0092.png'
+FRAME_DONE poli 92 4.8338
+07:16.344  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0093.png'
+FRAME_DONE poli 93 4.3022
+07:21.047  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0094.png'
+FRAME_DONE poli 94 4.7037
+07:25.828  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0095.png'
+FRAME_DONE poli 95 4.7787
+07:30.563  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0096.png'
+FRAME_DONE poli 96 4.7335
+07:35.344  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0097.png'
+FRAME_DONE poli 97 4.7696
+07:40.031  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0098.png'
+FRAME_DONE poli 98 4.6937
+07:44.781  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0099.png'
+FRAME_DONE poli 99 4.7525
+07:49.297  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0100.png'
+FRAME_DONE poli 100 4.5059
+07:53.922  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0101.png'
+FRAME_DONE poli 101 4.6248
+07:58.610  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0102.png'
+FRAME_DONE poli 102 4.683
+08:03.406  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0103.png'
+FRAME_DONE poli 103 4.8034
+08:08.203  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0104.png'
+FRAME_DONE poli 104 4.7863
+08:12.985  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0105.png'
+FRAME_DONE poli 105 4.7804
+08:17.735  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0106.png'
+FRAME_DONE poli 106 4.7494
+08:22.360  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0107.png'
+FRAME_DONE poli 107 4.6339
+08:27.047  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0108.png'
+FRAME_DONE poli 108 4.6713
+08:31.781  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0109.png'
+FRAME_DONE poli 109 4.7445
+08:36.469  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0110.png'
+FRAME_DONE poli 110 4.6786
+08:41.156  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0111.png'
+FRAME_DONE poli 111 4.6897
+08:45.860  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0112.png'
+FRAME_DONE poli 112 4.6996
+08:50.578  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0113.png'
+FRAME_DONE poli 113 4.713
+08:55.281  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0114.png'
+FRAME_DONE poli 114 4.7136
+08:59.985  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0115.png'
+FRAME_DONE poli 115 4.7017
+09:04.688  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0116.png'
+FRAME_DONE poli 116 4.6883
+09:09.360  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0117.png'
+FRAME_DONE poli 117 4.676
+09:14.047  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0118.png'
+FRAME_DONE poli 118 4.6855
+09:18.750  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0119.png'
+FRAME_DONE poli 119 4.7066
+09:23.438  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0120.png'
+FRAME_DONE poli 120 4.6789
+09:28.141  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0121.png'
+FRAME_DONE poli 121 4.7113
+09:32.766  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0122.png'
+FRAME_DONE poli 122 4.6139
+09:37.422  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0123.png'
+FRAME_DONE poli 123 4.6553
+09:42.110  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0124.png'
+FRAME_DONE poli 124 4.6902
+09:46.766  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0125.png'
+FRAME_DONE poli 125 4.6569
+09:51.406  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0126.png'
+FRAME_DONE poli 126 4.641
+09:56.156  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0127.png'
+FRAME_DONE poli 127 4.7443
+10:00.797  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0128.png'
+FRAME_DONE poli 128 4.6412
+10:05.453  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0129.png'
+FRAME_DONE poli 129 4.6529
+10:10.156  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0130.png'
+FRAME_DONE poli 130 4.703
+10:14.891  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0131.png'
+FRAME_DONE poli 131 4.7268
+10:19.563  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0132.png'
+FRAME_DONE poli 132 4.6713
+10:24.344  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0133.png'
+FRAME_DONE poli 133 4.7831
+10:29.110  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0134.png'
+FRAME_DONE poli 134 4.7613
+10:33.735  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0135.png'
+FRAME_DONE poli 135 4.6236
+10:38.313  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0136.png'
+FRAME_DONE poli 136 4.5865
+10:42.922  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0137.png'
+FRAME_DONE poli 137 4.5957
+10:47.547  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0138.png'
+FRAME_DONE poli 138 4.6258
+10:52.172  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0139.png'
+FRAME_DONE poli 139 4.6288
+10:57.078  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0140.png'
+FRAME_DONE poli 140 4.8957
+11:01.750  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0141.png'
+FRAME_DONE poli 141 4.6717
+11:06.375  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0142.png'
+FRAME_DONE poli 142 4.6323
+11:11.078  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0143.png'
+FRAME_DONE poli 143 4.7037
+11:15.172  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0144.png'
+FRAME_DONE poli 144 4.0865
+11:19.828  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0145.png'
+FRAME_DONE poli 145 4.647
+11:24.500  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0146.png'
+FRAME_DONE poli 146 4.6804
+11:29.172  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0147.png'
+FRAME_DONE poli 147 4.6653
+11:33.860  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0148.png'
+FRAME_DONE poli 148 4.6868
+11:38.547  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0149.png'
+FRAME_DONE poli 149 4.6823
+11:43.203  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0150.png'
+FRAME_DONE poli 150 4.6537
+11:47.828  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0151.png'
+FRAME_DONE poli 151 4.6354
+11:52.516  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0152.png'
+FRAME_DONE poli 152 4.6735
+11:57.156  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0153.png'
+FRAME_DONE poli 153 4.6417
+12:01.766  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0154.png'
+FRAME_DONE poli 154 4.6178
+12:06.485  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0155.png'
+FRAME_DONE poli 155 4.7159
+12:11.344  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0156.png'
+FRAME_DONE poli 156 4.8592
+12:16.188  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0157.png'
+FRAME_DONE poli 157 4.8297
+12:20.969  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0158.png'
+FRAME_DONE poli 158 4.7889
+12:25.688  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0159.png'
+FRAME_DONE poli 159 4.7147
+12:30.391  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0160.png'
+FRAME_DONE poli 160 4.6967
+12:35.110  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0161.png'
+FRAME_DONE poli 161 4.7235
+12:39.781  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0162.png'
+FRAME_DONE poli 162 4.6723
+12:44.485  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0163.png'
+FRAME_DONE poli 163 4.7003
+12:49.203  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0164.png'
+FRAME_DONE poli 164 4.7087
+12:53.906  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0165.png'
+FRAME_DONE poli 165 4.7141
+12:58.578  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0166.png'
+FRAME_DONE poli 166 4.6636
+13:03.203  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0167.png'
+FRAME_DONE poli 167 4.63
+13:07.922  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0168.png'
+FRAME_DONE poli 168 4.7096
+13:12.594  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0169.png'
+FRAME_DONE poli 169 4.6694
+13:17.375  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0170.png'
+FRAME_DONE poli 170 4.7795
+13:22.047  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0171.png'
+FRAME_DONE poli 171 4.6729
+13:26.797  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0172.png'
+FRAME_DONE poli 172 4.7542
+13:31.500  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0173.png'
+FRAME_DONE poli 173 4.7008
+13:36.188  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0174.png'
+FRAME_DONE poli 174 4.6797
+13:40.828  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0175.png'
+FRAME_DONE poli 175 4.6374
+13:45.516  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0176.png'
+FRAME_DONE poli 176 4.692
+13:50.172  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0177.png'
+FRAME_DONE poli 177 4.6597
+13:54.860  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0178.png'
+FRAME_DONE poli 178 4.6732
+13:59.531  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0179.png'
+FRAME_DONE poli 179 4.6815
+14:04.156  render           | Saved: 'D:\MAOGAI\assets\renders\leadtype_poli\frames\0180.png'
+FRAME_DONE poli 180 4.6208
+14:04.156  blend            | Read blend: "D:\MAOGAI\blender\A_leadtype\leadtype_poli.blend"
+14:08.328  render           | Saved: 'D:\MAOGAI\blender\A_leadtype\review\reopened_blend\poli_0001.png'
+SHOT_COMPLETE poli
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+
+Blender quit

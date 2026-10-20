@@ -1,0 +1,27 @@
+{
+  "browser": "Edge",
+  "title": {
+    "url": "http://127.0.0.1:8771/assets/renders/leadtype_title/preview.mp4",
+    "duration": 7,
+    "currentTime": 7,
+    "ended": true,
+    "readyState": 4,
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "error": null
+  },
+  "poli": {
+    "url": "http://127.0.0.1:8771/blender/A_leadtype/review_delivery.html",
+    "duration": 6,
+    "currentTime": 6,
+    "ended": true,
+    "readyState": 4,
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "error": null,
+    "png_previous_frame": 179,
+    "png_loaded": true,
+    "png_size": [1920, 1080],
+    "caption_guide_visually_checked": true
+  }
+}

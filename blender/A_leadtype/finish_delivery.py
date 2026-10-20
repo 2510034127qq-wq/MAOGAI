@@ -127,8 +127,10 @@ def inspect(out,count):
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--shot",choices=["title","poli","both"],default="both")
+    parser.add_argument("--manifest-only",action="store_true",help="Refresh final artifact hashes after reports, without re-encoding verified movies")
     args=parser.parse_args()
     for shot,count in [("title",210),("poli",180)]:
+        if args.manifest_only:continue
         if args.shot not in ("both",shot):continue
         out=RENDERS/("leadtype_"+shot)
         encode(out,count);inspect(out,count)
@@ -139,7 +141,14 @@ def main():
     manifest_files=[ROOT/name for name in (
         "leadtype_title.blend","leadtype_poli.blend","build_leadtype.py","make_textures.py",
         "render_delivery.py","render_worker.py","finish_delivery.py","audit_scene.py",
-        "BRIEF.md","FEEDBACK_1.md")]
+        "BRIEF.md","FEEDBACK_1.md","FEEDBACK_2.md","HANDOFF.md",
+        "build_poli_side.py","prepare_poli_textures.py","review_saved_poli.py",
+        "queue_poli_review.py","audit_poli_side.py","write_report.py","review_delivery.html",
+        "verify_title_preserved.py","title_preservation_audit.json","poli_side_composition.json",
+        "poli_side_audit.json","browser_review.json","final_visual_review.json","REVIEW.md","REPORT.md",
+        "title_render_stats.json","poli_render_stats.json","title_scene_audit.json",
+        "leadtype_title_qa.json","leadtype_poli_qa.json","leadtype_title_sha256.json","leadtype_poli_sha256.json",
+        "textures/glyph_meshes.json","textures/manifest.json","textures/poli_side/manifest.json")]
     manifest_files += [RENDERS/f"leadtype_{s}"/name for s in ("title","poli") for name in ("preview.mp4","contact.png")]
     manifest_files += [still]
     manifest={"blender":"5.2.1 LTS / 9e2066aef7ef","font":"STSONG.TTF",

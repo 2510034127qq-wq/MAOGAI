@@ -1,0 +1,183 @@
+{
+  "shot": "poli",
+  "heroes": [
+    {
+      "name": "铅字_破_主体",
+      "character": "破",
+      "mirrored_x": true,
+      "body_bbox_mm": [
+        4.0,
+        4.0,
+        23.5
+      ],
+      "relief_mm": 0.66667,
+      "nonmanifold_edges": 0,
+      "top_normal_min_z": 1.0,
+      "positive_volume": true
+    },
+    {
+      "name": "铅字_立_主体",
+      "character": "立",
+      "mirrored_x": true,
+      "body_bbox_mm": [
+        4.0,
+        4.0,
+        23.5
+      ],
+      "relief_mm": 0.66667,
+      "nonmanifold_edges": 0,
+      "top_normal_min_z": 1.0,
+      "positive_volume": true
+    }
+  ],
+  "frames": [
+    {
+      "frame": 1,
+      "objects": [
+        {
+          "character": "破",
+          "bounds_norm": [
+            0.407192200422287,
+            0.7744868397712708,
+            0.46217793226242065,
+            0.85307377576828
+          ],
+          "inside": true,
+          "pixel_width": 105.57260513305664,
+          "pixel_height": 84.87389087677002
+        },
+        {
+          "character": "立",
+          "bounds_norm": [
+            0.5218586325645447,
+            0.7932584881782532,
+            0.5810422897338867,
+            0.8698889017105103
+          ],
+          "inside": true,
+          "pixel_width": 113.63262176513672,
+          "pixel_height": 82.76084661483765
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "objects": [
+        {
+          "character": "破",
+          "bounds_norm": [
+            0.40907371044158936,
+            0.7771614789962769,
+            0.4627777934074402,
+            0.8543062806129456
+          ],
+          "inside": true,
+          "pixel_width": 103.1118392944336,
+          "pixel_height": 83.3163857460022
+        },
+        {
+          "character": "立",
+          "bounds_norm": [
+            0.5239455103874207,
+            0.7923648953437805,
+            0.582135021686554,
+            0.867733359336853
+          ],
+          "inside": true,
+          "pixel_width": 111.72386169433594,
+          "pixel_height": 81.39794111251831
+        }
+      ]
+    },
+    {
+      "frame": 90,
+      "objects": [
+        {
+          "character": "破",
+          "bounds_norm": [
+            0.4142357110977173,
+            0.7862719297409058,
+            0.46728628873825073,
+            0.8599312901496887
+          ],
+          "inside": true,
+          "pixel_width": 101.85710906982422,
+          "pixel_height": 79.5521092414856
+        },
+        {
+          "character": "立",
+          "bounds_norm": [
+            0.5321117043495178,
+            0.7885470986366272,
+            0.5859504342079163,
+            0.8584513068199158
+          ],
+          "inside": true,
+          "pixel_width": 103.370361328125,
+          "pixel_height": 75.49654483795166
+        }
+      ]
+    },
+    {
+      "frame": 135,
+      "objects": [
+        {
+          "character": "破",
+          "bounds_norm": [
+            0.41794103384017944,
+            0.7902910113334656,
+            0.4756423830986023,
+            0.8692089915275574
+          ],
+          "inside": true,
+          "pixel_width": 110.78659057617188,
+          "pixel_height": 85.23141860961914
+        },
+        {
+          "character": "立",
+          "bounds_norm": [
+            0.5362769961357117,
+            0.7787535190582275,
+            0.5916799306869507,
+            0.8533552885055542
+          ],
+          "inside": true,
+          "pixel_width": 106.3736343383789,
+          "pixel_height": 80.5699110031128
+        }
+      ]
+    },
+    {
+      "frame": 180,
+      "objects": [
+        {
+          "character": "破",
+          "bounds_norm": [
+            0.4190607964992523,
+            0.7912806272506714,
+            0.47787874937057495,
+            0.8714558482170105
+          ],
+          "inside": true,
+          "pixel_width": 112.93046951293945,
+          "pixel_height": 86.58923864364624
+        },
+        {
+          "character": "立",
+          "bounds_norm": [
+            0.5369671583175659,
+            0.7759096622467041,
+            0.5936310291290283,
+            0.8520669937133789
+          ],
+          "inside": true,
+          "pixel_width": 108.79463195800781,
+          "pixel_height": 82.24991798400879
+        }
+      ]
+    }
+  ],
+  "external_missing": [],
+  "packed_images": 3,
+  "all_heroes_solid": true
+}

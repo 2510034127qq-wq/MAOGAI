@@ -1,0 +1,65 @@
+00:00.547  blend            | Read blend: "D:\MAOGAI\blender\A_leadtype\leadtype_poli.blend"
+{
+  "heroes": [
+    {
+      "character": "破",
+      "mirrored_x": true,
+      "body_bbox_mm": [
+        4.0,
+        4.0,
+        23.5
+      ],
+      "body_bottom_mm": 0.08999896090244874,
+      "paper_top_mm": 0.09,
+      "contact_error_mm": 1.0390975512530876e-06,
+      "relief_mm": 0.6666666666666666,
+      "nonmanifold_edges": 0,
+      "positive_volume": true,
+      "type_axis_world": [
+        -0.1736481785774231,
+        -0.9848077297210693,
+        -4.371138828673793e-08
+      ]
+    },
+    {
+      "character": "立",
+      "mirrored_x": true,
+      "body_bbox_mm": [
+        4.0,
+        4.0,
+        23.5
+      ],
+      "body_bottom_mm": 0.08999896090244874,
+      "paper_top_mm": 0.09,
+      "contact_error_mm": 1.0390975512530876e-06,
+      "relief_mm": 0.6666666666666666,
+      "nonmanifold_edges": 0,
+      "positive_volume": true,
+      "type_axis_world": [
+        -0.1736481785774231,
+        -0.9848077297210693,
+        -4.371138828673793e-08
+      ]
+    }
+  ],
+  "external_missing": [],
+  "all_180_frames_body_and_faces_inside": true,
+  "all_heroes_solid": true,
+  "max_contact_error_mm": 1.0390975512530876e-06,
+  "packed_images": 3,
+  "paper_covers_full_frame_all_frames": true,
+  "depression_range_degrees": [
+    29.958088409956073,
+    30.04201806233399
+  ],
+  "focus_timing": {
+    "faces_1_to_60": true,
+    "prints_139_to_180": true,
+    "monotonic_rack": true
+  },
+  "stamp_max_bottom_fraction": 0.6219372153282166,
+  "caption_region_clear_of_subjects": true
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+
+Blender quit

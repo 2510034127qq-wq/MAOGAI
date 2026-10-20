@@ -1,0 +1,40 @@
+Input #0, image2, from 'D:\MAOGAI\assets\renders\leadtype_poli\frames\%04d.png':
+  Duration: 00:00:06.00, start: 0.000000, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc, gbr/bt709/iec61966-2-1), 1920x1080 [SAR 2834:2834 DAR 16:9], 30 fps, 30 tbr, 30 tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (png (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0000020f66e98d40] using SAR=1/1
+[libx264 @ 0000020f66e98d40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 0000020f66e98d40] profile High, level 5.0, 4:2:0, 8-bit
+[libx264 @ 0000020f66e98d40] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=5 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=8 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=2 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=34 lookahead_threads=5 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=3 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=50 rc=crf mbtree=1 crf=18.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'D:\MAOGAI\assets\renders\leadtype_poli\preview.mp4':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 30 fps, 15360 tbn
+      Metadata:
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=   43 fps=0.0 q=24.0 size=       0KiB time=00:00:01.36 bitrate=   0.3kbits/s speed=2.66x    [mp4 @ 0000020f66e93cc0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000020f66e90b40] video:645KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.461823%
+frame=  180 fps=0.0 q=-1.0 Lsize=     648KiB time=00:00:05.93 bitrate= 894.9kbits/s speed=5.96x    
+[libx264 @ 0000020f66e98d40] frame I:1     Avg QP: 8.25  size:155784
+[libx264 @ 0000020f66e98d40] frame P:45    Avg QP: 9.86  size:  9450
+[libx264 @ 0000020f66e98d40] frame B:134   Avg QP:15.62  size:   589
+[libx264 @ 0000020f66e98d40] consecutive B-frames:  0.6%  0.0%  1.7% 97.8%
+[libx264 @ 0000020f66e98d40] mb I  I16..4:  8.1% 77.4% 14.5%
+[libx264 @ 0000020f66e98d40] mb P  I16..4:  0.0%  0.1%  0.0%  P16..4: 18.7%  4.0%  5.3%  0.0%  0.0%    skip:71.9%
+[libx264 @ 0000020f66e98d40] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 10.0%  0.0%  0.0%  direct: 0.0%  skip:89.9%  L0:11.9% L1:88.1% BI: 0.0%
+[libx264 @ 0000020f66e98d40] 8x8 transform intra:77.3% inter:27.2%
+[libx264 @ 0000020f66e98d40] direct mvs  spatial:86.6% temporal:13.4%
+[libx264 @ 0000020f66e98d40] coded y,uvDC,uvAC intra: 86.6% 62.3% 58.1% inter: 1.5% 1.7% 0.7%
+[libx264 @ 0000020f66e98d40] i16 v,h,dc,p: 10% 17% 12% 60%
+[libx264 @ 0000020f66e98d40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 10% 12% 16%  9% 11%  9% 12%  8% 14%
+[libx264 @ 0000020f66e98d40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu:  7%  7%  4% 14% 17% 11% 14% 10% 17%
+[libx264 @ 0000020f66e98d40] i8c dc,h,v,p: 72% 17%  8%  3%
+[libx264 @ 0000020f66e98d40] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0000020f66e98d40] ref P L0: 88.5%  0.9%  6.2%  2.8%  1.5%
+[libx264 @ 0000020f66e98d40] ref B L0: 88.9%  9.4%  1.4%  0.4%
+[libx264 @ 0000020f66e98d40] ref B L1: 97.3%  2.7%
+[libx264 @ 0000020f66e98d40] kb/s:879.94

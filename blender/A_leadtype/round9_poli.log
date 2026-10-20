@@ -1,0 +1,10 @@
+00:00.531  blend            | Read blend: "D:\MAOGAI\blender\A_leadtype\leadtype_poli.blend"
+00:02.156  render           | Saved: 'D:\MAOGAI\blender\A_leadtype\review\round9\poli_0001.png'
+REVIEW_FRAME 1 1.496
+00:02.968  render           | Saved: 'D:\MAOGAI\blender\A_leadtype\review\round9\poli_0090.png'
+REVIEW_FRAME 90 0.801
+00:03.765  render           | Saved: 'D:\MAOGAI\blender\A_leadtype\review\round9\poli_0180.png'
+REVIEW_FRAME 180 0.798
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+
+Blender quit

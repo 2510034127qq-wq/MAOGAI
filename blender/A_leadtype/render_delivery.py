@@ -6,6 +6,7 @@ import os
 import subprocess
 import time
 import uuid
+import argparse
 
 ROOT=Path(__file__).resolve().parent
 RENDERS=ROOT.parents[1]/"assets"/"renders"
@@ -43,7 +44,11 @@ def release(token):
 
 
 def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--shot',choices=['title','poli','both'],default='both')
+    args=parser.parse_args()
     for shot in ("title","poli"):
+        if args.shot not in ('both',shot):continue
         token=acquire(shot)
         proc=None
         try:

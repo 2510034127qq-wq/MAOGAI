@@ -1,0 +1,4154 @@
+{
+  "shots": {
+    "desk_open": {
+      "frame_count": 180,
+      "all_png_rgb_8bit_1920x1080": true,
+      "unique_frame_hashes": 180,
+      "video": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30.0,
+        "declared_frames": 180,
+        "decoded_frames": 180,
+        "duration_seconds": 6.0
+      },
+      "max_white_clipping_fraction": 0.0,
+      "max_black_clipping_fraction": 0.007520254629629629,
+      "flat_motion_compensated_mae_max": 0.6773815143842181,
+      "flat_motion_compensated_mae_median": 0.3385656584759615,
+      "contact_frames": [
+        1,
+        30,
+        60,
+        90,
+        120,
+        150,
+        180
+      ],
+      "ffmpeg_full_decode_passed": true,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "mean_luma": 107.70798611111111,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007033179012345679
+        },
+        {
+          "frame": 2,
+          "mean_luma": 108.68992283950617,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007064043209876543,
+          "motion_compensated_flat_mae_8bit": 0.6773815143842181,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 3,
+          "mean_luma": 109.6816049382716,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007133005401234568,
+          "motion_compensated_flat_mae_8bit": 0.6663046119106487,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 4,
+          "mean_luma": 110.6742824074074,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007122395833333333,
+          "motion_compensated_flat_mae_8bit": 0.6634104418821171,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 5,
+          "mean_luma": 111.67917438271606,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007155189043209877,
+          "motion_compensated_flat_mae_8bit": 0.6479661186705012,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 6,
+          "mean_luma": 112.70631172839506,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00718701774691358,
+          "motion_compensated_flat_mae_8bit": 0.6310233855395838,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 7,
+          "mean_luma": 113.74060956790123,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007247299382716049,
+          "motion_compensated_flat_mae_8bit": 0.6229828641545507,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 8,
+          "mean_luma": 114.7927237654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007247781635802469,
+          "motion_compensated_flat_mae_8bit": 0.6084029048490394,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 9,
+          "mean_luma": 115.84900462962963,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0072583912037037035,
+          "motion_compensated_flat_mae_8bit": 0.5988719828382275,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 10,
+          "mean_luma": 116.9225925925926,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0072280092592592595,
+          "motion_compensated_flat_mae_8bit": 0.5760530199818347,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 11,
+          "mean_luma": 117.99956018518519,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007259355709876543,
+          "motion_compensated_flat_mae_8bit": 0.5748942894972878,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 12,
+          "mean_luma": 119.08259259259259,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0072680362654320985,
+          "motion_compensated_flat_mae_8bit": 0.5680651292088617,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 13,
+          "mean_luma": 120.1801774691358,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007256944444444444,
+          "motion_compensated_flat_mae_8bit": 0.5329913270222777,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 14,
+          "mean_luma": 121.2705787037037,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007259355709876543,
+          "motion_compensated_flat_mae_8bit": 0.5327234739398046,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 15,
+          "mean_luma": 122.36417438271604,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007355324074074074,
+          "motion_compensated_flat_mae_8bit": 0.5096213619666572,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 16,
+          "mean_luma": 123.46635802469136,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007368344907407408,
+          "motion_compensated_flat_mae_8bit": 0.4942444003402325,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 17,
+          "mean_luma": 124.56952160493827,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007340856481481481,
+          "motion_compensated_flat_mae_8bit": 0.48522695235410207,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 18,
+          "mean_luma": 125.65327932098765,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007385706018518519,
+          "motion_compensated_flat_mae_8bit": 0.47551620758089713,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 19,
+          "mean_luma": 126.72486111111111,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007446469907407408,
+          "motion_compensated_flat_mae_8bit": 0.47316663164530365,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 20,
+          "mean_luma": 127.79645061728395,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007466242283950617,
+          "motion_compensated_flat_mae_8bit": 0.46052080716737837,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 21,
+          "mean_luma": 128.86591820987655,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0073876350308641975,
+          "motion_compensated_flat_mae_8bit": 0.45284411334679386,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 22,
+          "mean_luma": 129.9360262345679,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007431037808641975,
+          "motion_compensated_flat_mae_8bit": 0.45222461303533007,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 23,
+          "mean_luma": 131.0025925925926,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007520254629629629,
+          "motion_compensated_flat_mae_8bit": 0.51454578151586,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 24,
+          "mean_luma": 132.07377314814815,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0074826388888888885,
+          "motion_compensated_flat_mae_8bit": 0.4345894629042749,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 25,
+          "mean_luma": 133.1626311728395,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0074705825617283955,
+          "motion_compensated_flat_mae_8bit": 0.4290539143380985,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 26,
+          "mean_luma": 134.24427469135802,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007478780864197531,
+          "motion_compensated_flat_mae_8bit": 0.4222286549223941,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 27,
+          "mean_luma": 135.3259336419753,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.007438271604938272,
+          "motion_compensated_flat_mae_8bit": 0.41532180727183055,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 28,
+          "mean_luma": 136.3631712962963,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0068036265432098765,
+          "motion_compensated_flat_mae_8bit": 0.417833959685685,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 29,
+          "mean_luma": 137.3434413580247,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0053052662037037035,
+          "motion_compensated_flat_mae_8bit": 0.41320739309143373,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 30,
+          "mean_luma": 138.2989197530864,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.003480420524691358,
+          "motion_compensated_flat_mae_8bit": 0.4089483332201779,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 31,
+          "mean_luma": 139.207600308642,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0018812692901234568,
+          "motion_compensated_flat_mae_8bit": 0.4151821450376501,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 32,
+          "mean_luma": 140.03714506172838,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0006727430555555556,
+          "motion_compensated_flat_mae_8bit": 0.40245688252521966,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 33,
+          "mean_luma": 140.72656635802468,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 9.741512345679012e-05,
+          "motion_compensated_flat_mae_8bit": 0.4063572722112604,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 34,
+          "mean_luma": 141.30891203703703,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.40363863131066646,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 35,
+          "mean_luma": 141.78783179012345,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3835737736183198,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 36,
+          "mean_luma": 142.19209104938273,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3871252444058223,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 37,
+          "mean_luma": 142.56300154320988,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3923370602672484,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 38,
+          "mean_luma": 142.9197685185185,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3828873066535723,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 39,
+          "mean_luma": 143.25685956790124,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.373150279513318,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 40,
+          "mean_luma": 143.58539351851852,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.37130280965897405,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 41,
+          "mean_luma": 143.9036651234568,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.37845735923608825,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 42,
+          "mean_luma": 144.2039197530864,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.36594663278271916,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 43,
+          "mean_luma": 144.49930555555557,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.37267806111233237,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 44,
+          "mean_luma": 144.7774537037037,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.36191848497324003,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 45,
+          "mean_luma": 145.0420524691358,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3561421151965174,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 46,
+          "mean_luma": 145.30274691358025,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.35721961972995314,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 47,
+          "mean_luma": 145.55586419753087,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3568274689411184,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 48,
+          "mean_luma": 145.80445216049384,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3620096352374398,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 49,
+          "mean_luma": 146.04992283950617,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.35841156025069104,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 50,
+          "mean_luma": 146.3047222222222,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.35537178710991246,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 51,
+          "mean_luma": 146.56105709876545,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.35984381422112616,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 52,
+          "mean_luma": 146.8204012345679,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3566267377328425,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 53,
+          "mean_luma": 147.07130401234568,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3632809295967191,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 54,
+          "mean_luma": 147.3135725308642,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3522606201338615,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 55,
+          "mean_luma": 147.55091049382716,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.35127889481603064,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 56,
+          "mean_luma": 147.79113425925925,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.35347608870254155,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 57,
+          "mean_luma": 148.04078703703703,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3513214505224339,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 58,
+          "mean_luma": 148.290887345679,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3531515604814034,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 59,
+          "mean_luma": 148.54003858024691,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.35135759519473814,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 60,
+          "mean_luma": 148.7900848765432,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.35037871089251116,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 61,
+          "mean_luma": 149.0255864197531,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3424986109793612,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 62,
+          "mean_luma": 149.25993827160494,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3399082134105893,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 63,
+          "mean_luma": 149.50166666666667,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.345277181035764,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 64,
+          "mean_luma": 149.75833333333333,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3386926369399144,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 65,
+          "mean_luma": 150.02679012345678,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.33465552953280897,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 66,
+          "mean_luma": 150.29803240740742,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3385656584759615,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 67,
+          "mean_luma": 150.5607098765432,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3363353995144248,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 68,
+          "mean_luma": 150.81222222222223,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.33530126992704673,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 69,
+          "mean_luma": 151.06059413580246,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.33648472115604755,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 70,
+          "mean_luma": 151.31842592592594,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.33624871974556625,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 71,
+          "mean_luma": 151.58289351851852,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.33579276174062905,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 72,
+          "mean_luma": 151.84930555555556,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.33877321328081034,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 73,
+          "mean_luma": 152.12073302469136,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.33200486355039177,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 74,
+          "mean_luma": 152.38993827160493,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3422304652850577,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 75,
+          "mean_luma": 152.6479475308642,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3905994347761416,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 76,
+          "mean_luma": 152.9045447530864,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.33376604059334986,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 77,
+          "mean_luma": 153.16404320987655,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3420152091254753,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 78,
+          "mean_luma": 153.4230709876543,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.33275287395415276,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 79,
+          "mean_luma": 153.67699845679013,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.33924216205905194,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 80,
+          "mean_luma": 153.92613425925927,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3343133367063682,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 81,
+          "mean_luma": 154.17284722222223,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3490778227620333,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 82,
+          "mean_luma": 154.4218672839506,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3337361973301104,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 83,
+          "mean_luma": 154.67957561728394,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3443677719396924,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 84,
+          "mean_luma": 154.93470679012347,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3400468061674009,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 85,
+          "mean_luma": 155.1950848765432,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.34596516370852165,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 86,
+          "mean_luma": 155.4587114197531,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.34706157743996474,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 87,
+          "mean_luma": 155.72393518518518,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.34282010975979704,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 88,
+          "mean_luma": 155.9916898148148,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.34054024240585745,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 89,
+          "mean_luma": 156.24850308641976,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3444079715419797,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 90,
+          "mean_luma": 156.50898148148147,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.45392125897749275,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 91,
+          "mean_luma": 156.78096450617284,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3364569327442856,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 92,
+          "mean_luma": 157.06780864197532,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.33751425313568983,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 93,
+          "mean_luma": 157.36211419753087,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.34139237217443624,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 94,
+          "mean_luma": 157.66042438271606,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.822530864197531e-07,
+          "motion_compensated_flat_mae_8bit": 0.3356279450932186,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 95,
+          "mean_luma": 157.96931327160493,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3333424563804311,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 96,
+          "mean_luma": 158.2903549382716,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3407179487179487,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 97,
+          "mean_luma": 158.59133487654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3321896742622032,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 98,
+          "mean_luma": 158.88777777777779,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3356646222355786,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 99,
+          "mean_luma": 159.1692438271605,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3367666267551976,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 100,
+          "mean_luma": 159.46773148148148,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.33504608107005956,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 101,
+          "mean_luma": 159.75657407407408,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3310657903652009,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 102,
+          "mean_luma": 160.0513425925926,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.822530864197531e-07,
+          "motion_compensated_flat_mae_8bit": 0.33261110960647833,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 103,
+          "mean_luma": 160.35637345679012,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3279065699716104,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 104,
+          "mean_luma": 160.65425154320988,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.32844227063880244,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 105,
+          "mean_luma": 160.96059413580247,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3304436239096698,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 106,
+          "mean_luma": 161.27041666666668,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3351695254354843,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 107,
+          "mean_luma": 161.5754475308642,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.328776669883135,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 108,
+          "mean_luma": 161.8804475308642,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.822530864197531e-07,
+          "motion_compensated_flat_mae_8bit": 0.32842288857583685,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 109,
+          "mean_luma": 162.17368827160493,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.822530864197531e-07,
+          "motion_compensated_flat_mae_8bit": 0.33557530626951715,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 110,
+          "mean_luma": 162.45467592592593,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 9.645061728395062e-07,
+          "motion_compensated_flat_mae_8bit": 0.335022807906741,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 111,
+          "mean_luma": 162.7304861111111,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.32766864220550046,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 112,
+          "mean_luma": 162.99869598765432,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3331164087920845,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 113,
+          "mean_luma": 163.27039351851852,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.822530864197531e-07,
+          "motion_compensated_flat_mae_8bit": 0.3261119860249064,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 114,
+          "mean_luma": 163.55797839506172,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.822530864197531e-07,
+          "motion_compensated_flat_mae_8bit": 0.33148384886065607,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 115,
+          "mean_luma": 163.85001543209876,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 1.4467592592592592e-06,
+          "motion_compensated_flat_mae_8bit": 0.3288285924215388,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 116,
+          "mean_luma": 164.14311728395063,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.822530864197531e-07,
+          "motion_compensated_flat_mae_8bit": 0.33112556775789626,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 117,
+          "mean_luma": 164.44395833333334,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3287681953357333,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 118,
+          "mean_luma": 164.75510030864197,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.3330085989660458,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 119,
+          "mean_luma": 165.0677700617284,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0,
+          "motion_compensated_flat_mae_8bit": 0.326058899448551,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 120,
+          "mean_luma": 165.3618827160494,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 2.8935185185185184e-06,
+          "motion_compensated_flat_mae_8bit": 0.32890053584699025,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 121,
+          "mean_luma": 165.64869598765432,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.822530864197531e-07,
+          "motion_compensated_flat_mae_8bit": 0.32248705472144884,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 122,
+          "mean_luma": 165.9154938271605,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 1.4467592592592592e-06,
+          "motion_compensated_flat_mae_8bit": 0.32868671092021345,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 123,
+          "mean_luma": 166.17577160493826,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 1.4467592592592592e-06,
+          "motion_compensated_flat_mae_8bit": 0.32199652372428467,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 124,
+          "mean_luma": 166.41882716049383,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 9.645061728395062e-07,
+          "motion_compensated_flat_mae_8bit": 0.32651634782158484,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 125,
+          "mean_luma": 166.6633101851852,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 1.4467592592592592e-06,
+          "motion_compensated_flat_mae_8bit": 0.3266890582612066,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 126,
+          "mean_luma": 166.9028086419753,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.822530864197531e-07,
+          "motion_compensated_flat_mae_8bit": 0.32932701567857003,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 127,
+          "mean_luma": 167.15742283950618,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 2.4112654320987654e-06,
+          "motion_compensated_flat_mae_8bit": 0.3202050624799744,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 128,
+          "mean_luma": 167.39645833333333,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 1.4467592592592592e-06,
+          "motion_compensated_flat_mae_8bit": 0.31861061822638087,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 129,
+          "mean_luma": 167.63104938271604,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 2.4112654320987654e-06,
+          "motion_compensated_flat_mae_8bit": 0.3152994080434948,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 130,
+          "mean_luma": 167.86260802469135,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 1.4467592592592592e-06,
+          "motion_compensated_flat_mae_8bit": 0.31784633692445974,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 131,
+          "mean_luma": 168.0872222222222,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 9.645061728395062e-07,
+          "motion_compensated_flat_mae_8bit": 0.3176886197325259,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 132,
+          "mean_luma": 168.29901234567902,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.822530864197531e-07,
+          "motion_compensated_flat_mae_8bit": 0.3115587396887061,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 133,
+          "mean_luma": 168.4958410493827,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 1.4467592592592592e-06,
+          "motion_compensated_flat_mae_8bit": 0.31014430596901965,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 134,
+          "mean_luma": 168.69101080246912,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 3.375771604938272e-06,
+          "motion_compensated_flat_mae_8bit": 0.3103226376288595,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 135,
+          "mean_luma": 168.86292438271605,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 3.858024691358025e-06,
+          "motion_compensated_flat_mae_8bit": 0.30869055276001667,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 136,
+          "mean_luma": 169.01587191358024,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 3.858024691358025e-06,
+          "motion_compensated_flat_mae_8bit": 0.30573970910740844,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 137,
+          "mean_luma": 169.15796296296296,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.340277777777778e-06,
+          "motion_compensated_flat_mae_8bit": 0.308271338091887,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 138,
+          "mean_luma": 169.28912037037037,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.304783950617284e-06,
+          "motion_compensated_flat_mae_8bit": 0.29962076499987444,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 139,
+          "mean_luma": 169.41765432098765,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 3.858024691358025e-06,
+          "motion_compensated_flat_mae_8bit": 0.29562820994613553,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 140,
+          "mean_luma": 169.54203703703703,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.822530864197531e-06,
+          "motion_compensated_flat_mae_8bit": 0.2951526436149607,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 141,
+          "mean_luma": 169.6623148148148,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.787037037037037e-06,
+          "motion_compensated_flat_mae_8bit": 0.28679282893343466,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 142,
+          "mean_luma": 169.78766203703702,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.822530864197531e-06,
+          "motion_compensated_flat_mae_8bit": 0.28686607276165826,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 143,
+          "mean_luma": 169.93525462962964,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.26929012345679e-06,
+          "motion_compensated_flat_mae_8bit": 0.2784426677260764,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 144,
+          "mean_luma": 170.0832561728395,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.787037037037037e-06,
+          "motion_compensated_flat_mae_8bit": 0.2763058570208764,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 145,
+          "mean_luma": 170.20922839506173,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.787037037037037e-06,
+          "motion_compensated_flat_mae_8bit": 0.2663984650615832,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 146,
+          "mean_luma": 170.3115586419753,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.787037037037037e-06,
+          "motion_compensated_flat_mae_8bit": 0.28830864197530864,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 147,
+          "mean_luma": 170.3879861111111,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 7.2337962962962966e-06,
+          "motion_compensated_flat_mae_8bit": 0.3262328243333251,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 148,
+          "mean_luma": 170.45922067901233,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.751543209876544e-06,
+          "motion_compensated_flat_mae_8bit": 0.34861762527770923,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 149,
+          "mean_luma": 170.5245987654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 3.858024691358025e-06,
+          "motion_compensated_flat_mae_8bit": 0.40902921725397295,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 150,
+          "mean_luma": 170.5825385802469,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.26929012345679e-06,
+          "motion_compensated_flat_mae_8bit": 0.4320367943423753,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 151,
+          "mean_luma": 170.64178240740742,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.304783950617284e-06,
+          "motion_compensated_flat_mae_8bit": 0.4144932566441888,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 152,
+          "mean_luma": 170.70216820987653,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.751543209876544e-06,
+          "motion_compensated_flat_mae_8bit": 0.42028643471996224,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 153,
+          "mean_luma": 170.75155864197532,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.304783950617284e-06,
+          "motion_compensated_flat_mae_8bit": 0.44435595266242733,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 154,
+          "mean_luma": 170.78491512345678,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.751543209876544e-06,
+          "motion_compensated_flat_mae_8bit": 0.3680853184491179,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 155,
+          "mean_luma": 170.80302469135802,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 4.822530864197531e-06,
+          "motion_compensated_flat_mae_8bit": 0.40211402226470255,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 156,
+          "mean_luma": 170.81345679012347,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.26929012345679e-06,
+          "motion_compensated_flat_mae_8bit": 0.3920830937679674,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 157,
+          "mean_luma": 170.82056327160493,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.787037037037037e-06,
+          "motion_compensated_flat_mae_8bit": 0.33719328993490233,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 158,
+          "mean_luma": 170.82624228395062,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 8.198302469135803e-06,
+          "motion_compensated_flat_mae_8bit": 0.3174170986073815,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 159,
+          "mean_luma": 170.83368827160493,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.26929012345679e-06,
+          "motion_compensated_flat_mae_8bit": 0.34408977991935785,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 160,
+          "mean_luma": 170.8414737654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 7.71604938271605e-06,
+          "motion_compensated_flat_mae_8bit": 0.2847355201313074,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 161,
+          "mean_luma": 170.84556327160493,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.787037037037037e-06,
+          "motion_compensated_flat_mae_8bit": 0.19365812475168853,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 162,
+          "mean_luma": 170.85435956790124,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.751543209876544e-06,
+          "motion_compensated_flat_mae_8bit": 0.17547820477832635,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 163,
+          "mean_luma": 170.86042438271605,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.26929012345679e-06,
+          "motion_compensated_flat_mae_8bit": 0.2704692836988268,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 164,
+          "mean_luma": 170.86717592592592,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 7.2337962962962966e-06,
+          "motion_compensated_flat_mae_8bit": 0.17288981083617325,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 165,
+          "mean_luma": 170.87435185185186,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 8.198302469135803e-06,
+          "motion_compensated_flat_mae_8bit": 0.13971566550041886,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 166,
+          "mean_luma": 170.88070987654322,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.751543209876544e-06,
+          "motion_compensated_flat_mae_8bit": 0.13164173964380596,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 167,
+          "mean_luma": 170.89066358024692,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 7.2337962962962966e-06,
+          "motion_compensated_flat_mae_8bit": 0.12669950012895936,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 168,
+          "mean_luma": 170.89939814814815,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 8.680555555555556e-06,
+          "motion_compensated_flat_mae_8bit": 0.11670039865072064,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 169,
+          "mean_luma": 170.90922067901235,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 7.71604938271605e-06,
+          "motion_compensated_flat_mae_8bit": 0.10997307880567793,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 170,
+          "mean_luma": 170.92601080246914,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 7.71604938271605e-06,
+          "motion_compensated_flat_mae_8bit": 0.10206997618611467,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 171,
+          "mean_luma": 170.94445216049382,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 7.71604938271605e-06,
+          "motion_compensated_flat_mae_8bit": 0.08982072466774875,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 172,
+          "mean_luma": 170.96324845679013,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 7.71604938271605e-06,
+          "motion_compensated_flat_mae_8bit": 0.08778639901579839,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 173,
+          "mean_luma": 170.9812962962963,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.787037037037037e-06,
+          "motion_compensated_flat_mae_8bit": 0.07729738935792317,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 174,
+          "mean_luma": 170.99926697530864,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.26929012345679e-06,
+          "motion_compensated_flat_mae_8bit": 0.07155528554070474,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 175,
+          "mean_luma": 171.01300925925926,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.751543209876544e-06,
+          "motion_compensated_flat_mae_8bit": 0.06219805297273676,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 176,
+          "mean_luma": 171.02436728395062,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 7.2337962962962966e-06,
+          "motion_compensated_flat_mae_8bit": 0.05345881439798195,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 177,
+          "mean_luma": 171.0338811728395,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 8.198302469135803e-06,
+          "motion_compensated_flat_mae_8bit": 0.044997089921427876,
+          "motion_compensated_flat_p95_8bit": 0.0
+        },
+        {
+          "frame": 178,
+          "mean_luma": 171.0402237654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 8.680555555555556e-06,
+          "motion_compensated_flat_mae_8bit": 0.03641297106101535,
+          "motion_compensated_flat_p95_8bit": 0.0
+        },
+        {
+          "frame": 179,
+          "mean_luma": 171.042862654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 8.680555555555556e-06,
+          "motion_compensated_flat_mae_8bit": 0.027555383292353533,
+          "motion_compensated_flat_p95_8bit": 0.0
+        },
+        {
+          "frame": 180,
+          "mean_luma": 171.04394290123457,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 8.198302469135803e-06,
+          "motion_compensated_flat_mae_8bit": 0.016757476692093473,
+          "motion_compensated_flat_p95_8bit": 0.0
+        }
+      ]
+    },
+    "desk_close": {
+      "frame_count": 330,
+      "all_png_rgb_8bit_1920x1080": true,
+      "unique_frame_hashes": 330,
+      "video": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30.0,
+        "declared_frames": 330,
+        "decoded_frames": 330,
+        "duration_seconds": 11.0
+      },
+      "max_white_clipping_fraction": 0.0,
+      "max_black_clipping_fraction": 0.0009109760802469136,
+      "flat_motion_compensated_mae_max": 0.4782366212893249,
+      "flat_motion_compensated_mae_median": 0.33052433159156747,
+      "contact_frames": [
+        1,
+        30,
+        60,
+        90,
+        120,
+        150,
+        180,
+        210,
+        240,
+        270,
+        300,
+        330
+      ],
+      "ffmpeg_full_decode_passed": true,
+      "frame_audit": [
+        {
+          "frame": 1,
+          "mean_luma": 128.24660493827162,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.8834876543209875e-05
+        },
+        {
+          "frame": 2,
+          "mean_luma": 127.54885802469136,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.497685185185185e-05,
+          "motion_compensated_flat_mae_8bit": 0.4742739366685404,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 3,
+          "mean_luma": 126.84153549382717,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.751543209876543e-05,
+          "motion_compensated_flat_mae_8bit": 0.4735576622043004,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 4,
+          "mean_luma": 126.140625,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.931712962962963e-05,
+          "motion_compensated_flat_mae_8bit": 0.47188992209097763,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 5,
+          "mean_luma": 125.46652777777778,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.690586419753086e-05,
+          "motion_compensated_flat_mae_8bit": 0.47797917664557443,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 6,
+          "mean_luma": 124.79533950617284,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.787037037037037e-05,
+          "motion_compensated_flat_mae_8bit": 0.4747246362166532,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 7,
+          "mean_luma": 124.16354166666666,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.2565586419753085e-05,
+          "motion_compensated_flat_mae_8bit": 0.4782366212893249,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 8,
+          "mean_luma": 123.58074845679012,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.160108024691358e-05,
+          "motion_compensated_flat_mae_8bit": 0.4748237983364023,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 9,
+          "mean_luma": 123.04162808641975,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.028163580246913e-05,
+          "motion_compensated_flat_mae_8bit": 0.4732825400061156,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 10,
+          "mean_luma": 122.53119598765431,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.931712962962963e-05,
+          "motion_compensated_flat_mae_8bit": 0.4690804024597604,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 11,
+          "mean_luma": 122.03467592592592,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.317515432098766e-05,
+          "motion_compensated_flat_mae_8bit": 0.4661168049872369,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 12,
+          "mean_luma": 121.55072530864197,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.221064814814815e-05,
+          "motion_compensated_flat_mae_8bit": 0.4640165642120425,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 13,
+          "mean_luma": 121.07574845679012,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.221064814814815e-05,
+          "motion_compensated_flat_mae_8bit": 0.4611453130444883,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 14,
+          "mean_luma": 120.61425925925926,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.36574074074074e-05,
+          "motion_compensated_flat_mae_8bit": 0.45945805916791876,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 15,
+          "mean_luma": 120.1679475308642,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.124614197530864e-05,
+          "motion_compensated_flat_mae_8bit": 0.4611162295783969,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 16,
+          "mean_luma": 119.73409722222222,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.413966049382716e-05,
+          "motion_compensated_flat_mae_8bit": 0.4560875512995896,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 17,
+          "mean_luma": 119.30775462962963,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.9799382716049385e-05,
+          "motion_compensated_flat_mae_8bit": 0.4563899284140251,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 18,
+          "mean_luma": 118.87996141975309,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.594135802469136e-05,
+          "motion_compensated_flat_mae_8bit": 0.4485323919722822,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 19,
+          "mean_luma": 118.44993055555555,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.317515432098766e-05,
+          "motion_compensated_flat_mae_8bit": 0.4532565294233161,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 20,
+          "mean_luma": 118.03250771604938,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.558641975308642e-05,
+          "motion_compensated_flat_mae_8bit": 0.44911283104301586,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 21,
+          "mean_luma": 117.62698302469136,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.558641975308642e-05,
+          "motion_compensated_flat_mae_8bit": 0.4464078947368421,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 22,
+          "mean_luma": 117.23215277777778,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.606867283950618e-05,
+          "motion_compensated_flat_mae_8bit": 0.44448994148493537,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 23,
+          "mean_luma": 116.84601851851852,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 7.089120370370371e-05,
+          "motion_compensated_flat_mae_8bit": 0.43929500451239584,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 24,
+          "mean_luma": 116.46714506172839,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.690586419753086e-05,
+          "motion_compensated_flat_mae_8bit": 0.4385149579742667,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 25,
+          "mean_luma": 116.09744598765432,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.124614197530864e-05,
+          "motion_compensated_flat_mae_8bit": 0.4344407574727808,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 26,
+          "mean_luma": 115.72658179012346,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.304783950617284e-05,
+          "motion_compensated_flat_mae_8bit": 0.4379923625390552,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 27,
+          "mean_luma": 115.35797839506174,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.3530092592592594e-05,
+          "motion_compensated_flat_mae_8bit": 0.43366582874257903,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 28,
+          "mean_luma": 114.99863425925926,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.642361111111111e-05,
+          "motion_compensated_flat_mae_8bit": 0.42905033926033204,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 29,
+          "mean_luma": 114.6484799382716,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.26929012345679e-05,
+          "motion_compensated_flat_mae_8bit": 0.4301630981945097,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 30,
+          "mean_luma": 114.30540895061728,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.787037037037037e-05,
+          "motion_compensated_flat_mae_8bit": 0.42586246287411467,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 31,
+          "mean_luma": 113.96754629629629,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.208333333333334e-05,
+          "motion_compensated_flat_mae_8bit": 0.42233284003766985,
+          "motion_compensated_flat_p95_8bit": 2.0
+        },
+        {
+          "frame": 32,
+          "mean_luma": 113.62600308641976,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.931712962962963e-05,
+          "motion_compensated_flat_mae_8bit": 0.42238009220565637,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 33,
+          "mean_luma": 113.28836419753087,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.028163580246913e-05,
+          "motion_compensated_flat_mae_8bit": 0.4150581238172479,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 34,
+          "mean_luma": 112.95686728395061,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.076388888888889e-05,
+          "motion_compensated_flat_mae_8bit": 0.41320369443805866,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 35,
+          "mean_luma": 112.63407407407408,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 5.5459104938271606e-05,
+          "motion_compensated_flat_mae_8bit": 0.41345111641014526,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 36,
+          "mean_luma": 112.31800925925926,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.124614197530864e-05,
+          "motion_compensated_flat_mae_8bit": 0.4108101529432447,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 37,
+          "mean_luma": 112.0066512345679,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.799768518518518e-05,
+          "motion_compensated_flat_mae_8bit": 0.4068386956875288,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 38,
+          "mean_luma": 111.70077160493827,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.799768518518518e-05,
+          "motion_compensated_flat_mae_8bit": 0.4035884778127373,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 39,
+          "mean_luma": 111.39851080246913,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.751543209876543e-05,
+          "motion_compensated_flat_mae_8bit": 0.40322187296769996,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 40,
+          "mean_luma": 111.1016512345679,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.751543209876543e-05,
+          "motion_compensated_flat_mae_8bit": 0.4013160572552744,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 41,
+          "mean_luma": 110.80423611111111,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.703317901234568e-05,
+          "motion_compensated_flat_mae_8bit": 0.3992133459921335,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 42,
+          "mean_luma": 110.51894290123457,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 6.99266975308642e-05,
+          "motion_compensated_flat_mae_8bit": 0.3969674776900751,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 43,
+          "mean_luma": 110.23609567901235,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 7.667824074074074e-05,
+          "motion_compensated_flat_mae_8bit": 0.39146585389084676,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 44,
+          "mean_luma": 109.95645833333333,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 7.378472222222222e-05,
+          "motion_compensated_flat_mae_8bit": 0.3889652918669408,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 45,
+          "mean_luma": 109.68226080246913,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 7.667824074074074e-05,
+          "motion_compensated_flat_mae_8bit": 0.3897621157385318,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 46,
+          "mean_luma": 109.41385030864197,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 8.053626543209876e-05,
+          "motion_compensated_flat_mae_8bit": 0.3850472128735131,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 47,
+          "mean_luma": 109.14690586419754,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 8.63233024691358e-05,
+          "motion_compensated_flat_mae_8bit": 0.3847172180369036,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 48,
+          "mean_luma": 108.8848611111111,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 9.211033950617283e-05,
+          "motion_compensated_flat_mae_8bit": 0.3846637335009428,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 49,
+          "mean_luma": 108.62304783950617,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00010223765432098765,
+          "motion_compensated_flat_mae_8bit": 0.37893541945895676,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 50,
+          "mean_luma": 108.36585648148149,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0001080246913580247,
+          "motion_compensated_flat_mae_8bit": 0.3802778422828418,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 51,
+          "mean_luma": 108.11456018518518,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0001080246913580247,
+          "motion_compensated_flat_mae_8bit": 0.3762757716112637,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 52,
+          "mean_luma": 107.87038580246913,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00011284722222222222,
+          "motion_compensated_flat_mae_8bit": 0.37643583852970136,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 53,
+          "mean_luma": 107.63145061728395,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00010657793209876543,
+          "motion_compensated_flat_mae_8bit": 0.37659224763731,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 54,
+          "mean_luma": 107.39627314814815,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0001080246913580247,
+          "motion_compensated_flat_mae_8bit": 0.37153950264535796,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 55,
+          "mean_luma": 107.17407407407407,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00010127314814814815,
+          "motion_compensated_flat_mae_8bit": 0.3746208291203236,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 56,
+          "mean_luma": 106.95512345679012,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 9.837962962962963e-05,
+          "motion_compensated_flat_mae_8bit": 0.37041392607583856,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 57,
+          "mean_luma": 106.74042438271604,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0001017554012345679,
+          "motion_compensated_flat_mae_8bit": 0.36981498979773497,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 58,
+          "mean_luma": 106.5297299382716,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 9.886188271604939e-05,
+          "motion_compensated_flat_mae_8bit": 0.3694898532454542,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 59,
+          "mean_luma": 106.32408179012346,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00010320216049382716,
+          "motion_compensated_flat_mae_8bit": 0.3706075984089974,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 60,
+          "mean_luma": 106.12332561728395,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00010850694444444444,
+          "motion_compensated_flat_mae_8bit": 0.3656527162812376,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 61,
+          "mean_luma": 105.92722993827161,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00010464891975308641,
+          "motion_compensated_flat_mae_8bit": 0.3670167548742699,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 62,
+          "mean_luma": 105.73521604938271,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 9.693287037037037e-05,
+          "motion_compensated_flat_mae_8bit": 0.3626382675047347,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 63,
+          "mean_luma": 105.54467592592593,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 9.35570987654321e-05,
+          "motion_compensated_flat_mae_8bit": 0.3617608301762477,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 64,
+          "mean_luma": 105.3552237654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 9.837962962962963e-05,
+          "motion_compensated_flat_mae_8bit": 0.36156628486874554,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 65,
+          "mean_luma": 105.16949074074074,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00010127314814814815,
+          "motion_compensated_flat_mae_8bit": 0.36053227244666985,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 66,
+          "mean_luma": 104.98425154320988,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00010464891975308641,
+          "motion_compensated_flat_mae_8bit": 0.3570235716045665,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 67,
+          "mean_luma": 104.79558641975309,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00011284722222222222,
+          "motion_compensated_flat_mae_8bit": 0.3572504656513641,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 68,
+          "mean_luma": 104.6083487654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00012779706790123457,
+          "motion_compensated_flat_mae_8bit": 0.35381222432262127,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 69,
+          "mean_luma": 104.42445987654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00015817901234567902,
+          "motion_compensated_flat_mae_8bit": 0.3522384788207573,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 70,
+          "mean_luma": 104.24373456790123,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00015914351851851853,
+          "motion_compensated_flat_mae_8bit": 0.35058620500739607,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 71,
+          "mean_luma": 104.06000771604938,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00017119984567901236,
+          "motion_compensated_flat_mae_8bit": 0.34846222343996164,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 72,
+          "mean_luma": 103.87391975308643,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00019048996913580246,
+          "motion_compensated_flat_mae_8bit": 0.35072277281936154,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 73,
+          "mean_luma": 103.69185956790123,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0001982060185185185,
+          "motion_compensated_flat_mae_8bit": 0.34843745712953056,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 74,
+          "mean_luma": 103.51091049382715,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021749614197530865,
+          "motion_compensated_flat_mae_8bit": 0.34858295152130375,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 75,
+          "mean_luma": 103.32788580246914,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002136381172839506,
+          "motion_compensated_flat_mae_8bit": 0.34572073612916465,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 76,
+          "mean_luma": 103.13881944444445,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00022810570987654322,
+          "motion_compensated_flat_mae_8bit": 0.34789259471714606,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 77,
+          "mean_luma": 102.9445524691358,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002290702160493827,
+          "motion_compensated_flat_mae_8bit": 0.34332335697593375,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 78,
+          "mean_luma": 102.75871913580247,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00022665895061728394,
+          "motion_compensated_flat_mae_8bit": 0.34528694129875814,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 79,
+          "mean_luma": 102.57244598765432,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00022038966049382717,
+          "motion_compensated_flat_mae_8bit": 0.34524902377200795,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 80,
+          "mean_luma": 102.39449074074074,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021026234567901234,
+          "motion_compensated_flat_mae_8bit": 0.34377867561459974,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 81,
+          "mean_luma": 102.21425154320988,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002088155864197531,
+          "motion_compensated_flat_mae_8bit": 0.3393101186246105,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 82,
+          "mean_luma": 102.03551697530864,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021460262345679012,
+          "motion_compensated_flat_mae_8bit": 0.3439912550386008,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 83,
+          "mean_luma": 101.85721450617284,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00022087191358024691,
+          "motion_compensated_flat_mae_8bit": 0.3410806081154982,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 84,
+          "mean_luma": 101.6797762345679,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020302854938271606,
+          "motion_compensated_flat_mae_8bit": 0.3415273680760406,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 85,
+          "mean_luma": 101.50320987654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021412037037037038,
+          "motion_compensated_flat_mae_8bit": 0.340086059695376,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 86,
+          "mean_luma": 101.32739969135802,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020688657407407407,
+          "motion_compensated_flat_mae_8bit": 0.33854180931773986,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 87,
+          "mean_luma": 101.1503163580247,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020833333333333335,
+          "motion_compensated_flat_mae_8bit": 0.34066024195201966,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 88,
+          "mean_luma": 100.97472993827161,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002088155864197531,
+          "motion_compensated_flat_mae_8bit": 0.33560614341932665,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 89,
+          "mean_luma": 100.79788580246914,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021701388888888888,
+          "motion_compensated_flat_mae_8bit": 0.33662878943266195,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 90,
+          "mean_luma": 100.62185185185186,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000193383487654321,
+          "motion_compensated_flat_mae_8bit": 0.33434546523874004,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 91,
+          "mean_luma": 100.44777777777777,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00019290123456790122,
+          "motion_compensated_flat_mae_8bit": 0.3357518344102508,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 92,
+          "mean_luma": 100.27537037037037,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002107445987654321,
+          "motion_compensated_flat_mae_8bit": 0.3363534184988212,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 93,
+          "mean_luma": 100.10161265432099,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020158179012345678,
+          "motion_compensated_flat_mae_8bit": 0.33311821165227185,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 94,
+          "mean_luma": 99.93253086419753,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021653163580246914,
+          "motion_compensated_flat_mae_8bit": 0.33501345931989235,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 95,
+          "mean_luma": 99.76303240740741,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021026234567901234,
+          "motion_compensated_flat_mae_8bit": 0.33224249590935967,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 96,
+          "mean_luma": 99.59729166666666,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002044753086419753,
+          "motion_compensated_flat_mae_8bit": 0.33425516985181825,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 97,
+          "mean_luma": 99.43012345679013,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00019868827160493828,
+          "motion_compensated_flat_mae_8bit": 0.33547756136532686,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 98,
+          "mean_luma": 99.26445987654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020495756172839505,
+          "motion_compensated_flat_mae_8bit": 0.33221721576894986,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 99,
+          "mean_luma": 99.1000848765432,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020785108024691358,
+          "motion_compensated_flat_mae_8bit": 0.33235918502384826,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 100,
+          "mean_luma": 98.93887345679012,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000197241512345679,
+          "motion_compensated_flat_mae_8bit": 0.3323179136571649,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 101,
+          "mean_luma": 98.7689737654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00019868827160493828,
+          "motion_compensated_flat_mae_8bit": 0.3300295001516363,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 102,
+          "mean_luma": 98.58524691358025,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00019145447530864197,
+          "motion_compensated_flat_mae_8bit": 0.332032004414402,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 103,
+          "mean_luma": 98.39756172839506,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002044753086419753,
+          "motion_compensated_flat_mae_8bit": 0.3314860625492337,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 104,
+          "mean_luma": 98.20304012345679,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00019917052469135802,
+          "motion_compensated_flat_mae_8bit": 0.33191489361702126,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 105,
+          "mean_luma": 98.0102237654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020785108024691358,
+          "motion_compensated_flat_mae_8bit": 0.3294267234230748,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 106,
+          "mean_luma": 97.8153086419753,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021846064814814815,
+          "motion_compensated_flat_mae_8bit": 0.3279548371958205,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 107,
+          "mean_luma": 97.61933641975308,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002044753086419753,
+          "motion_compensated_flat_mae_8bit": 0.3292440318302387,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 108,
+          "mean_luma": 97.42185185185186,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002035108024691358,
+          "motion_compensated_flat_mae_8bit": 0.3282455412691829,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 109,
+          "mean_luma": 97.22313271604938,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002035108024691358,
+          "motion_compensated_flat_mae_8bit": 0.32798751260480985,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 110,
+          "mean_luma": 97.026875,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020158179012345678,
+          "motion_compensated_flat_mae_8bit": 0.3304912314698188,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 111,
+          "mean_luma": 96.8286574074074,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0001962770061728395,
+          "motion_compensated_flat_mae_8bit": 0.3300185333739039,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 112,
+          "mean_luma": 96.63023919753087,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020736882716049384,
+          "motion_compensated_flat_mae_8bit": 0.3286865274932167,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 113,
+          "mean_luma": 96.43041666666667,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002199074074074074,
+          "motion_compensated_flat_mae_8bit": 0.32737484398835115,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 114,
+          "mean_luma": 96.23150462962963,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020736882716049384,
+          "motion_compensated_flat_mae_8bit": 0.3313424976442548,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 115,
+          "mean_luma": 96.03519290123457,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00022762345679012345,
+          "motion_compensated_flat_mae_8bit": 0.33052433159156747,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 116,
+          "mean_luma": 95.83693672839506,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021026234567901234,
+          "motion_compensated_flat_mae_8bit": 0.33084122500969154,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 117,
+          "mean_luma": 95.63765432098765,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020592206790123456,
+          "motion_compensated_flat_mae_8bit": 0.3315106041309043,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 118,
+          "mean_luma": 95.43957561728395,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021122685185185185,
+          "motion_compensated_flat_mae_8bit": 0.33096450927866533,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 119,
+          "mean_luma": 95.24053240740741,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021701388888888888,
+          "motion_compensated_flat_mae_8bit": 0.33125997917389793,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 120,
+          "mean_luma": 95.04079475308642,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021122685185185185,
+          "motion_compensated_flat_mae_8bit": 0.33169993614481247,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 121,
+          "mean_luma": 94.83817901234568,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020302854938271606,
+          "motion_compensated_flat_mae_8bit": 0.3330742216237976,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 122,
+          "mean_luma": 94.63713734567901,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020640432098765433,
+          "motion_compensated_flat_mae_8bit": 0.3368498596169349,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 123,
+          "mean_luma": 94.43508487654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021412037037037038,
+          "motion_compensated_flat_mae_8bit": 0.3357265859348961,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 124,
+          "mean_luma": 94.23355709876543,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002189429012345679,
+          "motion_compensated_flat_mae_8bit": 0.3330692684011563,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 125,
+          "mean_luma": 94.03074845679012,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002088155864197531,
+          "motion_compensated_flat_mae_8bit": 0.3341815097540288,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 126,
+          "mean_luma": 93.82568672839506,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0001982060185185185,
+          "motion_compensated_flat_mae_8bit": 0.3350212144397301,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 127,
+          "mean_luma": 93.62148919753086,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020833333333333335,
+          "motion_compensated_flat_mae_8bit": 0.3356766011943706,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 128,
+          "mean_luma": 93.41653549382715,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00020109953703703704,
+          "motion_compensated_flat_mae_8bit": 0.3380244475656733,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 129,
+          "mean_luma": 93.20994598765432,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021026234567901234,
+          "motion_compensated_flat_mae_8bit": 0.33694986924831694,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 130,
+          "mean_luma": 93.00520833333333,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00022376543209876544,
+          "motion_compensated_flat_mae_8bit": 0.3398404439819632,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 131,
+          "mean_luma": 92.79743827160493,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021797839506172839,
+          "motion_compensated_flat_mae_8bit": 0.33378265703168425,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 132,
+          "mean_luma": 92.59027006172839,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00022810570987654322,
+          "motion_compensated_flat_mae_8bit": 0.3380007508655812,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 133,
+          "mean_luma": 92.3828163580247,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00021942515432098766,
+          "motion_compensated_flat_mae_8bit": 0.3388230708190057,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 134,
+          "mean_luma": 92.17548611111111,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00022038966049382717,
+          "motion_compensated_flat_mae_8bit": 0.3381698910384701,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 135,
+          "mean_luma": 91.96842592592593,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00023051697530864198,
+          "motion_compensated_flat_mae_8bit": 0.338695996774059,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 136,
+          "mean_luma": 91.75693672839506,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00023196373456790123,
+          "motion_compensated_flat_mae_8bit": 0.33540753114776917,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 137,
+          "mean_luma": 91.55066358024692,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00024305555555555555,
+          "motion_compensated_flat_mae_8bit": 0.33829104695246426,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 138,
+          "mean_luma": 91.34264660493827,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002546296296296296,
+          "motion_compensated_flat_mae_8bit": 0.3373870743571925,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 139,
+          "mean_luma": 91.13425154320987,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002507716049382716,
+          "motion_compensated_flat_mae_8bit": 0.3353874831332508,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 140,
+          "mean_luma": 90.92475308641976,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002700617283950617,
+          "motion_compensated_flat_mae_8bit": 0.3370985018153491,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 141,
+          "mean_luma": 90.71856481481481,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002777777777777778,
+          "motion_compensated_flat_mae_8bit": 0.3386358259223693,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 142,
+          "mean_luma": 90.51145061728396,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00026765046296296297,
+          "motion_compensated_flat_mae_8bit": 0.3386551229764904,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 143,
+          "mean_luma": 90.30279320987654,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00030092592592592595,
+          "motion_compensated_flat_mae_8bit": 0.33540096859692214,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 144,
+          "mean_luma": 90.09603395061728,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0002961033950617284,
+          "motion_compensated_flat_mae_8bit": 0.33810840477414517,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 145,
+          "mean_luma": 89.88912037037036,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00028935185185185184,
+          "motion_compensated_flat_mae_8bit": 0.3395720811407467,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 146,
+          "mean_luma": 89.68163580246913,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0003129822530864198,
+          "motion_compensated_flat_mae_8bit": 0.3402661998443926,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 147,
+          "mean_luma": 89.47444444444444,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00032841435185185187,
+          "motion_compensated_flat_mae_8bit": 0.33845683897752044,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 148,
+          "mean_luma": 89.26547839506173,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0003235918209876543,
+          "motion_compensated_flat_mae_8bit": 0.3367455924985782,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 149,
+          "mean_luma": 89.05871141975308,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0003303433641975309,
+          "motion_compensated_flat_mae_8bit": 0.337075685364532,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 150,
+          "mean_luma": 88.85226851851851,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00032937885802469135,
+          "motion_compensated_flat_mae_8bit": 0.3383599461731615,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 151,
+          "mean_luma": 88.64554012345678,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00033998842592592593,
+          "motion_compensated_flat_mae_8bit": 0.3404134216261991,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 152,
+          "mean_luma": 88.43827160493827,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00034770447530864195,
+          "motion_compensated_flat_mae_8bit": 0.33946151603093716,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 153,
+          "mean_luma": 88.233387345679,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00033130787037037037,
+          "motion_compensated_flat_mae_8bit": 0.3375137147063317,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 154,
+          "mean_luma": 88.0272299382716,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0003452932098765432,
+          "motion_compensated_flat_mae_8bit": 0.33656413394148404,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 155,
+          "mean_luma": 87.82261574074074,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0003351658950617284,
+          "motion_compensated_flat_mae_8bit": 0.34008377951008406,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 156,
+          "mean_luma": 87.62000771604939,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0003505979938271605,
+          "motion_compensated_flat_mae_8bit": 0.33875846375846375,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 157,
+          "mean_luma": 87.41667438271605,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0003631365740740741,
+          "motion_compensated_flat_mae_8bit": 0.3403298974792947,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 158,
+          "mean_luma": 87.21648919753086,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0003433641975308642,
+          "motion_compensated_flat_mae_8bit": 0.33733536669901565,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 159,
+          "mean_luma": 87.01195216049383,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0003481867283950617,
+          "motion_compensated_flat_mae_8bit": 0.33930550936703247,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 160,
+          "mean_luma": 86.81076388888889,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00040123456790123454,
+          "motion_compensated_flat_mae_8bit": 0.33611696815003883,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 161,
+          "mean_luma": 86.6122762345679,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0003563850308641975,
+          "motion_compensated_flat_mae_8bit": 0.33711747970300465,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 162,
+          "mean_luma": 86.41752314814815,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0003559027777777778,
+          "motion_compensated_flat_mae_8bit": 0.3386310776387197,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 163,
+          "mean_luma": 86.22096450617283,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0003766396604938272,
+          "motion_compensated_flat_mae_8bit": 0.3362763278071462,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 164,
+          "mean_luma": 86.0221450617284,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00036651234567901237,
+          "motion_compensated_flat_mae_8bit": 0.3356910061715554,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 165,
+          "mean_luma": 85.82693672839507,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00038194444444444446,
+          "motion_compensated_flat_mae_8bit": 0.3352862148723702,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 166,
+          "mean_luma": 85.62933641975309,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00039110725308641974,
+          "motion_compensated_flat_mae_8bit": 0.3369435749702224,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 167,
+          "mean_luma": 85.4395524691358,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0004041280864197531,
+          "motion_compensated_flat_mae_8bit": 0.3356781832029357,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 168,
+          "mean_luma": 85.24689814814815,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000390625,
+          "motion_compensated_flat_mae_8bit": 0.3336747263089422,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 169,
+          "mean_luma": 85.05471450617284,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0004070216049382716,
+          "motion_compensated_flat_mae_8bit": 0.33557873188004866,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 170,
+          "mean_luma": 84.86483024691358,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0004041280864197531,
+          "motion_compensated_flat_mae_8bit": 0.3344380463150918,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 171,
+          "mean_luma": 84.67387345679012,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0003949652777777778,
+          "motion_compensated_flat_mae_8bit": 0.3321999695926801,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 172,
+          "mean_luma": 84.48577160493826,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0004123263888888889,
+          "motion_compensated_flat_mae_8bit": 0.3335821617661289,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 173,
+          "mean_luma": 84.29706018518519,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0004070216049382716,
+          "motion_compensated_flat_mae_8bit": 0.33063969336783405,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 174,
+          "mean_luma": 84.10895061728395,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0004224537037037037,
+          "motion_compensated_flat_mae_8bit": 0.3316210991438829,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 175,
+          "mean_luma": 83.91810185185186,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00042920524691358023,
+          "motion_compensated_flat_mae_8bit": 0.33043478260869563,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 176,
+          "mean_luma": 83.73422839506173,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00043836805555555556,
+          "motion_compensated_flat_mae_8bit": 0.33132954686787447,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 177,
+          "mean_luma": 83.54820987654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00044367283950617285,
+          "motion_compensated_flat_mae_8bit": 0.33154710935557824,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 178,
+          "mean_luma": 83.36412037037037,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00045138888888888887,
+          "motion_compensated_flat_mae_8bit": 0.3266399668554067,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 179,
+          "mean_luma": 83.18157407407408,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00047019675925925923,
+          "motion_compensated_flat_mae_8bit": 0.3299893453624652,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 180,
+          "mean_luma": 83.00051697530864,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00046440972222222223,
+          "motion_compensated_flat_mae_8bit": 0.32936409150001383,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 181,
+          "mean_luma": 82.82311728395062,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0004962384259259259,
+          "motion_compensated_flat_mae_8bit": 0.327576909782233,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 182,
+          "mean_luma": 82.64290895061728,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.00048755787037037035,
+          "motion_compensated_flat_mae_8bit": 0.3294775293336285,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 183,
+          "mean_luma": 82.4657175925926,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0004967206790123457,
+          "motion_compensated_flat_mae_8bit": 0.3257611435853395,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 184,
+          "mean_luma": 82.2928163580247,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0005049189814814815,
+          "motion_compensated_flat_mae_8bit": 0.32449835902122887,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 185,
+          "mean_luma": 82.11788580246913,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0005145640432098766,
+          "motion_compensated_flat_mae_8bit": 0.32752613240418116,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 186,
+          "mean_luma": 81.94652777777777,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000519386574074074,
+          "motion_compensated_flat_mae_8bit": 0.3226039080810462,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 187,
+          "mean_luma": 81.77733024691358,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0005362654320987655,
+          "motion_compensated_flat_mae_8bit": 0.32564429772241793,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 188,
+          "mean_luma": 81.6053549382716,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0005372299382716049,
+          "motion_compensated_flat_mae_8bit": 0.32372803794045457,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 189,
+          "mean_luma": 81.43240740740741,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0005516975308641975,
+          "motion_compensated_flat_mae_8bit": 0.32205790460320766,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 190,
+          "mean_luma": 81.25912037037037,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0005695408950617284,
+          "motion_compensated_flat_mae_8bit": 0.32147763700198445,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 191,
+          "mean_luma": 81.0884799382716,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0005782214506172839,
+          "motion_compensated_flat_mae_8bit": 0.3223538891127072,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 192,
+          "mean_luma": 80.91703703703703,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000589795524691358,
+          "motion_compensated_flat_mae_8bit": 0.320618199459422,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 193,
+          "mean_luma": 80.74670524691358,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0005979938271604939,
+          "motion_compensated_flat_mae_8bit": 0.3195932071702092,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 194,
+          "mean_luma": 80.57234567901234,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0006095679012345679,
+          "motion_compensated_flat_mae_8bit": 0.3179558394667407,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 195,
+          "mean_luma": 80.40047067901234,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0006471836419753086,
+          "motion_compensated_flat_mae_8bit": 0.3170765558207961,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 196,
+          "mean_luma": 80.22560185185185,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0006819058641975308,
+          "motion_compensated_flat_mae_8bit": 0.3159442810366835,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 197,
+          "mean_luma": 80.04976851851852,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0007074652777777778,
+          "motion_compensated_flat_mae_8bit": 0.3148168701442841,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 198,
+          "mean_luma": 79.87334104938272,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0007118055555555556,
+          "motion_compensated_flat_mae_8bit": 0.3162489088415014,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 199,
+          "mean_luma": 79.69677469135803,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0007542438271604938,
+          "motion_compensated_flat_mae_8bit": 0.3128590857364901,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 200,
+          "mean_luma": 79.5161188271605,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000738329475308642,
+          "motion_compensated_flat_mae_8bit": 0.3098789090707104,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 201,
+          "mean_luma": 79.33601851851851,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0007542438271604938,
+          "motion_compensated_flat_mae_8bit": 0.31202536927313695,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 202,
+          "mean_luma": 79.15376543209877,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0007725694444444444,
+          "motion_compensated_flat_mae_8bit": 0.3123244626122744,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 203,
+          "mean_luma": 78.96722222222222,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0007995756172839506,
+          "motion_compensated_flat_mae_8bit": 0.3099437929359517,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 204,
+          "mean_luma": 78.77753858024691,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0007937885802469136,
+          "motion_compensated_flat_mae_8bit": 0.30510739591018554,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 205,
+          "mean_luma": 78.58405092592592,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008121141975308642,
+          "motion_compensated_flat_mae_8bit": 0.307333963733452,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 206,
+          "mean_luma": 78.39430555555556,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008198302469135802,
+          "motion_compensated_flat_mae_8bit": 0.3085510622954457,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 207,
+          "mean_luma": 78.20550154320988,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008309220679012345,
+          "motion_compensated_flat_mae_8bit": 0.3029363943356634,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 208,
+          "mean_luma": 78.02070216049383,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008371913580246913,
+          "motion_compensated_flat_mae_8bit": 0.3018627165425318,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 209,
+          "mean_luma": 77.83863425925927,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008511766975308642,
+          "motion_compensated_flat_mae_8bit": 0.29846938775510207,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 210,
+          "mean_luma": 77.65512345679012,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008429783950617284,
+          "motion_compensated_flat_mae_8bit": 0.3011124536477647,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 211,
+          "mean_luma": 77.4745138888889,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008762538580246914,
+          "motion_compensated_flat_mae_8bit": 0.29882441116462405,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 212,
+          "mean_luma": 77.29761574074074,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008420138888888889,
+          "motion_compensated_flat_mae_8bit": 0.30128187342193613,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 213,
+          "mean_luma": 77.11891203703703,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008511766975308642,
+          "motion_compensated_flat_mae_8bit": 0.2980621389885446,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 214,
+          "mean_luma": 76.93983024691359,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000861304012345679,
+          "motion_compensated_flat_mae_8bit": 0.29513369872114265,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 215,
+          "mean_luma": 76.76618827160493,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000849729938271605,
+          "motion_compensated_flat_mae_8bit": 0.29405819973973474,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 216,
+          "mean_luma": 76.5898225308642,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008960262345679012,
+          "motion_compensated_flat_mae_8bit": 0.2906735320986629,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 217,
+          "mean_luma": 76.42025462962962,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008757716049382716,
+          "motion_compensated_flat_mae_8bit": 0.2910908107958247,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 218,
+          "mean_luma": 76.24783950617284,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008854166666666666,
+          "motion_compensated_flat_mae_8bit": 0.2903516057585825,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 219,
+          "mean_luma": 76.07966820987654,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0009109760802469136,
+          "motion_compensated_flat_mae_8bit": 0.28944634521352486,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 220,
+          "mean_luma": 75.91160493827161,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008825231481481481,
+          "motion_compensated_flat_mae_8bit": 0.28535426965203065,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 221,
+          "mean_luma": 75.74787037037036,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008878279320987655,
+          "motion_compensated_flat_mae_8bit": 0.28761452698973394,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 222,
+          "mean_luma": 75.58414351851852,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008916859567901235,
+          "motion_compensated_flat_mae_8bit": 0.2851216240510005,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 223,
+          "mean_luma": 75.42125,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008820408950617284,
+          "motion_compensated_flat_mae_8bit": 0.2851617003053034,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 224,
+          "mean_luma": 75.26033179012346,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000874807098765432,
+          "motion_compensated_flat_mae_8bit": 0.2808215399045491,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 225,
+          "mean_luma": 75.1006712962963,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008781828703703704,
+          "motion_compensated_flat_mae_8bit": 0.27841897451473063,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 226,
+          "mean_luma": 74.94284722222223,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008916859567901235,
+          "motion_compensated_flat_mae_8bit": 0.27872496100059363,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 227,
+          "mean_luma": 74.78465277777778,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008656442901234568,
+          "motion_compensated_flat_mae_8bit": 0.2762517073439936,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 228,
+          "mean_luma": 74.62907407407407,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008805941358024692,
+          "motion_compensated_flat_mae_8bit": 0.2714756721709501,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 229,
+          "mean_luma": 74.47212962962963,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000863233024691358,
+          "motion_compensated_flat_mae_8bit": 0.2747926483150092,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 230,
+          "mean_luma": 74.31713734567901,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008878279320987655,
+          "motion_compensated_flat_mae_8bit": 0.27139681619240913,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 231,
+          "mean_luma": 74.1626774691358,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008661265432098765,
+          "motion_compensated_flat_mae_8bit": 0.26978442041462913,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 232,
+          "mean_luma": 74.00878858024691,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008940972222222222,
+          "motion_compensated_flat_mae_8bit": 0.2676180505812992,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 233,
+          "mean_luma": 73.85747685185186,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008661265432098765,
+          "motion_compensated_flat_mae_8bit": 0.2680680956647598,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 234,
+          "mean_luma": 73.70519290123457,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008622685185185185,
+          "motion_compensated_flat_mae_8bit": 0.2630119601053924,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 235,
+          "mean_luma": 73.55211419753087,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008579282407407407,
+          "motion_compensated_flat_mae_8bit": 0.2631702048622099,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 236,
+          "mean_luma": 73.39917438271605,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000865162037037037,
+          "motion_compensated_flat_mae_8bit": 0.26141158948616816,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 237,
+          "mean_luma": 73.25091820987655,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008569637345679013,
+          "motion_compensated_flat_mae_8bit": 0.2586979604782327,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 238,
+          "mean_luma": 73.09976080246913,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008733603395061728,
+          "motion_compensated_flat_mae_8bit": 0.2599895354280836,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 239,
+          "mean_luma": 72.95270061728395,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008762538580246914,
+          "motion_compensated_flat_mae_8bit": 0.2571090536394778,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 240,
+          "mean_luma": 72.80605709876544,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008815586419753087,
+          "motion_compensated_flat_mae_8bit": 0.25435996415523543,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 241,
+          "mean_luma": 72.66418981481482,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008777006172839507,
+          "motion_compensated_flat_mae_8bit": 0.251479452808896,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 242,
+          "mean_luma": 72.52022376543209,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008815586419753087,
+          "motion_compensated_flat_mae_8bit": 0.2520450601812323,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 243,
+          "mean_luma": 72.37831790123457,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008815586419753087,
+          "motion_compensated_flat_mae_8bit": 0.24956634268564662,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 244,
+          "mean_luma": 72.2372762345679,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008830054012345679,
+          "motion_compensated_flat_mae_8bit": 0.2443704233882068,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 245,
+          "mean_luma": 72.09791666666666,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000896508487654321,
+          "motion_compensated_flat_mae_8bit": 0.2464533157373804,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 246,
+          "mean_luma": 71.95981481481482,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008940972222222222,
+          "motion_compensated_flat_mae_8bit": 0.24132624318122484,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 247,
+          "mean_luma": 71.8224537037037,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000884934413580247,
+          "motion_compensated_flat_mae_8bit": 0.24100857897052352,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 248,
+          "mean_luma": 71.68644290123457,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000857445987654321,
+          "motion_compensated_flat_mae_8bit": 0.23863464525796296,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 249,
+          "mean_luma": 71.55229166666666,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008579282407407407,
+          "motion_compensated_flat_mae_8bit": 0.23639334358523725,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 250,
+          "mean_luma": 71.41780864197531,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008502121913580247,
+          "motion_compensated_flat_mae_8bit": 0.23461691692654313,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 251,
+          "mean_luma": 71.28636574074073,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008371913580246913,
+          "motion_compensated_flat_mae_8bit": 0.23309075930248524,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 252,
+          "mean_luma": 71.15570987654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008521412037037037,
+          "motion_compensated_flat_mae_8bit": 0.23305061484409312,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 253,
+          "mean_luma": 71.0279475308642,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008545524691358024,
+          "motion_compensated_flat_mae_8bit": 0.2298806367869456,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 254,
+          "mean_luma": 70.90188271604939,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008564814814814815,
+          "motion_compensated_flat_mae_8bit": 0.22592465518424484,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 255,
+          "mean_luma": 70.77417438271605,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008516589506172839,
+          "motion_compensated_flat_mae_8bit": 0.22589588394339907,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 256,
+          "mean_luma": 70.64648148148149,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008675733024691358,
+          "motion_compensated_flat_mae_8bit": 0.22437118771845657,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 257,
+          "mean_luma": 70.52388888888889,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008617862654320987,
+          "motion_compensated_flat_mae_8bit": 0.22164581565331654,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 258,
+          "mean_luma": 70.4020987654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008637152777777778,
+          "motion_compensated_flat_mae_8bit": 0.22018813413114618,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 259,
+          "mean_luma": 70.28135030864198,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000865162037037037,
+          "motion_compensated_flat_mae_8bit": 0.21755537325676785,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 260,
+          "mean_luma": 70.16086419753087,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008531057098765432,
+          "motion_compensated_flat_mae_8bit": 0.21704694681549574,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 261,
+          "mean_luma": 70.04193672839506,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008622685185185185,
+          "motion_compensated_flat_mae_8bit": 0.2116234823909443,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 262,
+          "mean_luma": 69.92604938271604,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008709490740740741,
+          "motion_compensated_flat_mae_8bit": 0.20862413443906178,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 263,
+          "mean_luma": 69.8111574074074,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000853587962962963,
+          "motion_compensated_flat_mae_8bit": 0.20618880927637695,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 264,
+          "mean_luma": 69.6977237654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008584104938271605,
+          "motion_compensated_flat_mae_8bit": 0.20506443281358896,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 265,
+          "mean_luma": 69.58478395061728,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008608217592592593,
+          "motion_compensated_flat_mae_8bit": 0.20461303434541833,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 266,
+          "mean_luma": 69.47497685185185,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000857445987654321,
+          "motion_compensated_flat_mae_8bit": 0.19973539561084058,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 267,
+          "mean_luma": 69.36597222222223,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008478009259259259,
+          "motion_compensated_flat_mae_8bit": 0.19873903134680732,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 268,
+          "mean_luma": 69.25886574074075,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000863233024691358,
+          "motion_compensated_flat_mae_8bit": 0.19586223815299905,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 269,
+          "mean_luma": 69.15111882716049,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008719135802469135,
+          "motion_compensated_flat_mae_8bit": 0.19426755934930526,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 270,
+          "mean_luma": 69.04807870370371,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000874807098765432,
+          "motion_compensated_flat_mae_8bit": 0.1887544173227272,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 271,
+          "mean_luma": 68.94473765432099,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008670910493827161,
+          "motion_compensated_flat_mae_8bit": 0.18989945778044195,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 272,
+          "mean_luma": 68.84190586419753,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000863233024691358,
+          "motion_compensated_flat_mae_8bit": 0.18799460615388808,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 273,
+          "mean_luma": 68.74198302469136,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008487654320987654,
+          "motion_compensated_flat_mae_8bit": 0.18281821519383218,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 274,
+          "mean_luma": 68.64135030864198,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000857445987654321,
+          "motion_compensated_flat_mae_8bit": 0.18165984024820042,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 275,
+          "mean_luma": 68.54500771604938,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000861304012345679,
+          "motion_compensated_flat_mae_8bit": 0.18076258150583302,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 276,
+          "mean_luma": 68.44815586419753,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008825231481481481,
+          "motion_compensated_flat_mae_8bit": 0.1742191535053144,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 277,
+          "mean_luma": 68.35435185185185,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008559992283950617,
+          "motion_compensated_flat_mae_8bit": 0.1757938396681852,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 278,
+          "mean_luma": 68.2600925925926,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008424961419753087,
+          "motion_compensated_flat_mae_8bit": 0.17150066473125866,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 279,
+          "mean_luma": 68.17067129629629,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008637152777777778,
+          "motion_compensated_flat_mae_8bit": 0.16786329890470827,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 280,
+          "mean_luma": 68.08107253086419,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008492476851851852,
+          "motion_compensated_flat_mae_8bit": 0.16671417905382474,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 281,
+          "mean_luma": 67.99188271604939,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000855516975308642,
+          "motion_compensated_flat_mae_8bit": 0.1671644222415291,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 282,
+          "mean_luma": 67.90576388888888,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008559992283950617,
+          "motion_compensated_flat_mae_8bit": 0.16109261398382824,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 283,
+          "mean_luma": 67.82163580246913,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008328510802469136,
+          "motion_compensated_flat_mae_8bit": 0.16098063676303087,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 284,
+          "mean_luma": 67.7369212962963,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008304398148148148,
+          "motion_compensated_flat_mae_8bit": 0.1568502355129023,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 285,
+          "mean_luma": 67.65746913580247,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008381558641975309,
+          "motion_compensated_flat_mae_8bit": 0.1552966072954678,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 286,
+          "mean_luma": 67.5742361111111,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008492476851851852,
+          "motion_compensated_flat_mae_8bit": 0.15424537250331988,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 287,
+          "mean_luma": 67.49694444444444,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008588927469135802,
+          "motion_compensated_flat_mae_8bit": 0.14842469001964903,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 288,
+          "mean_luma": 67.41869598765432,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008545524691358024,
+          "motion_compensated_flat_mae_8bit": 0.1469443125551109,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 289,
+          "mean_luma": 67.34414351851852,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008405671296296296,
+          "motion_compensated_flat_mae_8bit": 0.14364057358735832,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 290,
+          "mean_luma": 67.26933641975309,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008391203703703704,
+          "motion_compensated_flat_mae_8bit": 0.14170927684441198,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 291,
+          "mean_luma": 67.19773919753086,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008439429012345679,
+          "motion_compensated_flat_mae_8bit": 0.14058916916563768,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 292,
+          "mean_luma": 67.1291975308642,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008482831790123457,
+          "motion_compensated_flat_mae_8bit": 0.1355529938292534,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 293,
+          "mean_luma": 67.06040895061729,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008487654320987654,
+          "motion_compensated_flat_mae_8bit": 0.13333333333333333,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 294,
+          "mean_luma": 66.99262345679013,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008492476851851852,
+          "motion_compensated_flat_mae_8bit": 0.13213835711092142,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 295,
+          "mean_luma": 66.92881944444444,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008453896604938272,
+          "motion_compensated_flat_mae_8bit": 0.12962687274154475,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 296,
+          "mean_luma": 66.8651774691358,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008357445987654321,
+          "motion_compensated_flat_mae_8bit": 0.1254010586594826,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 297,
+          "mean_luma": 66.80436728395061,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008294753086419753,
+          "motion_compensated_flat_mae_8bit": 0.12262233783124696,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 298,
+          "mean_luma": 66.74355709876544,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008342978395061728,
+          "motion_compensated_flat_mae_8bit": 0.12235195318849217,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 299,
+          "mean_luma": 66.6855864197531,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008265817901234567,
+          "motion_compensated_flat_mae_8bit": 0.11791401596499047,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 300,
+          "mean_luma": 66.63119598765432,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008198302469135802,
+          "motion_compensated_flat_mae_8bit": 0.11169017516311558,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 301,
+          "mean_luma": 66.57572530864198,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008318865740740741,
+          "motion_compensated_flat_mae_8bit": 0.11112916108245678,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 302,
+          "mean_luma": 66.52173611111111,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008265817901234567,
+          "motion_compensated_flat_mae_8bit": 0.10785507481667884,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 303,
+          "mean_luma": 66.47123456790123,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008275462962962963,
+          "motion_compensated_flat_mae_8bit": 0.10527952409923612,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 304,
+          "mean_luma": 66.4224074074074,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008251350308641975,
+          "motion_compensated_flat_mae_8bit": 0.10003514748425123,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 305,
+          "mean_luma": 66.37271604938272,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008304398148148148,
+          "motion_compensated_flat_mae_8bit": 0.09907840328639766,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 306,
+          "mean_luma": 66.32710648148148,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008400848765432099,
+          "motion_compensated_flat_mae_8bit": 0.09704305069634873,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 307,
+          "mean_luma": 66.28409722222223,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008468364197530865,
+          "motion_compensated_flat_mae_8bit": 0.09301948490662919,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 308,
+          "mean_luma": 66.24094907407408,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008318865740740741,
+          "motion_compensated_flat_mae_8bit": 0.09056863964524241,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 309,
+          "mean_luma": 66.20132716049383,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008275462962962963,
+          "motion_compensated_flat_mae_8bit": 0.0862399697403615,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 310,
+          "mean_luma": 66.16141203703704,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008478009259259259,
+          "motion_compensated_flat_mae_8bit": 0.0833513425900913,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 311,
+          "mean_luma": 66.1244675925926,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008352623456790124,
+          "motion_compensated_flat_mae_8bit": 0.08121464158891754,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 312,
+          "mean_luma": 66.08881944444444,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008304398148148148,
+          "motion_compensated_flat_mae_8bit": 0.07833976938240933,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 313,
+          "mean_luma": 66.05553240740741,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.000829957561728395,
+          "motion_compensated_flat_mae_8bit": 0.07301535886846439,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 314,
+          "mean_luma": 66.02334104938272,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008111496913580247,
+          "motion_compensated_flat_mae_8bit": 0.07122126378595824,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 315,
+          "mean_luma": 65.99365740740741,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008251350308641975,
+          "motion_compensated_flat_mae_8bit": 0.06592797783933518,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 316,
+          "mean_luma": 65.96641203703703,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008246527777777778,
+          "motion_compensated_flat_mae_8bit": 0.06423432682425488,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 317,
+          "mean_luma": 65.93956018518519,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008236882716049382,
+          "motion_compensated_flat_mae_8bit": 0.06093112486152017,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 318,
+          "mean_luma": 65.91524691358025,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008270640432098765,
+          "motion_compensated_flat_mae_8bit": 0.05567625190602777,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 319,
+          "mean_luma": 65.89280092592593,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008275462962962963,
+          "motion_compensated_flat_mae_8bit": 0.051644714623438025,
+          "motion_compensated_flat_p95_8bit": 1.0
+        },
+        {
+          "frame": 320,
+          "mean_luma": 65.87344135802469,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008342978395061728,
+          "motion_compensated_flat_mae_8bit": 0.048676506300423625,
+          "motion_compensated_flat_p95_8bit": 0.0
+        },
+        {
+          "frame": 321,
+          "mean_luma": 65.85519290123457,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008386381172839506,
+          "motion_compensated_flat_mae_8bit": 0.04355743808341877,
+          "motion_compensated_flat_p95_8bit": 0.0
+        },
+        {
+          "frame": 322,
+          "mean_luma": 65.83752314814815,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008463541666666667,
+          "motion_compensated_flat_mae_8bit": 0.04064996760958756,
+          "motion_compensated_flat_p95_8bit": 0.0
+        },
+        {
+          "frame": 323,
+          "mean_luma": 65.82376543209877,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008449074074074074,
+          "motion_compensated_flat_mae_8bit": 0.037597537597537596,
+          "motion_compensated_flat_p95_8bit": 0.0
+        },
+        {
+          "frame": 324,
+          "mean_luma": 65.81047839506172,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008362268518518519,
+          "motion_compensated_flat_mae_8bit": 0.035590406651100644,
+          "motion_compensated_flat_p95_8bit": 0.0
+        },
+        {
+          "frame": 325,
+          "mean_luma": 65.79864197530864,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008367091049382717,
+          "motion_compensated_flat_mae_8bit": 0.02944828330814079,
+          "motion_compensated_flat_p95_8bit": 0.0
+        },
+        {
+          "frame": 326,
+          "mean_luma": 65.79033950617284,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008342978395061728,
+          "motion_compensated_flat_mae_8bit": 0.026353785742237575,
+          "motion_compensated_flat_p95_8bit": 0.0
+        },
+        {
+          "frame": 327,
+          "mean_luma": 65.78364197530864,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008342978395061728,
+          "motion_compensated_flat_mae_8bit": 0.022553145570303225,
+          "motion_compensated_flat_p95_8bit": 0.0
+        },
+        {
+          "frame": 328,
+          "mean_luma": 65.77883487654321,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008333333333333334,
+          "motion_compensated_flat_mae_8bit": 0.017318586458052333,
+          "motion_compensated_flat_p95_8bit": 0.0
+        },
+        {
+          "frame": 329,
+          "mean_luma": 65.77589506172839,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008362268518518519,
+          "motion_compensated_flat_mae_8bit": 0.013983845085426865,
+          "motion_compensated_flat_p95_8bit": 0.0
+        },
+        {
+          "frame": 330,
+          "mean_luma": 65.77474537037037,
+          "clipped_white_fraction": 0.0,
+          "clipped_black_fraction": 0.0008304398148148148,
+          "motion_compensated_flat_mae_8bit": 0.009199309377360526,
+          "motion_compensated_flat_p95_8bit": 0.0
+        }
+      ]
+    }
+  },
+  "created": "2026-10-20 15:08:47",
+  "still_4k": {
+    "path": "D:\\MAOGAI\\assets\\renders\\desk_close\\still_4k.png",
+    "size": [
+      3840,
+      2160
+    ],
+    "mode": "RGB",
+    "sha256": "b06362dfd60fc3d3ae8bb467c69e04974307f126a623f19c25886d39ac1aca67"
+  },
+  "pass": true
+}
