@@ -57,6 +57,14 @@ for scene in bpy.data.scenes:
         "camera_max_step_mm":max(speeds)*1000,
         "camera_last_step_mm":speeds[-1]*1000,
     }
+    mug_objects=[o for o in scene.objects if o.get("prop_family")=="enamel_mug"]
+    if mug_objects:
+        lowest=[]
+        for o in mug_objects:
+            ev=o.evaluated_get(dg);me=ev.to_mesh()
+            lowest.extend((o.matrix_world@v.co).z for v in me.vertices)
+            ev.to_mesh_clear()
+        entry["mug_lowest_surface_mm"]=min(lowest)*1000
     if scene.name=="desk_open":
         sheet=next(o for o in pages if o.name=="Open right leaf 07")
         def world_at(sx,sy):

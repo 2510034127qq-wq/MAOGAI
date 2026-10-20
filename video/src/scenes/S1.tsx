@@ -150,7 +150,7 @@ export const S1: React.FC = () => {
         <Cards />
       </Fade>
       <Fade a={b3.a - 4} b={b4.a + 10} fi={16} fo={18}>
-        <FrameSeq shot="desk_open" rate={180 / (b4.a - b3.a + 10)} />
+        <FrameSeq shot="desk_open" />
       </Fade>
       <Fade a={b4.a - 8} b={b5.a + 6}>
         <ScanFocus marks={[{ page: "p07", find: "要把国内外一切积极因素调动起来，为社会主义事业服务" }]} establish at={b4.a - b4.a + 46} dur={b4.d - 60} len={b5.a - b4.a + 14} seed={41} />

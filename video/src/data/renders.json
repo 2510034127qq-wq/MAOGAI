@@ -5,5 +5,8 @@
  "img:neidi": 1,
  "img:nongqingzhong": 1,
  "img:yanhai": 1,
- "steelyard_balance": 23
+ "desk_close": 65,
+ "desk_open": 180,
+ "steelyard_balance": 300,
+ "steelyard_detail": 150
 }

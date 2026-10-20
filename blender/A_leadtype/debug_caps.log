@@ -1,11 +1,8 @@
-00:00.641  blend            | Read blend: "D:\MAOGAI\blender\A_leadtype\leadtype_title.blend"
+00:00.546  blend            | Read blend: "D:\MAOGAI\blender\A_leadtype\leadtype_title.blend"
 D:\MAOGAI\blender\A_leadtype\debug_caps.py:10: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
   m=bpy.data.materials.new("DEBUG_TOP");m.use_nodes=True
-Traceback (most recent call last):
-  File "D:\MAOGAI\blender\A_leadtype\debug_caps.py", line 11, in <module>
-    p=m.node_tree.nodes.get("Principled BSDF");p.inputs["Base Color"].default_value=(.8,0,0,1)
-                                               ^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'inputs'
+00:04.375  render           | Saved: 'D:\MAOGAI\blender\A_leadtype\review\round3\debug_top.png'
+信息: 已另存为 "debug_caps.blend"
 Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
 
 Blender quit

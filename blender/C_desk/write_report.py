@@ -45,11 +45,12 @@ text=f"""# 任务 C《书桌上的 1976 年版小册子》交付报告
 - 白色空心搪瓷缸，黑色卷口、两处微小掉瓷；没有添加文字或图案。稿纸只有格线。未使用可选眼镜或尘埃特效。
 - 深色木桌包含非周期长纤维、树结、细划痕与不均匀粗糙度；低角度暖窗光来自左方，页脊有柔和阴影，远处桌面自然压暗。合本镜头色温仅轻微变暖。
 - C2 从约 45° 俯角推向右页上半部；末帧标题投影高 {g['scenes']['desk_open']['final_text_projection']['title']['height_px']:.2f}px、日期高 {g['scenes']['desk_open']['final_text_projection']['date']['height_px']:.2f}px，焦点落在标题日期区域。
+- 供原扫描切换对位：1080p 末帧标题范围约为 {tuple(round(v) for v in g['scenes']['desk_open']['final_text_projection']['title']['bounds_px'])}，日期范围约为 {tuple(round(v) for v in g['scenes']['desk_open']['final_text_projection']['date']['bounds_px'])}，坐标顺序为左、上、右、下；更精确数值见 `geometry_audit.json`。
 
 ## 渲染参数与实测耗时
 
 - Blender 5.2.1 LTS；Cycles GPU；RTX 5060 Laptop；OptiX。
-- 正式序列：128 最大采样，自适应阈值 0.012，OptiX 降噪，固定种子 1976；7 次最大反弹，间接光钳制 3，开启 persistent data。
+- 正式序列：128 最大采样、32 最低采样，自适应阈值 0.012，OptiX 降噪，固定种子 1976；7 次最大反弹，间接光钳制 3，开启 persistent data。
 - 4K：144 最大采样，自适应阈值 0.009；直接以 3840×2160 重新渲染，没有放大 1080p。
 - AgX / Medium High Contrast，曝光 +0.20EV；展开光圈从 f/9 平滑过渡至 f/7.1，焦点落在真实标题日期表面；合本从 f/8 至 f/4.5；30fps。
 - 左窗光位于 (-0.34, 0.06, 0.22)m，0.55W，0.11×0.22m 矩形光源，65° spread；0.12W 极弱室内反射补光，暖灰环境强度 0.15。

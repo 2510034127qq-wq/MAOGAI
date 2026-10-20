@@ -24,6 +24,9 @@ $taskDir = 'D:\MAOGAI\blender\B_steelyard'
 # 独立场景检查
 & $blenderExe --background "$taskDir\steelyard.blend" --python "$taskDir\audit_scene.py"
 
+# 构图、画框余量与最终画面水平检查
+& $blenderExe --background "$taskDir\steelyard.blend" --python "$taskDir\audit_composition.py"
+
 # 正式渲染：B1、B2、B1最终4K静帧
 & $blenderExe --background "$taskDir\steelyard.blend" --python "$taskDir\render_steelyard.py" -- final
 
@@ -59,5 +62,6 @@ python "$taskDir\finish_delivery.py"
 - `REPORT.md`：中文交付报告、清单、渲染时间及已知不足。
 - `geometry_audit.json`：主要实体净体积和估算质量。
 - `rig_audit.json`：300 帧绳长、悬挂姿态、相机和 B2 姿态核查。
+- `composition_audit.json`：画面投影范围、杆中心高度和杆端高差。
 - `delivery_audit.json`：完整序列、视频、4K静帧及时间统计。
 - `review/`：保留每轮低清证据，便于对比修改前后。

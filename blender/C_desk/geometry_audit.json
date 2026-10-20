@@ -27,7 +27,8 @@
         "137": 0.032597868994344026
       },
       "camera_max_step_mm": 3.0965723365685345,
-      "camera_last_step_mm": 0.009650949610442381
+      "camera_last_step_mm": 0.009650949610442381,
+      "mug_lowest_surface_mm": 0.0
     },
     "desk_open": {
       "frames": 180,

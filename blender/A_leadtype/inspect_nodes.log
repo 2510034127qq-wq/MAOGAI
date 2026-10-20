@@ -1,0 +1,10 @@
+00:00.609  blend            | Read blend: "D:\MAOGAI\blender\A_leadtype\leadtype_title.blend"
+<string>:1: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+NODES [('Principled BSDF', 'BSDF_PRINCIPLED', ''), ('Material Output', 'OUTPUT_MATERIAL', True), ('Noise Texture', 'TEX_NOISE', ''), ('Color Ramp', 'VALTORGB', ''), ('Map Range', 'MAP_RANGE', ''), ('Noise Texture.001', 'TEX_NOISE', ''), ('Bump', 'BUMP', ''), ('Noise Texture.002', 'TEX_NOISE', ''), ('薄墨透银｜约百分之三', 'VALTORGB', ''), ('磨薄处露出的铅', 'BSDF_PRINCIPLED', ''), ('覆墨与露铅', 'MIX_SHADER', '')]
+LINKS [('Noise Texture', 'Factor', 'Color Ramp', 'Factor'), ('Color Ramp', 'Color', 'Principled BSDF', 'Base Color'), ('Noise Texture', 'Factor', 'Map Range', 'Value'), ('Map Range', 'Result', 'Principled BSDF', 'Roughness'), ('Noise Texture.001', 'Factor', 'Bump', 'Height'), ('Bump', 'Normal', 'Principled BSDF', 'Normal'), ('Noise Texture.002', 'Factor', '薄墨透银｜约百分之三', 'Factor'), ('薄墨透银｜约百分之三', 'Color', '覆墨与露铅', 'Factor'), ('磨薄处露出的铅', 'BSDF', '覆墨与露铅', 'Shader'), ('Principled BSDF', 'BSDF', '覆墨与露铅', 'Shader'), ('覆墨与露铅', 'Shader', 'Material Output', 'Surface')]
+BASE (0.011612244881689548, 0.01032982300966978, 0.008568125776946545, 1.0)
+SCENE CYCLES None
+ALL_MATS [('字面薄墨｜black', True), ('手盘钢板｜发暗磨痕', True), ('老木｜顺纹磨损', True), ('铅锑锡｜微氧化银灰', True)]
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+
+Blender quit

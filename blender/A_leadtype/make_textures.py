@@ -62,7 +62,7 @@ def main():
     crisp = np.asarray(mask, dtype=np.float32) / 255
     bleed = np.asarray(mask.filter(ImageFilter.GaussianBlur(1.1)), dtype=np.float32) / 255
     spread = np.asarray(mask.filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.GaussianBlur(1.3)), dtype=np.float32) / 255
-    patch = .88 + .08 * noise(W, H, 38) + .04 * fine
+    patch = .985 + .01 * noise(W, H, 38) + .005 * fine
     pinhole = np.clip((grain - .986) * 25, 0, .36)
     alpha = np.maximum(crisp * (patch - pinhole), spread * .25 + bleed * .22)
     alpha = np.clip(alpha, 0, 1)

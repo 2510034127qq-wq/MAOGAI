@@ -51,8 +51,9 @@ const Stamp: React.FC<{ at: number }> = ({ at }) => {
     <div
       style={{
         position: "absolute",
-        right: 150,
-        bottom: 170,
+        left: 960,
+        translate: "-50% 0",
+        bottom: 300,
         border: `5px solid ${C.red}`,
         padding: "10px 26px",
         fontFamily: F.heavy,

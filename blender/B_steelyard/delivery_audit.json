@@ -1,0 +1,224 @@
+{
+  "checked_at": "2026-10-20T14:33:24.703714",
+  "shots": {
+    "steelyard_balance": {
+      "sequence": {
+        "frames": 300,
+        "format": "PNG 8-bit RGB",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "all_decode": true,
+        "continuous_numbering": true,
+        "black_clipping_fraction": 3.2150205761316874e-09,
+        "white_clipping_fraction": 0.0,
+        "background_max_frame_mean_change_8bit": 0.017603305785115708,
+        "raw_adjacent_mae_8bit": {
+          "median": 0.17140432098765432,
+          "max": 0.7342978395061729
+        },
+        "flow_compensated_mae_8bit": {
+          "median": 0.15343300298669563,
+          "p95": 0.37119959951126796,
+          "max": 0.37875882432799346
+        },
+        "identical_adjacent_frames": [],
+        "note": "运动补偿残差为辅助筛查，不等价于独立证明所有像素无闪烁；结尾镜头停留允许相同帧。"
+      },
+      "video": {
+        "frames_decoded": 300,
+        "fps": 30.0,
+        "duration_seconds": 10.0,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "codec": "H.264 / libx264",
+        "crf": 18,
+        "pixel_format": "yuv420p",
+        "ffmpeg_decode_errors": "",
+        "sha256": "9a8e9a2de3d3776ca1a26ba1c7f9091a600deceddf0b2afba297ebf24372715f",
+        "bytes": 1739960
+      },
+      "contact_frames": [
+        1,
+        30,
+        60,
+        90,
+        120,
+        150,
+        180,
+        210,
+        240,
+        270,
+        300
+      ],
+      "encode_command": [
+        "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+        "-hide_banner",
+        "-y",
+        "-framerate",
+        "30",
+        "-start_number",
+        "1",
+        "-i",
+        "D:\\MAOGAI\\assets\\renders\\steelyard_balance\\frames\\%04d.png",
+        "-frames:v",
+        "300",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "slow",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-color_primaries",
+        "bt709",
+        "-color_trc",
+        "bt709",
+        "-colorspace",
+        "bt709",
+        "-movflags",
+        "+faststart",
+        "D:\\MAOGAI\\assets\\renders\\steelyard_balance\\preview.mp4"
+      ],
+      "source": {
+        "blend_sha256": "8b9687672a0b0cd528b7806e57b45125b4cbf42f2f12f33b831c010493fcf9fe",
+        "build_sha256": "711b411718e7a39ced2ca73d7fabb52eed5f313241bf0e93645faf1e8c531b4b",
+        "renderer_sha256": "b876c6bdceed95958f61c35913895efefa5f390b46db18477ed88b18d6dfc6d5",
+        "revision": "director_feedback_2_screen_horizontal"
+      }
+    },
+    "steelyard_detail": {
+      "sequence": {
+        "frames": 150,
+        "format": "PNG 8-bit RGB",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "all_decode": true,
+        "continuous_numbering": true,
+        "black_clipping_fraction": 0.0,
+        "white_clipping_fraction": 0.0,
+        "background_max_frame_mean_change_8bit": 0.04880165289256411,
+        "raw_adjacent_mae_8bit": {
+          "median": 1.5780555555555555,
+          "max": 3.5670524691358025
+        },
+        "flow_compensated_mae_8bit": {
+          "median": 0.32872318761878905,
+          "p95": 1.9787316725495512,
+          "max": 2.80958118381754
+        },
+        "identical_adjacent_frames": [],
+        "note": "运动补偿残差为辅助筛查，不等价于独立证明所有像素无闪烁；结尾镜头停留允许相同帧。"
+      },
+      "video": {
+        "frames_decoded": 150,
+        "fps": 30.0,
+        "duration_seconds": 5.0,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "codec": "H.264 / libx264",
+        "crf": 18,
+        "pixel_format": "yuv420p",
+        "ffmpeg_decode_errors": "",
+        "sha256": "4cbd5b018bc0bd50385a44892eaf0639293858f042c59579f2f0d06e45357a4c",
+        "bytes": 1026279
+      },
+      "contact_frames": [
+        1,
+        30,
+        60,
+        90,
+        120,
+        150
+      ],
+      "encode_command": [
+        "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+        "-hide_banner",
+        "-y",
+        "-framerate",
+        "30",
+        "-start_number",
+        "1",
+        "-i",
+        "D:\\MAOGAI\\assets\\renders\\steelyard_detail\\frames\\%04d.png",
+        "-frames:v",
+        "150",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "slow",
+        "-crf",
+        "18",
+        "-pix_fmt",
+        "yuv420p",
+        "-color_primaries",
+        "bt709",
+        "-color_trc",
+        "bt709",
+        "-colorspace",
+        "bt709",
+        "-movflags",
+        "+faststart",
+        "D:\\MAOGAI\\assets\\renders\\steelyard_detail\\preview.mp4"
+      ],
+      "source": {
+        "blend_sha256": "8b9687672a0b0cd528b7806e57b45125b4cbf42f2f12f33b831c010493fcf9fe",
+        "build_sha256": "711b411718e7a39ced2ca73d7fabb52eed5f313241bf0e93645faf1e8c531b4b",
+        "renderer_sha256": "b876c6bdceed95958f61c35913895efefa5f390b46db18477ed88b18d6dfc6d5",
+        "revision": "director_feedback_2_screen_horizontal"
+      }
+    }
+  },
+  "still_4k": {
+    "path": "D:\\MAOGAI\\assets\\renders\\steelyard_balance\\still_4k.png",
+    "width": 3840,
+    "height": 2160,
+    "depth": 8,
+    "color_type": 2,
+    "sha256": "fdaa9008b95a3039f1be3160d7c96fee67d7c696eb21e8d25bc5038ab9995f7d"
+  },
+  "motion": {
+    "initial_hold_degrees": 12.000000000000002,
+    "hold_0_30": true,
+    "monotonic_weight_slide": true,
+    "final_weight_x_m": 0.5060534084810128,
+    "settling_overshoot_degrees": -0.1809354835113264,
+    "settling_return_degrees": 0.08691974497753331,
+    "final_250_300_horizontal": true,
+    "horizontal_torque_residual_Nm": 0.0,
+    "max_pan_swing_degrees": 0.022684164037178878,
+    "max_weight_swing_degrees": 0.5466033445036136,
+    "load_to_weight_mass_ratio": 4.820638009513041,
+    "physical_scope": "含画外持秤者稳定作用的受控准静态演示。起始12度静止需要支承反力矩；不是无外力矩的自由杆秤刚体模拟。重物、秤砣、杆自重力矩共同驱动积分。"
+  },
+  "render_times": {
+    "steelyard_balance": {
+      "count": 300,
+      "mean_seconds": 7.861617356332718,
+      "median_seconds": 7.748604899999918,
+      "min_seconds": 6.3133217000286095,
+      "max_seconds": 12.190669400035404,
+      "total_seconds": 2358.4852068998152
+    },
+    "steelyard_detail": {
+      "count": 150,
+      "mean_seconds": 9.24894313333362,
+      "median_seconds": 9.314957500027958,
+      "min_seconds": 7.665320200030692,
+      "max_seconds": 10.761488499992993,
+      "total_seconds": 1387.341470000043
+    },
+    "still_4k_seconds": 41.567850599996746
+  },
+  "all_technical_checks_passed": true
+}

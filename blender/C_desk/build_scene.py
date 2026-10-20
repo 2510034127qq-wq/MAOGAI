@@ -244,6 +244,7 @@ def pencil(opened):
     return p0
 
 def mug():
+    existing=set(bpy.context.scene.objects)
     c=(.153,.105,0)
     profile=[(0,.003),(.031,.003),(.034,.004),(.036,.009),(.038,.071),(.039,.078),
              (.039,.081),(.0377,.082),(.0368,.080),(.0366,.074),(.034,.010),(.030,.007),(0,.007)]
@@ -264,6 +265,12 @@ def mug():
             rr=.036+(zz-.009)/.062*.002+.00013
             vs.append((c[0]+rr*cos(ph),c[1]+rr*sin(ph),zz))
         mesh("Tiny chip in white enamel",vs,[(0,j,j+1) for j in range(1,13)],chip)
+    # The profile was authored from its 3mm recessed base reference. Place its
+    # actual lowest surface on the tabletop, including handle, lip and chips.
+    for ob in bpy.context.scene.objects:
+        if ob not in existing:
+            ob.location.z-=.003
+            ob["prop_family"]="enamel_mug"
 
 def glasses():
     # Round fine wire frames resting on their folded temples.
@@ -327,6 +334,7 @@ def setup(name,opened):
     s.render.engine="CYCLES";s.cycles.device="GPU";s.cycles.samples=128
     s.unit_settings.system="METRIC"
     s.cycles.use_adaptive_sampling=True;s.cycles.adaptive_threshold=.012
+    s.cycles.adaptive_min_samples=32
     s.cycles.use_denoising=True;s.cycles.denoiser="OPTIX"
     s.cycles.seed=1976;s.cycles.use_animated_seed=False
     s.cycles.max_bounces=7;s.cycles.diffuse_bounces=3;s.cycles.glossy_bounces=4

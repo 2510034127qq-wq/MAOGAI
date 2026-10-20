@@ -111,12 +111,13 @@ def create_materials():
     MATS["lead"] = m
     for key, color in [("black", "#1C1A17"), ("red", "#B5302A")]:
         m, p = material("字面薄墨｜" + key, color, 0, .36)
+        p.inputs["Specular IOR Level"].default_value=.10
         n = noise(m, 28, 4)
         r = ramp(m, n, ["#0E0D0B", color, "#39362F"] if key == "black" else ["#84201B", color, "#BA3D31"], [.13, .50, .88])
         connect(m, r, "Color", p, "Base Color")
         rgh = node(m, "ShaderNodeMapRange")
-        rgh.inputs["To Min"].default_value = .30
-        rgh.inputs["To Max"].default_value = .47
+        rgh.inputs["To Min"].default_value = .25
+        rgh.inputs["To Max"].default_value = .38
         connect(m, n, "Fac", rgh, "Value")
         connect(m, rgh, "Result", p, "Roughness")
         grain = noise(m, 190, 2)
@@ -165,6 +166,7 @@ def create_materials():
     connect(m, r, "Color", p, "Base Color")
     MATS["steel"] = m
     m, p = material("纸｜旧纸基色", "#EDE5D4", 0, .86)
+    p.inputs["Specular IOR Level"].default_value=.12
     t = node(m, "ShaderNodeTexImage")
     t.image = bpy.data.images.load(str(ROOT / "textures" / "paper_fibre.png"))
     t.image.colorspace_settings.name = "Non-Color"
@@ -194,6 +196,17 @@ def create_materials():
     mix.inputs[2].default_value = sRGB("#B5302A")
     connect(m, alpha, "Color", mix, 0)
     connect(m, mix, "Color", p, "Base Color")
+    impression=node(m,"ShaderNodeTexImage","压印轮廓｜与凸字共用")
+    impression.image=bpy.data.images.load(str(ROOT/"textures"/"stamp_height.png"))
+    impression.image.colorspace_settings.name="Non-Color"
+    press_bump=node(m,"ShaderNodeBump","压印边缘微凹")
+    press_bump.invert=True
+    press_bump.inputs["Distance"].default_value=.004*U
+    press_bump.inputs["Strength"].default_value=.45
+    paper_normal=p.inputs["Normal"].links[0].from_socket
+    m.node_tree.links.new(paper_normal,press_bump.inputs["Normal"])
+    connect(m,impression,"Color",press_bump,"Height")
+    connect(m,press_bump,"Normal",p,"Normal")
     MATS["stamped_paper"] = m
 
 
@@ -244,6 +257,7 @@ def glyph_mesh(ch):
         return TEMPLATE[ch]
     cv = bpy.data.curves.new("STSONG_"+ch, "FONT")
     cv.body=ch;cv.font=FONT;cv.size=1;cv.resolution_u=10
+    cv.offset=.0075  # small cast/ink gain, retaining the STSong outlines
     cv.align_x="CENTER";cv.align_y="CENTER";cv.fill_mode="BOTH"
     bpy.ops.object.select_all(action="DESELECT")
     o=bpy.data.objects.new("字形轮廓",cv);bpy.context.collection.objects.link(o)
@@ -279,8 +293,8 @@ def glyph_mesh(ch):
         d=(pts[b]-pts[a]).normalized()
         n=Vector((d.y,-d.x))
         offsets[a]+=n;offsets[b]+=n
-    # A 0.175-face relief with a flared, filleted foot; no vertical extrusion.
-    heights=[.175,.158,.026,0]
+    # A 1/6-face relief with a flared, filleted foot; no vertical extrusion.
+    heights=[1/6,.150,.026,0]
     spreads=[0,.003,.018,.032]
     verts=[]
     for height,spread in zip(heights,spreads):
@@ -297,7 +311,8 @@ def glyph_mesh(ch):
     mesh=bpy.data.meshes.new("镜像阳文_"+ch)
     mesh.from_pydata(verts,[],faces);mesh.update()
     mesh.materials.append(MATS["lead"]);mesh.materials.append(MATS["black"])
-    for i,p in enumerate(mesh.polygons):p.material_index=1 if i<top_count else 0
+    for i,p in enumerate(mesh.polygons):
+        p.material_index=1 if (i<top_count or 2*top_count<=i<2*top_count+len(boundary)) else 0
     bm=bmesh.new();bm.from_mesh(mesh)
     bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces))
     bm.to_mesh(mesh);bm.free()
@@ -317,7 +332,7 @@ def type_piece(ch, x, y, base=.20, ink="black", angle=0, hero=True):
     g.data.materials[1]=MATS[ink]
     bevel=g.modifiers.new("笔画顶端微磨损","BEVEL")
     bevel.width=.006*U;bevel.segments=3
-    g["source_character"]=ch;g["mirrored_x"]=True;g["relief_height_mm"]=.7
+    g["source_character"]=ch;g["mirrored_x"]=True;g["relief_height_mm"]=4/6
     g["taper_base_expansion_mm"]=.128
     # Discrete shoulder ink specks; fixed seed, deliberately sparse.
     for j in range(9 if hero else 2):
@@ -336,7 +351,7 @@ def paper_z(x,y):
     # Quiet curled corners; the central printing surface stays supported.
     ex=max(0,(abs(x)-3.8)/1.45)
     ey=max(0,(abs(y)-2.7)/1.3)
-    return .075 + .18*ex**3 + .09*ey**3 + .018*math.sin(x*.7)*ex*ey
+    return .0225 + .18*ex**3 + .09*ey**3 + .018*math.sin(x*.7)*ex*ey
 
 
 def paper(stamped=True):
@@ -405,10 +420,10 @@ def animate_cam(shot):
             t=smoother((frame-1)/149)
             x=lerp(-2.12,2.12,t)
             pull=smoother((frame-150)/60)
-            pos=Vector((lerp(x,0,pull),lerp(-6.3,-14.0,pull),lerp(10.0,17.5,pull)))
+            pos=Vector((lerp(x,0,pull),lerp(-6.3,-14.0,pull),lerp(11.25,17.5,pull)))
             target=Vector((lerp(x,0,pull),0,lerp(6.23,3.4,pull)))
             focal=Vector((lerp(x,0,pull),0,6.23))
-            aperture=lerp(11,14,pull)
+            aperture=lerp(11,8,pull)
         else:
             t=smoother((frame-1)/(end-1))
             angle=math.radians(lerp(-7.5,7.5,t))
@@ -416,7 +431,7 @@ def animate_cam(shot):
             pos=Vector((math.sin(angle)*dist,-math.cos(angle)*dist,25.5))
             target=Vector((0,-.20,2.5))
             rack=smoother((frame-36)/110)
-            focal=Vector((0,lerp(.7,-2,rack),lerp(6.15,.075,rack)))
+            focal=Vector((0,lerp(.7,-2,rack),lerp(6.064,.0225,rack)))
             aperture=5.6
         c.location=pos*U;c.rotation_euler=(target*U-c.location).to_track_quat("-Z","Y").to_euler()
         f.location=focal*U;c.data.dof.aperture_fstop=aperture
@@ -470,7 +485,7 @@ def make_scene(shot):
     world=scene.world.node_tree.nodes.get("Background")
     world.inputs["Color"].default_value=sRGB("#B9A68B");world.inputs["Strength"].default_value=.22
     if shot=="title":
-        cube("字盘桌面",(0,1,-.45),(40,32,.8),MATS["wood"],.09)
+        cube("字盘桌面",(0,1,-.4),(40,32,.8),MATS["wood"],.09)
         cube("手盘钢制底板",(0,.3,.09),(7.0,2.1,.18),MATS["steel"],.025)
         cube("木质左挡边",(-3.55,.3,.8),(.45,2.5,1.6),MATS["wood"],.07)
         cube("木质右挡边",(3.55,.3,.8),(.45,2.5,1.6),MATS["wood"],.07)
@@ -478,13 +493,13 @@ def make_scene(shot):
         for ch,x in zip("系关大十论",[-2.12,-1.06,0,1.06,2.12]):type_piece(ch,x,0,.18)
         for j,ch in enumerate("发展人民农业建设实际统筹兼顾"):
             x=(j%7-3)*1.14+random.uniform(-.09,.09);y=3.1+(j//7)*1.7
-            type_piece(ch,x,y,.02,angle=random.uniform(-5,5),hero=False)
+            type_piece(ch,x,y,0,angle=random.uniform(-5,5),hero=False)
         cube("远处字盘挡边",(0,6.3,2),(14,.28,4),MATS["wood"],.05)
         area("左侧低角度暖光",(-7,-2,8.6),(0,0,6),.035,5.5,(1,.85,.69),2.5)
         area("右侧弱补光",(6,-2,10),(0,0,5),.004,5,(.86,.88,.86),6)
         area("上后方窄柔光",(1,5,12),(0,0,6),.010,6,(1,.89,.73),2)
     else:
-        cube("桌面",(0,0,-.45),(40,30,.8),MATS["wood"],.06)
+        cube("桌面",(0,0,-.4),(40,30,.8),MATS["wood"],.06)
         type_piece("破",-1.0,.7,paper_z(-1,.7),ink="red",angle=-1.4)
         type_piece("立",1.0,.7,paper_z(1,.7),ink="red",angle=.7)
         # Printing masks come from the very same mesh triangles as the raised
@@ -505,11 +520,11 @@ def make_scene(shot):
     animate_cam(shot)
     scene.frame_start=1;scene.frame_set(1)
     scene["brief"]="D:/MAOGAI/blender/A_leadtype/BRIEF.md"
-    scene["geometry_scale"]="4 mm face; 23.5 mm body; 0.7 mm relief"
+    scene["geometry_scale"]="4 mm face; 23.5 mm body; 0.667 mm relief"
     scene["source_font"]="C:/Windows/Fonts/STSONG.TTF"
     scene["backend"]=backend
     output=ASSETS/("leadtype_"+shot);output.mkdir(parents=True,exist_ok=True)
-    scene.render.filepath=str(output/"frames"/"")
+    scene.render.filepath=str(output/"frames")+"/"
     for im in bpy.data.images:
         if im.source=="FILE":im.pack()
     FONT.pack()

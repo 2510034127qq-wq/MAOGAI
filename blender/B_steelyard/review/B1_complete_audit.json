@@ -1,0 +1,54 @@
+{
+  "sequence": {
+    "frames": 300,
+    "format": "PNG 8-bit RGB",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "all_decode": true,
+    "continuous_numbering": true,
+    "black_clipping_fraction": 3.2150205761316874e-09,
+    "white_clipping_fraction": 0.0,
+    "background_max_frame_mean_change_8bit": 0.017603305785115708,
+    "raw_adjacent_mae_8bit": {
+      "median": 0.17140432098765432,
+      "max": 0.7342978395061729
+    },
+    "flow_compensated_mae_8bit": {
+      "median": 0.15343300298669563,
+      "p95": 0.37119959951126796,
+      "max": 0.37875882432799346
+    },
+    "identical_adjacent_frames": [],
+    "note": "运动补偿残差为辅助筛查，不等价于独立证明所有像素无闪烁；结尾镜头停留允许相同帧。"
+  },
+  "contact_frames": [
+    1,
+    30,
+    60,
+    90,
+    120,
+    150,
+    180,
+    210,
+    240,
+    270,
+    300
+  ],
+  "video": {
+    "frames_decoded": 300,
+    "fps": 30.0,
+    "duration_seconds": 10.0,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "codec": "H.264 / libx264",
+    "crf": 18,
+    "pixel_format": "yuv420p",
+    "ffmpeg_decode_errors": "",
+    "sha256": "9a8e9a2de3d3776ca1a26ba1c7f9091a600deceddf0b2afba297ebf24372715f",
+    "bytes": 1739960
+  }
+}

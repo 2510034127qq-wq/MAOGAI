@@ -1,0 +1,15 @@
+D:\MAOGAI\blender\A_leadtype\build_leadtype.py:43: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m.use_nodes = True
+D:\MAOGAI\blender\A_leadtype\build_leadtype.py:473: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  scene.world.use_nodes=True
+00:05.562  reports          | WARNING Path 'C:/Windows/Fonts/STSONG.TTF' cannot be made relative for Font 'STSong Regular'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+00:07.484  render           | Saved: 'D:\MAOGAI\blender\A_leadtype\review\round5\poli_0001.png'
+Info: Saved as "leadtype_poli.blend"
+TEST_FRAME poli 1 1.886
+00:08.515  render           | Saved: 'D:\MAOGAI\blender\A_leadtype\review\round5\poli_0090.png'
+TEST_FRAME poli 90 1.027
+00:09.578  render           | Saved: 'D:\MAOGAI\blender\A_leadtype\review\round5\poli_0180.png'
+TEST_FRAME poli 180 1.058
+
+Blender quit
