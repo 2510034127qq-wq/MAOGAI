@@ -29,9 +29,9 @@ X_START = 0.105
 ROD_THICKNESS = 1.15
 WEIGHT_HANG = .072
 WEIGHT_NAME = "实心梨形铸铁秤砣"
-B1_TARGET = Vector((.215, 0, .310))
-B1_OFFSET = Vector((1.66*math.sin(math.radians(15)),
-                    -1.66*math.cos(math.radians(15)), .44))
+B1_TARGET = Vector((.215, 0, .325))
+B1_OFFSET = Vector((1.65*math.sin(math.radians(15)),
+                    -1.65*math.cos(math.radians(15)), .44))
 B1_START = B1_TARGET + B1_OFFSET
 COLLECTIONS = {}
 MOTION = []
@@ -196,7 +196,7 @@ def make_materials():
         result[key]=m
     # Compensated albedo: the target #EDE5D4 is the lit, AgX-rendered paper,
     # rather than feeding that display RGB directly into a bright studio.
-    m,p,n,l=material("旧纸背景 · 成像目标 #EDE5D4", "E3D3B0",rough=.95)
+    m,p,n,l=material("旧纸背景 · 成像目标 #EDE5D4", "E8DEBC",rough=.95)
     geo=n.new("ShaderNodeNewGeometry")
     center=n.new("ShaderNodeVectorMath");center.operation="SUBTRACT"
     center.inputs[1].default_value=(.2,.23,.30)
@@ -215,7 +215,7 @@ def make_materials():
     l.new(length.outputs["Value"],vignette.inputs[0])
     tint=n.new("ShaderNodeMixRGB");tint.blend_type="MULTIPLY"
     tint.inputs[0].default_value=1
-    tint.inputs[1].default_value=srgb("E3D3B0")
+    tint.inputs[1].default_value=srgb("E8DEBC")
     l.new(vignette.outputs[0],tint.inputs[2])
     l.new(tint.outputs[0],p.inputs["Base Color"])
     tc=n.new("ShaderNodeTexCoord")
@@ -497,16 +497,14 @@ def build_weight(mats,coll):
     # Solid pear/truncated-cone weight. The base is a closed flat face with a
     # thick vertical land. No separate rim, no skirt, no cavity, no bell mouth.
     radius=PAN_R/3
-    # Smooth shoulders instead of lathe-like stepped rings.
-    controls=[(.010,-.014),(.0105,-.022),(.024,-.032),(.028,-.039),
-              (.0275,-.044),(.035,-.055),(radius,-.067),(radius,-.0785)]
-    profile=[(0,-.014),controls[0]]
-    for i in range(len(controls)-1):
-        r0,z0=controls[i];r1,z1=controls[i+1]
-        for j in range(1,9):
-            t=j/8
-            u=t*t*(3-2*t)
-            profile.append((r0+(r1-r0)*u,z0+(z1-z0)*t))
+    # A single differentiable pear envelope avoids stepped lathe rings.
+    profile=[(0,-.014),(.010,-.014),(.010,-.021)]
+    for j in range(1,161):
+        u=j/160
+        e=u*u*(3-2*u)
+        r=.010+(radius-.010)*math.sin(PI*.5*e)
+        r-=.0008*math.exp(-((u-.45)/.12)**2)
+        profile.append((r,-.021-.0575*u))
     profile.extend([(.0392,-.079),(0,-.079)])
     block=lathe(WEIGHT_NAME,list(reversed(profile)),mats["iron"],coll,root,segments=112,distress=.00012)
     block.data.materials.append(mats["edge"])
@@ -661,11 +659,15 @@ def animate(beam,pan,saddle,weight,states):
         st=states[f];theta=st["beam_angle_rad"];x=st["weight_x_m"]
         beam.rotation_euler=(0,-theta,0)
         anchor=transform_point(X_LOAD,ROD_Z-.018,theta)
-        sag=beam_radius(x)-beam_radius(X_START)
-        saddle.location=transform_point(x,sag,theta)
-        saddle.rotation_euler=(0,-theta,0)
+        # The suspended loop is vertical in world space. Its undeformed top
+        # arc rises slightly to clear the elliptical section of a tilted rod.
+        # This avoids transferring the rod's 12-degree tilt to the rope legs.
+        sag=beam_radius(x)/math.cos(theta)-beam_radius(X_START)
+        beam_center=transform_point(x,ROD_Z,theta)
+        saddle.location=beam_center+Vector((0,0,-ROD_Z+sag))
+        saddle.rotation_euler=(0,0,0)
         # top of the weight ring intersects only the rope's empty loop aperture
-        wp=transform_point(x,ROD_Z-WEIGHT_HANG+sag,theta)
+        wp=beam_center+Vector((0,0,sag-WEIGHT_HANG))
         if last_pan_x is not None:
             pv=(anchor.x-last_pan_x)*FPS;wv=(wp.x-last_weight_x)*FPS
             pa=(pv-last_pan_v)*FPS;wa=(wv-last_weight_v)*FPS

@@ -13,7 +13,7 @@ export const Strips: React.FC<{ items: Mark[]; at?: number; per?: number; w?: nu
         const k = ramp(f, a - 10, a + 10);
         return (
           <div key={i} style={{ position: "relative", width: w, height: h, opacity: k, borderTop: `1px solid ${C.faint}`, borderBottom: `1px solid ${C.faint}` }}>
-            <ScanFocus marks={[m]} w={w} h={h} cy={h / 2} at={a} dur={per - 6} len={400} fitW={w - 60} fitH={h - 40} maxScale={scale} dim={false} seed={seed + i} />
+            <ScanFocus marks={[m]} w={w} h={h} cy={h / 2} at={a} dur={per - 6} len={400} fitW={w - 60} fitH={h + 80} maxScale={scale} dim={false} seed={seed + i} />
           </div>
         );
       })}

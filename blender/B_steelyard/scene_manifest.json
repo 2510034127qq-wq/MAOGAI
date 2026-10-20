@@ -16,22 +16,22 @@
   "gear_diameter_m": 0.157,
   "pan_diameter_m": 0.238,
   "weight_diameter_m": 0.07933333333333333,
-  "weight_final_x_m": 0.4508797955362899,
+  "weight_final_x_m": 0.5060536244678487,
   "B1_target": [
     0.2150000035762787,
     0.0,
-    0.3100000023841858
+    0.32499998807907104
   ],
   "B1_start": [
-    0.6446396112442017,
-    -1.603436827659607,
-    0.75
+    0.6420514583587646,
+    -1.5937776565551758,
+    0.7649999856948853
   ],
   "B1_side_angle_deg": 15,
   "B1_initial_target": [
     0.2150000035762787,
     0.0,
-    0.3614409565925598
+    0.37644094228744507
   ],
   "render_engine": "Cycles",
   "device": "OPTIX",
@@ -42,5 +42,5 @@
   "denoiser": "OPENIMAGEDENOISE",
   "color": "AgX - Medium High Contrast",
   "objects": 354,
-  "mesh_vertices": 186238
+  "mesh_vertices": 197998
 }

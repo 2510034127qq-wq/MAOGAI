@@ -1,94 +1,102 @@
 {
   "pass": true,
-  "method": "Two independent executions of post.py, first with previews and second with --skip-previews; compare all final PNG byte hashes.",
+  "method": "Two independent executions of post.py on FINAL selected versions, first with previews and second with --skip-previews; compare all final PNG byte hashes.",
+  "selected": {
+    "nongqingzhong": "nongqingzhong_v4.png",
+    "yanhai": "yanhai_v5.png",
+    "neidi": "neidi_v4.png",
+    "muji_maer": "muji_maer_v4.png",
+    "aq": "aq_v5.png",
+    "kongqi_senlin_baozang": "kongqi_senlin_baozang_v4.png"
+  },
   "identical_png_count": 12,
   "checks": [
     {
       "file": "nongqingzhong_ink.png",
-      "first_run_sha256": "2f8842ef5aa1879ef67a9cebb8e548abccaf5e88ba4e38367cc170241be8b0fb",
-      "second_run_sha256": "2f8842ef5aa1879ef67a9cebb8e548abccaf5e88ba4e38367cc170241be8b0fb",
-      "current_file_sha256": "2f8842ef5aa1879ef67a9cebb8e548abccaf5e88ba4e38367cc170241be8b0fb",
+      "first_run_sha256": "ad5ba756a4e92b06f0adac9d4f204a7e7a33f76d39d331f35e7dfea78de35271",
+      "second_run_sha256": "ad5ba756a4e92b06f0adac9d4f204a7e7a33f76d39d331f35e7dfea78de35271",
+      "current_file_sha256": "ad5ba756a4e92b06f0adac9d4f204a7e7a33f76d39d331f35e7dfea78de35271",
       "identical": true
     },
     {
       "file": "nongqingzhong_paper.png",
-      "first_run_sha256": "bca519666b40302a6834268abdf34794cd5b8ee5802797e820e8566a93e2056c",
-      "second_run_sha256": "bca519666b40302a6834268abdf34794cd5b8ee5802797e820e8566a93e2056c",
-      "current_file_sha256": "bca519666b40302a6834268abdf34794cd5b8ee5802797e820e8566a93e2056c",
+      "first_run_sha256": "4d10b56668413b64fb21b5c6aec8d061951529c39f31e1e1070ba4d778b0bcbb",
+      "second_run_sha256": "4d10b56668413b64fb21b5c6aec8d061951529c39f31e1e1070ba4d778b0bcbb",
+      "current_file_sha256": "4d10b56668413b64fb21b5c6aec8d061951529c39f31e1e1070ba4d778b0bcbb",
       "identical": true
     },
     {
       "file": "yanhai_ink.png",
-      "first_run_sha256": "e9e0757712815ca2ae3f489830dee8dcea9296726612cf63997475f25678d97c",
-      "second_run_sha256": "e9e0757712815ca2ae3f489830dee8dcea9296726612cf63997475f25678d97c",
-      "current_file_sha256": "e9e0757712815ca2ae3f489830dee8dcea9296726612cf63997475f25678d97c",
+      "first_run_sha256": "cad9312f93753772c5c94e2753ee24f1d6025c33d21723c6def234c74df0be05",
+      "second_run_sha256": "cad9312f93753772c5c94e2753ee24f1d6025c33d21723c6def234c74df0be05",
+      "current_file_sha256": "cad9312f93753772c5c94e2753ee24f1d6025c33d21723c6def234c74df0be05",
       "identical": true
     },
     {
       "file": "yanhai_paper.png",
-      "first_run_sha256": "a1d6bc1c6d27fb0ddd747f29a4a616d1c89a8021cc907625822b02ba01430ab1",
-      "second_run_sha256": "a1d6bc1c6d27fb0ddd747f29a4a616d1c89a8021cc907625822b02ba01430ab1",
-      "current_file_sha256": "a1d6bc1c6d27fb0ddd747f29a4a616d1c89a8021cc907625822b02ba01430ab1",
+      "first_run_sha256": "93cad3d5b85037e660fc30f8983d7f7b4acf5ce25310ec131f013b262bef2448",
+      "second_run_sha256": "93cad3d5b85037e660fc30f8983d7f7b4acf5ce25310ec131f013b262bef2448",
+      "current_file_sha256": "93cad3d5b85037e660fc30f8983d7f7b4acf5ce25310ec131f013b262bef2448",
       "identical": true
     },
     {
       "file": "neidi_ink.png",
-      "first_run_sha256": "ccb6dda66f927362f97de682b8f5e7c202fbab484beb5362a67a5a4628522c60",
-      "second_run_sha256": "ccb6dda66f927362f97de682b8f5e7c202fbab484beb5362a67a5a4628522c60",
-      "current_file_sha256": "ccb6dda66f927362f97de682b8f5e7c202fbab484beb5362a67a5a4628522c60",
+      "first_run_sha256": "b22581d159279270a8f4feb415503618ed219701013c4b9a1433fa8e3b749b41",
+      "second_run_sha256": "b22581d159279270a8f4feb415503618ed219701013c4b9a1433fa8e3b749b41",
+      "current_file_sha256": "b22581d159279270a8f4feb415503618ed219701013c4b9a1433fa8e3b749b41",
       "identical": true
     },
     {
       "file": "neidi_paper.png",
-      "first_run_sha256": "eb3293d90fbb296e5e08b9b4fdfd613b9d89c0feb775b5ade36fda51f2a0fff0",
-      "second_run_sha256": "eb3293d90fbb296e5e08b9b4fdfd613b9d89c0feb775b5ade36fda51f2a0fff0",
-      "current_file_sha256": "eb3293d90fbb296e5e08b9b4fdfd613b9d89c0feb775b5ade36fda51f2a0fff0",
+      "first_run_sha256": "e9d50a319d6f805382c2b230661066c34019ecdf7ca59d2437e826af0421907d",
+      "second_run_sha256": "e9d50a319d6f805382c2b230661066c34019ecdf7ca59d2437e826af0421907d",
+      "current_file_sha256": "e9d50a319d6f805382c2b230661066c34019ecdf7ca59d2437e826af0421907d",
       "identical": true
     },
     {
       "file": "muji_maer_ink.png",
-      "first_run_sha256": "5856904c1c02626bb910fe9e77b480c62d737bba0b27552ec7801825f13a1b2a",
-      "second_run_sha256": "5856904c1c02626bb910fe9e77b480c62d737bba0b27552ec7801825f13a1b2a",
-      "current_file_sha256": "5856904c1c02626bb910fe9e77b480c62d737bba0b27552ec7801825f13a1b2a",
+      "first_run_sha256": "2f265073d0d4bb18e8b4d2d23ded995392f88fbb0b46d1d8570fcc7ce960f03c",
+      "second_run_sha256": "2f265073d0d4bb18e8b4d2d23ded995392f88fbb0b46d1d8570fcc7ce960f03c",
+      "current_file_sha256": "2f265073d0d4bb18e8b4d2d23ded995392f88fbb0b46d1d8570fcc7ce960f03c",
       "identical": true
     },
     {
       "file": "muji_maer_paper.png",
-      "first_run_sha256": "1d5804e8d7cf7a578f987f65ea1074f76c858591a6d236c54d01023a0dbde4a8",
-      "second_run_sha256": "1d5804e8d7cf7a578f987f65ea1074f76c858591a6d236c54d01023a0dbde4a8",
-      "current_file_sha256": "1d5804e8d7cf7a578f987f65ea1074f76c858591a6d236c54d01023a0dbde4a8",
+      "first_run_sha256": "98e97e593c51a7d281653e0d649e4e442148cd7e64c3953d467616962859b986",
+      "second_run_sha256": "98e97e593c51a7d281653e0d649e4e442148cd7e64c3953d467616962859b986",
+      "current_file_sha256": "98e97e593c51a7d281653e0d649e4e442148cd7e64c3953d467616962859b986",
       "identical": true
     },
     {
       "file": "aq_ink.png",
-      "first_run_sha256": "163b2d6ccf51041ad8fc3d81aeed512bed81d4d1b54f5f269d37bd9b3d8b20ee",
-      "second_run_sha256": "163b2d6ccf51041ad8fc3d81aeed512bed81d4d1b54f5f269d37bd9b3d8b20ee",
-      "current_file_sha256": "163b2d6ccf51041ad8fc3d81aeed512bed81d4d1b54f5f269d37bd9b3d8b20ee",
+      "first_run_sha256": "6bf7ee0fd2c7e303c0ad7f8832b6cbfdd24d89f1180670cbd42f02dbc77d8c9d",
+      "second_run_sha256": "6bf7ee0fd2c7e303c0ad7f8832b6cbfdd24d89f1180670cbd42f02dbc77d8c9d",
+      "current_file_sha256": "6bf7ee0fd2c7e303c0ad7f8832b6cbfdd24d89f1180670cbd42f02dbc77d8c9d",
       "identical": true
     },
     {
       "file": "aq_paper.png",
-      "first_run_sha256": "8138c7a7c54c03483df35456dbcb0c2083a020487569dc7eb9f8050ade1d02ce",
-      "second_run_sha256": "8138c7a7c54c03483df35456dbcb0c2083a020487569dc7eb9f8050ade1d02ce",
-      "current_file_sha256": "8138c7a7c54c03483df35456dbcb0c2083a020487569dc7eb9f8050ade1d02ce",
+      "first_run_sha256": "046eb1321a0758efbd9e3a816a2d4101e761ad3aa8c9de534c41a17d3a3fc464",
+      "second_run_sha256": "046eb1321a0758efbd9e3a816a2d4101e761ad3aa8c9de534c41a17d3a3fc464",
+      "current_file_sha256": "046eb1321a0758efbd9e3a816a2d4101e761ad3aa8c9de534c41a17d3a3fc464",
       "identical": true
     },
     {
       "file": "kongqi_senlin_baozang_ink.png",
-      "first_run_sha256": "2b4d4d9f54176d96c1fd1d42b07ab92c5dba70fa9bde0bcfb06a3ced984b6349",
-      "second_run_sha256": "2b4d4d9f54176d96c1fd1d42b07ab92c5dba70fa9bde0bcfb06a3ced984b6349",
-      "current_file_sha256": "2b4d4d9f54176d96c1fd1d42b07ab92c5dba70fa9bde0bcfb06a3ced984b6349",
+      "first_run_sha256": "e0c733df60de4748480b4fd5f8fe43bfb898589977b7f4ba651f25e357fd1d4e",
+      "second_run_sha256": "e0c733df60de4748480b4fd5f8fe43bfb898589977b7f4ba651f25e357fd1d4e",
+      "current_file_sha256": "e0c733df60de4748480b4fd5f8fe43bfb898589977b7f4ba651f25e357fd1d4e",
       "identical": true
     },
     {
       "file": "kongqi_senlin_baozang_paper.png",
-      "first_run_sha256": "fd2aa3d40452854a6237e580ee5a994942806a16a7888db2cfb27e86711fb0b6",
-      "second_run_sha256": "fd2aa3d40452854a6237e580ee5a994942806a16a7888db2cfb27e86711fb0b6",
-      "current_file_sha256": "fd2aa3d40452854a6237e580ee5a994942806a16a7888db2cfb27e86711fb0b6",
+      "first_run_sha256": "3625887dcf823bb0647f82ee77738866253e358ac8b5414aa2c2bee0cf42185a",
+      "second_run_sha256": "3625887dcf823bb0647f82ee77738866253e358ac8b5414aa2c2bee0cf42185a",
+      "current_file_sha256": "3625887dcf823bb0647f82ee77738866253e358ac8b5414aa2c2bee0cf42185a",
       "identical": true
     }
   ],
-  "unmodified_raw_count": 18,
+  "unmodified_raw_count": 26,
   "raw_copies": [
     {
       "file": "assets/img/raw/nongqingzhong_v1.png",
@@ -178,6 +186,46 @@
     {
       "file": "assets/img/raw/kongqi_senlin_baozang_v3.png",
       "sha256": "3950a9f5231800d12acb5c72a87c98fb314ac481f068ec0cabc7bcd4fdd8108e",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/nongqingzhong_v4.png",
+      "sha256": "9d49e4e085f6ea3eda283d30a7fa708da1fb66aa9129cba503aa8c75e8ad19cf",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/yanhai_v4.png",
+      "sha256": "0851085ed02a7e8e131909e904d1d42d309e5077eac2d1c12beaf6433c77d05f",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/neidi_v4.png",
+      "sha256": "c3cccb6cfaec08f22a65262a18fc79505c74166cde6e1a6a39f409389b035a09",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/muji_maer_v4.png",
+      "sha256": "7fd93eef7745cc231bfb876bebaf08013bfeb1f3d1ba1e0935b920290f95b461",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/aq_v4.png",
+      "sha256": "4b736485a9f28e7cbe58313cd78962bb3ddab2f6fcf814ba35e6827a0c708176",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/kongqi_senlin_baozang_v4.png",
+      "sha256": "292949695e833c315de1479bc6544a32e6857ccab0a46e018ab498b0acae049d",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/yanhai_v5.png",
+      "sha256": "c6ee8d67f577257e5905b62da509cd3322d7ea3dc820ee16039b52b02b9e68d1",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/aq_v5.png",
+      "sha256": "72018641194e9c05f20be5fb6bf766c8aa06296063977fc24db7eac9bca8fcd1",
       "unmodified_copy": true
     }
   ]

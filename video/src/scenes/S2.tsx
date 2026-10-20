@@ -73,8 +73,13 @@ const Stamp: React.FC<{ at: number }> = ({ at }) => {
 /** ten pairs as a list, then regrouped into the report's four blocks */
 const Regroup: React.FC<{ len: number }> = ({ len }) => {
   const f = useCurrentFrame();
-  const t = ramp(f, 40, Math.min(len - 40, 120), 0, 1, io);
-  const colX = [250, 720, 1190, 1660];
+  // 2×2 quadrants: header at (qx, qy), rows below
+  const Q = [
+    { x: 500, y: 190 },
+    { x: 1420, y: 190 },
+    { x: 500, y: 560 },
+    { x: 1420, y: 560 },
+  ];
   return (
     <AbsoluteFill>
       {PAIRS.map((_, i) => {
@@ -82,26 +87,26 @@ const Regroup: React.FC<{ len: number }> = ({ len }) => {
         const pos = GROUPS[g].idx.indexOf(i);
         const listX = 960;
         const listY = 150 + i * 66;
-        const gx = colX[g];
-        const gy = 430 + pos * 82;
+        const gx = Q[g].x;
+        const gy = Q[g].y + 100 + pos * 58;
         const stagger = ramp(f, 40 + i * 4, 100 + i * 4, 0, 1, io);
         const x = listX + (gx - listX) * stagger;
         const y = listY + (gy - listY) * stagger;
-        const sc = 1 - 0.42 * stagger;
+        const sc = 1 - 0.22 * stagger;
         return (
           <div key={i} style={{ position: "absolute", left: x, top: y, translate: "-50% -50%", scale: String(sc), opacity: ramp(f, i * 2, i * 2 + 14) }}>
-            <PairRow i={i} size={40} lineW={200} />
+            <PairRow i={i} size={40} lineW={150} />
           </div>
         );
       })}
       {GROUPS.map((G, g) => {
         const k = ramp(f, 110 + g * 8, 136 + g * 8);
         return (
-          <div key={g} style={{ position: "absolute", left: colX[g], top: 250, translate: "-50% 0", textAlign: "center", opacity: k * (t > 0.5 ? 1 : 0) }}>
-            <div style={{ width: 96, height: 96, margin: "0 auto", background: C.red, display: "flex", justifyContent: "center", alignItems: "center" }}>
-              <span style={{ fontFamily: F.heavy, fontSize: 66, color: C.paperHi }}>{G.no}</span>
+          <div key={g} style={{ position: "absolute", left: Q[g].x, top: Q[g].y, translate: "-50% 0", display: "flex", alignItems: "center", gap: 22, opacity: k }}>
+            <div style={{ width: 64, height: 64, background: C.red, display: "flex", justifyContent: "center", alignItems: "center" }}>
+              <span style={{ fontFamily: F.heavy, fontSize: 44, color: C.paperHi }}>{G.no}</span>
             </div>
-            <div style={{ fontFamily: F.heavy, fontSize: 36, color: C.ink, letterSpacing: 4, marginTop: 20, whiteSpace: "nowrap" }}>{G.title}</div>
+            <div style={{ fontFamily: F.heavy, fontSize: 40, color: C.ink, letterSpacing: 6, whiteSpace: "nowrap" }}>{G.title}</div>
           </div>
         );
       })}

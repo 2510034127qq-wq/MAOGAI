@@ -34,6 +34,7 @@ for f in range(1,301):
     # The suspended pan and weight must not inherit the beam's full rotation.
     assert abs(records[-1]["pan_deg"])<1
     assert abs(records[-1]["weight_deg"])<2
+    assert max(abs(a) for a in objects["03 可沿杆滑动 · 麻绳套"].rotation_euler)<1e-8
 scene.frame_set(300)
 saved_matrices={o.name:o.matrix_world.copy() for o in objects.values()}
 bpy.context.window.scene=detail
@@ -68,6 +69,7 @@ out={"all_passed":True,"frames_checked":300,"rope_strands_checked":len(rope_obje
      "max_weight_tilt_deg":max(abs(r["weight_deg"]) for r in records),
      "frozen_B2_matches_B1_frame300":frozen,"B1_camera_distance_ratio":ratio,
      "B2_camera_translation_m":list(d1-d0),"missing_external_images":external,
+     "weight_rope_loop_vertical_all_frames":True,
      "note":"逐帧检查刚性绳体长度、悬挂姿态及相机连续性；不将这些检查冒充通用碰撞求解。"}
 (ROOT/"rig_audit.json").write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding="utf-8")
 print("RIG_AUDIT_PASSED",len(rope_objects),ratio)

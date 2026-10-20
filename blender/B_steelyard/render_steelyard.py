@@ -5,6 +5,7 @@ import json
 import time
 import sys
 import uuid
+import hashlib
 from pathlib import Path
 from datetime import datetime,timezone
 
@@ -17,9 +18,31 @@ owner=str(uuid.uuid4())
 owned=False
 
 
+def check_stop():
+    if (ROOT/"STOP_RENDER").exists():
+        raise RuntimeError("STOP_RENDER 已请求正常停渲；保留已完成帧并释放本任务GPU锁。")
+
+
+def source_guard(folder):
+    folder.mkdir(parents=True,exist_ok=True)
+    tag=folder/"render_source.json"
+    source={"blend_sha256":hashlib.sha256((ROOT/"steelyard.blend").read_bytes()).hexdigest(),
+            "build_sha256":hashlib.sha256((ROOT/"build_steelyard.py").read_bytes()).hexdigest(),
+            "renderer_sha256":hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+            "revision":"director_feedback_1_with_vertical_rope"}
+    if tag.exists():
+        previous=json.loads(tag.read_text(encoding="utf-8"))
+        if previous!=source:
+            raise RuntimeError("已有帧的场景/脚本来源不同，请先将旧版本移入审核备份："+str(folder))
+    elif (folder/"frames").exists() and any((folder/"frames").glob("*.png")):
+        raise RuntimeError("已有帧缺少来源标记，拒绝混合续渲："+str(folder))
+    tag.write_text(json.dumps(source,ensure_ascii=False,indent=2),encoding="utf-8")
+
+
 def acquire():
     global owned
     while True:
+        check_stop()
         try:
             with LOCK.open("x",encoding="utf-8") as f:
                 json.dump({"task":"B_steelyard","owner":owner,"pid":os.getpid(),
@@ -78,19 +101,28 @@ try:
         # Never more than five <=960x540 test stills per batch.
         folder=ROOT/"review"/mode
         shots=[(b1,1,"B1_0001"),(b1,130,"B1_0130"),(b1,300,"B1_0300")]
-        if not mode.endswith("_B1"):
+        if mode.endswith("_B2"):
+            shots=[(b2,1,"B2_0001"),(b2,75,"B2_0075"),(b2,150,"B2_0150")]
+        elif not mode.endswith("_B1"):
             shots += [(b2,1,"B2_0001"),(b2,150,"B2_0150")]
         for sc,frame,label in shots:
             render(sc,frame,folder/(label+".png"),50,48)
     elif mode=="final":
         acquire()
         for sc,shot,end,samples in [(b1,"steelyard_balance",300,128),(b2,"steelyard_detail",150,160)]:
+            source_guard(RENDERS/shot)
             for frame in range(1,end+1):
+                check_stop()
                 path=RENDERS/shot/"frames"/f"{frame:04}.png"
                 if path.exists() and path.stat().st_size>10000:
-                    print("SKIP_EXISTING",shot,frame,flush=True)
-                    continue
+                    with path.open("rb") as f:
+                        f.seek(-12,2)
+                        valid_end=f.read()==b"\x00\x00\x00\x00IEND\xaeB`\x82"
+                    if valid_end:
+                        print("SKIP_EXISTING",shot,frame,flush=True)
+                        continue
                 render(sc,frame,path,100,samples)
+        check_stop()
         b1.render.resolution_x=3840;b1.render.resolution_y=2160
         render(b1,300,RENDERS/"steelyard_balance"/"still_4k.png",100,192)
     elif mode=="still":
