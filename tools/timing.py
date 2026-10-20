@@ -24,7 +24,7 @@ def line_secs(line):
 
 
 def chunks(t):
-    parts = re.findall(r"[^，、；：。？！]+[，、；：。？！]?[”’」]*", t)
+    parts = re.findall(r"[^，；：。？！]+[，；：。？！]?[”’」]*", t)
     out, cur = [], ""
     for p in parts:
         if cur and spoken_len(cur + p) > MAXC:
@@ -34,6 +34,15 @@ def chunks(t):
             cur += p
     if cur:
         out.append(cur)
+    split = []
+    for c in out:
+        cuts = [m.end() for m in re.finditer("、", c)]
+        if spoken_len(c) > 24 and cuts:
+            k = min(cuts, key=lambda i: abs(i - len(c) / 2))
+            split += [c[:k], c[k:]]
+        else:
+            split.append(c)
+    out = split
     return [re.sub(r"[，、；：。]+(?=[”’」]*$)", "", c) for c in out]
 
 
