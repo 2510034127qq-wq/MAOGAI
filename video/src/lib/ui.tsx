@@ -29,13 +29,30 @@ const ALL_SUBS = TL.scenes.flatMap((s) => s.lines.flatMap((l) => l.subs.map((x) 
 
 export const Subtitles: React.FC = () => {
   const f = useCurrentFrame();
+  const near = ALL_SUBS.reduce((d, s) => Math.min(d, f < s.from ? s.from - f : f > s.to ? f - s.to : 0), 1e9);
+  const band = 1 - Math.min(1, Math.max(0, (near - 8) / 12));
   const cur = ALL_SUBS.find((s) => f >= s.from && f < s.to + 2);
-  if (!cur) return null;
+  const backdrop = (
+    <div
+      style={{
+        position: "absolute",
+        left: 0,
+        right: 0,
+        bottom: 0,
+        height: 230,
+        opacity: band,
+        background: `linear-gradient(to top, rgba(237,229,212,0.94) 0%, rgba(237,229,212,0.86) 45%, rgba(237,229,212,0) 100%)`,
+      }}
+    />
+  );
+  if (!cur) return <AbsoluteFill style={{ pointerEvents: "none" }}>{backdrop}</AbsoluteFill>;
   const o = Math.min(ramp(f, cur.from, cur.from + 4), 1 - ramp(f, cur.to - 1, cur.to + 2));
   return (
     <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 54, pointerEvents: "none" }}>
+      {backdrop}
       <div
         style={{
+          position: "relative",
           fontFamily: F.serif,
           fontWeight: 600,
           fontSize: 44,

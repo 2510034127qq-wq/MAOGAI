@@ -21,7 +21,7 @@ text=f"""# 任务 C《书桌上的 1976 年版小册子》交付报告
 
 已按 `BRIEF.md`、`COMMON.md` 和导演阐述制作展开、合本两个镜头，交付 **510 张正式 PNG 帧、2 个 H.264 预览、2 张联系表、1 张 4K 静帧、1 个内嵌贴图的 Blender 工程和完整复现脚本**。
 
-自审经过五轮；前两轮暴露并修正光照、构图和木纹问题，第四轮另行修正亚毫米级铅笔支撑间隙；第五轮审核最终序列、视频及 4K 静帧。详细证据与结论见 `REVIEW.md`。
+自审经过八轮；前四轮处理比例、材质、构图和铅笔支撑，导演审核意见 1 退回旧版氛围后，第五至七轮重新审核做旧、页曲、窗光与焦点，第八轮核验新版完整序列、视频和 4K 静帧。详细证据与结论见 `REVIEW.md`。旧版 145 张正式试渲染帧已全部移出交付目录。
 
 ## 正式产出
 
@@ -40,10 +40,10 @@ text=f"""# 任务 C《书桌上的 1976 年版小册子》交付报告
 
 - 130×184mm 软封薄册；合本 14 张独立纸叶对应 28 页，约 2mm 厚；页边有微错落，封面微弯曲、圆角及稀疏纸纤维，两枚微锈铁制骑马钉。
 - 封面使用原始 `cover.png`，裁切框 `(0,20,975,1400)`，宽高比严格等于 130:184；除去扫描黑边，并局部修补扫描细缝，保留题字、签名与原有印章，不重排字形。内页使用 p06/p07，裁切框 `(22,45,1452,2069)` 同样严格等比；原有印刷文字全部保留。处理参数见 `textures/manifest.json`。
-- 书页使用密集曲面与真实纸厚，折缝有自然隆起和阴影；旧纸色与朱砂取自导演调色板，经 AgX 与自然光成像后存在正常明暗变化。
+- 书页使用密集曲面与真实纸厚，折缝下沉、两侧隆起，页面略有起伏，右前页角轻翘；旧纸带暖黄底、氧化页边及淡斑。朱砂按导演调色板作暖窗光成像补偿，避免偏成亮橙红。
 - 140mm 六棱红漆铅笔，露木削口和黑色石墨芯、细微漆面磨损；基于真实纸页/桌面计算支撑，不靠目测摆放。
 - 白色空心搪瓷缸，黑色卷口、两处微小掉瓷；没有添加文字或图案。稿纸只有格线。未使用可选眼镜或尘埃特效。
-- 深色木桌包含非周期长纤维、树结、细划痕与不均匀粗糙度；暖色柔光来自左方。合本镜头色温仅轻微变暖。
+- 深色木桌包含非周期长纤维、树结、细划痕与不均匀粗糙度；低角度暖窗光来自左方，页脊有柔和阴影，远处桌面自然压暗。合本镜头色温仅轻微变暖。
 - C2 从约 45° 俯角推向右页上半部；末帧标题投影高 {g['scenes']['desk_open']['final_text_projection']['title']['height_px']:.2f}px、日期高 {g['scenes']['desk_open']['final_text_projection']['date']['height_px']:.2f}px，焦点落在标题日期区域。
 
 ## 渲染参数与实测耗时
@@ -51,7 +51,8 @@ text=f"""# 任务 C《书桌上的 1976 年版小册子》交付报告
 - Blender 5.2.1 LTS；Cycles GPU；RTX 5060 Laptop；OptiX。
 - 正式序列：128 最大采样，自适应阈值 0.012，OptiX 降噪，固定种子 1976；7 次最大反弹，间接光钳制 3，开启 persistent data。
 - 4K：144 最大采样，自适应阈值 0.009；直接以 3840×2160 重新渲染，没有放大 1080p。
-- AgX / Medium High Contrast，曝光 +0.35EV；展开 f/10、合本 f/8；30fps。
+- AgX / Medium High Contrast，曝光 +0.20EV；展开光圈从 f/9 平滑过渡至 f/7.1，焦点落在真实标题日期表面；合本从 f/8 至 f/4.5；30fps。
+- 左窗光位于 (-0.34, 0.06, 0.22)m，0.55W，0.11×0.22m 矩形光源，65° spread；0.12W 极弱室内反射补光，暖灰环境强度 0.15。
 - 预览编码：libx264，preset slow，CRF 18，yuv420p，BT.709 标签，faststart。
 - 完整渲染按规范独占创建共享 GPU 锁，等待其他任务释放后开始；每帧更新时间，结束和失败均释放。
 
@@ -83,7 +84,7 @@ text=f"""# 任务 C《书桌上的 1976 年版小册子》交付报告
 ```powershell
 python D:\\MAOGAI\\blender\\C_desk\\prepare_textures.py
 & D:\\UE\\Tools\\blender.exe -b --python D:\\MAOGAI\\blender\\C_desk\\build_scene.py
-python D:\\MAOGAI\\blender\\C_desk\\run_render.py review4
+python D:\\MAOGAI\\blender\\C_desk\\run_render.py review7_atmosphere
 python D:\\MAOGAI\\blender\\C_desk\\run_render.py final
 python D:\\MAOGAI\\blender\\C_desk\\run_render.py still desk_close
 python D:\\MAOGAI\\blender\\C_desk\\finish_delivery.py

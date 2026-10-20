@@ -1,4 +1,4 @@
-// usage: node stills.mjs <compId> <frame> [frame...]   -> out/stills/<compId>_<frame>.jpg
+﻿// usage: node stills.mjs <compId> <frame> [frame...]   -> out/stills/<compId>_<frame>.jpg
 // frames may be given as seconds with an "s" suffix, e.g. 12.5s
 import { bundle } from "@remotion/bundler";
 import { renderStill, selectComposition } from "@remotion/renderer";
@@ -12,6 +12,7 @@ fs.mkdirSync("out/stills", { recursive: true });
 for (const fr of frames) {
   const frame = fr.endsWith("s") ? Math.round(parseFloat(fr) * composition.fps) : parseInt(fr, 10);
   const output = `out/stills/${id}_${frame}.jpg`;
-  await renderStill({ serveUrl, composition, frame, output, imageFormat: "jpeg", jpegQuality: 85, scale: 0.5 });
+  await renderStill({ serveUrl, composition, frame, output, imageFormat: "jpeg", jpegQuality: 85, scale: Number(process.env.SCALE ?? 0.5) });
   console.log(output);
 }
+
