@@ -1,0 +1,8 @@
+﻿node_modules/
+_work/pages/
+video/out/
+video/public/renders/
+**/frames/
+*.blend1
+__pycache__/
+.codex_logs/
