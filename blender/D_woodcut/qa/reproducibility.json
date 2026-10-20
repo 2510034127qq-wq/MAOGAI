@@ -1,0 +1,184 @@
+{
+  "pass": true,
+  "method": "Two independent executions of post.py, first with previews and second with --skip-previews; compare all final PNG byte hashes.",
+  "identical_png_count": 12,
+  "checks": [
+    {
+      "file": "nongqingzhong_ink.png",
+      "first_run_sha256": "2f8842ef5aa1879ef67a9cebb8e548abccaf5e88ba4e38367cc170241be8b0fb",
+      "second_run_sha256": "2f8842ef5aa1879ef67a9cebb8e548abccaf5e88ba4e38367cc170241be8b0fb",
+      "current_file_sha256": "2f8842ef5aa1879ef67a9cebb8e548abccaf5e88ba4e38367cc170241be8b0fb",
+      "identical": true
+    },
+    {
+      "file": "nongqingzhong_paper.png",
+      "first_run_sha256": "bca519666b40302a6834268abdf34794cd5b8ee5802797e820e8566a93e2056c",
+      "second_run_sha256": "bca519666b40302a6834268abdf34794cd5b8ee5802797e820e8566a93e2056c",
+      "current_file_sha256": "bca519666b40302a6834268abdf34794cd5b8ee5802797e820e8566a93e2056c",
+      "identical": true
+    },
+    {
+      "file": "yanhai_ink.png",
+      "first_run_sha256": "e9e0757712815ca2ae3f489830dee8dcea9296726612cf63997475f25678d97c",
+      "second_run_sha256": "e9e0757712815ca2ae3f489830dee8dcea9296726612cf63997475f25678d97c",
+      "current_file_sha256": "e9e0757712815ca2ae3f489830dee8dcea9296726612cf63997475f25678d97c",
+      "identical": true
+    },
+    {
+      "file": "yanhai_paper.png",
+      "first_run_sha256": "a1d6bc1c6d27fb0ddd747f29a4a616d1c89a8021cc907625822b02ba01430ab1",
+      "second_run_sha256": "a1d6bc1c6d27fb0ddd747f29a4a616d1c89a8021cc907625822b02ba01430ab1",
+      "current_file_sha256": "a1d6bc1c6d27fb0ddd747f29a4a616d1c89a8021cc907625822b02ba01430ab1",
+      "identical": true
+    },
+    {
+      "file": "neidi_ink.png",
+      "first_run_sha256": "ccb6dda66f927362f97de682b8f5e7c202fbab484beb5362a67a5a4628522c60",
+      "second_run_sha256": "ccb6dda66f927362f97de682b8f5e7c202fbab484beb5362a67a5a4628522c60",
+      "current_file_sha256": "ccb6dda66f927362f97de682b8f5e7c202fbab484beb5362a67a5a4628522c60",
+      "identical": true
+    },
+    {
+      "file": "neidi_paper.png",
+      "first_run_sha256": "eb3293d90fbb296e5e08b9b4fdfd613b9d89c0feb775b5ade36fda51f2a0fff0",
+      "second_run_sha256": "eb3293d90fbb296e5e08b9b4fdfd613b9d89c0feb775b5ade36fda51f2a0fff0",
+      "current_file_sha256": "eb3293d90fbb296e5e08b9b4fdfd613b9d89c0feb775b5ade36fda51f2a0fff0",
+      "identical": true
+    },
+    {
+      "file": "muji_maer_ink.png",
+      "first_run_sha256": "5856904c1c02626bb910fe9e77b480c62d737bba0b27552ec7801825f13a1b2a",
+      "second_run_sha256": "5856904c1c02626bb910fe9e77b480c62d737bba0b27552ec7801825f13a1b2a",
+      "current_file_sha256": "5856904c1c02626bb910fe9e77b480c62d737bba0b27552ec7801825f13a1b2a",
+      "identical": true
+    },
+    {
+      "file": "muji_maer_paper.png",
+      "first_run_sha256": "1d5804e8d7cf7a578f987f65ea1074f76c858591a6d236c54d01023a0dbde4a8",
+      "second_run_sha256": "1d5804e8d7cf7a578f987f65ea1074f76c858591a6d236c54d01023a0dbde4a8",
+      "current_file_sha256": "1d5804e8d7cf7a578f987f65ea1074f76c858591a6d236c54d01023a0dbde4a8",
+      "identical": true
+    },
+    {
+      "file": "aq_ink.png",
+      "first_run_sha256": "163b2d6ccf51041ad8fc3d81aeed512bed81d4d1b54f5f269d37bd9b3d8b20ee",
+      "second_run_sha256": "163b2d6ccf51041ad8fc3d81aeed512bed81d4d1b54f5f269d37bd9b3d8b20ee",
+      "current_file_sha256": "163b2d6ccf51041ad8fc3d81aeed512bed81d4d1b54f5f269d37bd9b3d8b20ee",
+      "identical": true
+    },
+    {
+      "file": "aq_paper.png",
+      "first_run_sha256": "8138c7a7c54c03483df35456dbcb0c2083a020487569dc7eb9f8050ade1d02ce",
+      "second_run_sha256": "8138c7a7c54c03483df35456dbcb0c2083a020487569dc7eb9f8050ade1d02ce",
+      "current_file_sha256": "8138c7a7c54c03483df35456dbcb0c2083a020487569dc7eb9f8050ade1d02ce",
+      "identical": true
+    },
+    {
+      "file": "kongqi_senlin_baozang_ink.png",
+      "first_run_sha256": "2b4d4d9f54176d96c1fd1d42b07ab92c5dba70fa9bde0bcfb06a3ced984b6349",
+      "second_run_sha256": "2b4d4d9f54176d96c1fd1d42b07ab92c5dba70fa9bde0bcfb06a3ced984b6349",
+      "current_file_sha256": "2b4d4d9f54176d96c1fd1d42b07ab92c5dba70fa9bde0bcfb06a3ced984b6349",
+      "identical": true
+    },
+    {
+      "file": "kongqi_senlin_baozang_paper.png",
+      "first_run_sha256": "fd2aa3d40452854a6237e580ee5a994942806a16a7888db2cfb27e86711fb0b6",
+      "second_run_sha256": "fd2aa3d40452854a6237e580ee5a994942806a16a7888db2cfb27e86711fb0b6",
+      "current_file_sha256": "fd2aa3d40452854a6237e580ee5a994942806a16a7888db2cfb27e86711fb0b6",
+      "identical": true
+    }
+  ],
+  "unmodified_raw_count": 18,
+  "raw_copies": [
+    {
+      "file": "assets/img/raw/nongqingzhong_v1.png",
+      "sha256": "f7abcc6f058695ff5675a06c0ef9a6da1e30cc57b59ed94f349a86fe3f9151fe",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/nongqingzhong_v2.png",
+      "sha256": "75bbe428d64d63f1a65080804633742510ef3f0e0be360c9ef396155d0e6a2bc",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/yanhai_v1.png",
+      "sha256": "d1a0f033ab2aa19a46535cc82e28a54633ae8ce90da2aee86b537c33b2c115e3",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/yanhai_v2.png",
+      "sha256": "d5eb09af2ca6633e272b60cb1ed5cd61d2d2d5912ba226d3b0b6451598112c10",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/neidi_v1.png",
+      "sha256": "546d2152ba5f8e7f62197fa3366a7dc5ecccd6a45e196ef50e8203b3319bdc18",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/neidi_v2.png",
+      "sha256": "21636ad5de8b14877c1f7a9b876267e231a71365e98922b4adc4d7ba3291f443",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/muji_maer_v1.png",
+      "sha256": "61a9cb3db33d2cfbf1ef7cb9be1fb664ccb7f47d3e9126fce455135580b2f42d",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/muji_maer_v2.png",
+      "sha256": "1d2981859ace3ec3afbe730b689f66bf6d111c15a382c3abfc8b58c605df8c04",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/aq_v1.png",
+      "sha256": "779689e4ee35abf00b75da53c57c7f8db8aec02b6c2c94de3260cee79bdcedd5",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/aq_v2.png",
+      "sha256": "f43f61286049502e0f60a7cbd73e4549b650c1c2c8591837e225d748594cadc4",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/kongqi_senlin_baozang_v1.png",
+      "sha256": "8dc7527e06ce32ca24eb9e25cc6690018cbace9adbd05bc4a3d5deffda940ad6",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/kongqi_senlin_baozang_v2.png",
+      "sha256": "925869c92eec95e42608b2210748134140afbab2df1bb928c3d89f83bddae617",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/nongqingzhong_v3.png",
+      "sha256": "23d4187009e281853d04603965d78dc480d1f6fee43f1d45593333bff6bbf561",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/yanhai_v3.png",
+      "sha256": "5eb3157a64dc158c3de01a8243eb8ba18d3f364ffe5e3cfaf3c7f83df138852e",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/neidi_v3.png",
+      "sha256": "8c0f03fbf2af234cb4096b347d8096debab35b2948b8d092633df353272c5158",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/muji_maer_v3.png",
+      "sha256": "e9102a88665c484c618b20092b1e67e502bdef2281ba73832afa0ec2cdda6871",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/aq_v3.png",
+      "sha256": "f5e5caf85d45d6591dca384642cfa9d73d7ee7333b2b1f526965df6fecc7996c",
+      "unmodified_copy": true
+    },
+    {
+      "file": "assets/img/raw/kongqi_senlin_baozang_v3.png",
+      "sha256": "3950a9f5231800d12acb5c72a87c98fb314ac481f068ec0cabc7bcd4fdd8108e",
+      "unmodified_copy": true
+    }
+  ]
+}

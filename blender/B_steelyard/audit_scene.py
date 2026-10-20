@@ -50,8 +50,10 @@ scene.frame_set(1)
 start_cam=scene.camera.location.copy()
 scene.frame_set(300)
 end_cam=scene.camera.location.copy()
-target=Vector((.182,0,.245))
-ratio=(end_cam-target).length/(start_cam-target).length
+manifest=json.loads((ROOT/"scene_manifest.json").read_text(encoding="utf-8"))
+target=Vector(manifest["B1_target"])
+initial_target=Vector(manifest["B1_initial_target"])
+ratio=(end_cam-target).length/(start_cam-initial_target).length
 assert abs(ratio-.94)<1e-6
 detail.frame_set(1)
 d0=detail.camera.location.copy()

@@ -36,24 +36,26 @@ SUBJECTS = (
     "nongqingzhong", "yanhai", "neidi",
     "muji_maer", "aq", "kongqi_senlin_baozang",
 )
-SELECTED = {name: f"{name}_v3.png" for name in SUBJECTS}
+SELECTED = {name: f"{name}_v4.png" for name in SUBJECTS}
+SELECTED.update(yanhai="yanhai_v5.png", aq="aq_v5.png")
+HORIZONTAL_SHIFT = {"muji_maer": -0.008, "neidi": -0.008}
 # 原图归一化关键内容框。由逐张目视确定，用于裁切检查而非自动识别。
 ESSENTIAL_BOXES = {
-    "nongqingzhong": [0.20, 0.20, 0.76, 0.68],
-    "yanhai": [0.105, 0.065, 0.86, 0.71],
-    "neidi": [0.16, 0.35, 0.955, 0.78],
-    "muji_maer": [0.145, 0.24, 0.92, 0.86],
-    "aq": [0.28, 0.22, 0.705, 0.845],
-    "kongqi_senlin_baozang": [0.28, 0.03, 0.78, 0.91],
+    "nongqingzhong": [0.20, 0.16, 0.86, 0.91],
+    "yanhai": [0.105, 0.073, 0.969, 0.72],
+    "neidi": [0.13, 0.29, 0.978, 0.82],
+    "muji_maer": [0.115, 0.20, 0.982, 0.855],
+    "aq": [0.205, 0.21, 0.782, 0.91],
+    "kongqi_senlin_baozang": [0.11, 0.05, 0.75, 0.96],
 }
 # 局部检查：刀痕、结构、人物/动物、关键叙事元素。
 DETAIL_BOXES = {
-    "nongqingzhong": [0.20, 0.20, 0.77, 0.68],
-    "yanhai": [0.10, 0.055, 0.86, 0.71],
-    "neidi": [0.16, 0.35, 0.96, 0.78],
-    "muji_maer": [0.14, 0.23, 0.93, 0.86],
-    "aq": [0.275, 0.215, 0.71, 0.85],
-    "kongqi_senlin_baozang": [0.27, 0.39, 0.79, 0.91],
+    "nongqingzhong": [0.20, 0.16, 0.86, 0.91],
+    "yanhai": [0.105, 0.073, 0.969, 0.72],
+    "neidi": [0.13, 0.29, 0.978, 0.82],
+    "muji_maer": [0.115, 0.20, 0.982, 0.855],
+    "aq": [0.205, 0.21, 0.782, 0.91],
+    "kongqi_senlin_baozang": [0.11, 0.05, 0.75, 0.96],
 }
 
 
@@ -67,7 +69,7 @@ def sha(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
-def print_mask(path: Path) -> tuple[np.ndarray, dict]:
+def print_mask(path: Path, name: str) -> tuple[np.ndarray, dict]:
     with Image.open(path) as source:
         source.load()
         source_size = list(source.size)
@@ -87,6 +89,7 @@ def print_mask(path: Path) -> tuple[np.ndarray, dict]:
     canvas = np.zeros((MASTER_SIZE[1], MASTER_SIZE[0]), dtype=bool)
     x = (MASTER_SIZE[0] - plate_size[0]) // 2
     y = (MASTER_SIZE[1] - plate_size[1]) // 2
+    x += round(MASTER_SIZE[0] * HORIZONTAL_SHIFT.get(name, 0))
     canvas[y:y + plate_size[1], x:x + plate_size[0]] = mask
     stats = {
         "source_size": source_size,
@@ -177,6 +180,8 @@ def validate_pair(name: str, ink_path: Path, paper_path: Path, box: list[float])
     assert np.array_equal(np.unique(ink[:, :, 3]), [0, 255]), name
     assert np.all(ink[:, :, :3] == INK), name
     assert np.count_nonzero(ink[:, :, 3] == 0) > 0, name
+    black_fraction = float(np.mean(ink[:, :, 3] == 255))
+    assert 0.35 <= black_fraction <= 0.50, (name, black_fraction)
     assert np.all(ink[:100, :, 3] == 0), name
     assert np.all(ink[-100:, :, 3] == 0), name
     with Image.open(paper_path) as image:
@@ -202,6 +207,8 @@ def validate_pair(name: str, ink_path: Path, paper_path: Path, box: list[float])
         "ink_rgb_unique": ["#1C1A17"],
         "alpha_unique": [0, 255],
         "intermediate_alpha_pixels": 0,
+        "black_fraction_of_entire_canvas": round(black_fraction, 6),
+        "director_black_mass_35_to_50_percent_pass": True,
         "paper_size": list(PAPER_SIZE),
         "paper_mode": "RGB",
         "paper_median_rgb": [237, 229, 212],
@@ -235,14 +242,17 @@ def previews(out_dir: Path, qa: Path, statistics: dict) -> None:
             opaque.paste(opened, mask=opened.getchannel("A"))
         detail = final_box(DETAIL_BOXES[name], statistics[name]["processing"])
         opaque.crop(pixel_box(detail, MASTER_SIZE)).save(qa / f"{name}_detail.png")
-        # 各题三版同尺度比较，标注仅在 QA 图中出现。
-        comparison = Image.new("RGB", (1800, 375), "white")
-        for version in range(1, 4):
-            with Image.open(RAW / f"{name}_v{version}.png") as raw:
+        # 各题全部版本同尺度比较，标注仅在 QA 图中出现。
+        versions = sorted(RAW.glob(f"{name}_v*.png"))
+        comparison = Image.new("RGB", (1800, 375 * ((len(versions) + 2) // 3)), "white")
+        for version_index, version_path in enumerate(versions):
+            with Image.open(version_path) as raw:
                 thumb = raw.convert("RGB").resize((600, 338), Image.Resampling.LANCZOS)
-            comparison.paste(thumb, ((version - 1) * 600, 32))
+            column, line = version_index % 3, version_index // 3
+            comparison.paste(thumb, (column * 600, line * 375 + 32))
             ImageDraw.Draw(comparison).text(
-                ((version - 1) * 600 + 12, 5), f"{name} / v{version}",
+                (column * 600 + 12, line * 375 + 5),
+                version_path.stem + (" / SELECTED" if version_path.name == SELECTED[name] else ""),
                 font=font, fill="black",
             )
         comparison.save(qa / f"{name}_versions.jpg", quality=94)
@@ -268,7 +278,7 @@ def main() -> None:
         original = Path(source["source"])
         if original.exists():
             assert sha(raw_path.read_bytes()) == sha(original.read_bytes())
-        mask, processing = print_mask(raw_path)
+        mask, processing = print_mask(raw_path, name)
         ink = transparent_ink(mask)
         paper, paper_stats = paper_print(mask, index)
         paths = (args.out_dir / f"{name}_ink.png",
@@ -288,7 +298,8 @@ def main() -> None:
             "validation": validation,
             "outputs": hashes,
         }
-        print(f"PASS {name}: RGBA 2560x1440 + RGB 1920x1080; alpha=0/255; crop-safe")
+        print(f"PASS {name}: RGBA 2560x1440 + RGB 1920x1080; "
+              f"alpha=0/255; crop-safe; black={processing['ink_fraction_of_canvas']:.2%}")
     report = {
         "all_numeric_checks_pass": True,
         "visual_review": "See REVIEW.md; not inferred from pixel tests.",

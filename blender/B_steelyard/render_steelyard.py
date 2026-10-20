@@ -77,8 +77,10 @@ try:
     if mode.startswith("test"):
         # Never more than five <=960x540 test stills per batch.
         folder=ROOT/"review"/mode
-        for sc,frame,label in [(b1,1,"B1_0001"),(b1,130,"B1_0130"),(b1,300,"B1_0300"),
-                               (b2,1,"B2_0001"),(b2,150,"B2_0150")]:
+        shots=[(b1,1,"B1_0001"),(b1,130,"B1_0130"),(b1,300,"B1_0300")]
+        if not mode.endswith("_B1"):
+            shots += [(b2,1,"B2_0001"),(b2,150,"B2_0150")]
+        for sc,frame,label in shots:
             render(sc,frame,folder/(label+".png"),50,48)
     elif mode=="final":
         acquire()

@@ -4,17 +4,35 @@
     "B1 · steelyard_balance",
     "B2 · steelyard_detail"
   ],
+  "revision": "导演审核1修订：实心梨形秤砣、侧偏15度构图、纸色校正",
   "rod_length_m": 0.75,
   "rod_diameters_m": [
-    0.024,
-    0.013
+    0.0276,
+    0.014949999999999998
   ],
   "star_diameter_m": 0.0012,
   "star_count": 63,
   "gear_teeth": 24,
   "gear_diameter_m": 0.157,
   "pan_diameter_m": 0.238,
-  "weight_final_x_m": 0.5060345095368018,
+  "weight_diameter_m": 0.07933333333333333,
+  "weight_final_x_m": 0.4508797955362899,
+  "B1_target": [
+    0.2150000035762787,
+    0.0,
+    0.3100000023841858
+  ],
+  "B1_start": [
+    0.6446396112442017,
+    -1.603436827659607,
+    0.75
+  ],
+  "B1_side_angle_deg": 15,
+  "B1_initial_target": [
+    0.2150000035762787,
+    0.0,
+    0.3614409565925598
+  ],
   "render_engine": "Cycles",
   "device": "OPTIX",
   "samples": [
@@ -23,6 +41,6 @@
   ],
   "denoiser": "OPENIMAGEDENOISE",
   "color": "AgX - Medium High Contrast",
-  "objects": 358,
-  "mesh_vertices": 185548
+  "objects": 354,
+  "mesh_vertices": 186238
 }

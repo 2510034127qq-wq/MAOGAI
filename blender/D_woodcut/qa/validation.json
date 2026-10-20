@@ -1,7 +1,7 @@
 {
   "all_numeric_checks_pass": true,
   "visual_review": "See REVIEW.md; not inferred from pixel tests.",
-  "generated_original_count": 18,
+  "generated_original_count": 26,
   "delivered_png_count": 12,
   "environment": {
     "python": "3.12.10",
@@ -26,8 +26,8 @@
   },
   "subjects": {
     "nongqingzhong": {
-      "selected_raw": "nongqingzhong_v3.png",
-      "raw_sha256": "23d4187009e281853d04603965d78dc480d1f6fee43f1d45593333bff6bbf561",
+      "selected_raw": "nongqingzhong_v4.png",
+      "raw_sha256": "9d49e4e085f6ea3eda283d30a7fa708da1fb66aa9129cba503aa8c75e8ad19cf",
       "processing": {
         "source_size": [
           1672,
@@ -42,10 +42,10 @@
           187
         ],
         "threshold": 155,
-        "removed_black_components": 344,
-        "removed_black_pixels": 666,
-        "ink_fraction_of_canvas": 0.224338,
-        "original_black_components": 1574
+        "removed_black_components": 51,
+        "removed_black_pixels": 79,
+        "ink_fraction_of_canvas": 0.360524,
+        "original_black_components": 208
       },
       "paper_print": {
         "seed": 20261020,
@@ -58,12 +58,12 @@
           -2,
           3
         ],
-        "white_dropouts": 426,
-        "white_dropouts_fraction_of_ink": 0.0009141
+        "white_dropouts": 913,
+        "white_dropouts_fraction_of_ink": 0.0012196
       },
       "validation": {
         "pass": true,
-        "raw_versions": 3,
+        "raw_versions": 4,
         "ink_size": [
           2560,
           1440
@@ -77,6 +77,8 @@
           255
         ],
         "intermediate_alpha_pixels": 0,
+        "black_fraction_of_entire_canvas": 0.360524,
+        "director_black_mass_35_to_50_percent_pass": true,
         "paper_size": [
           1920,
           1080
@@ -90,27 +92,27 @@
         "paper_pixels_outside_two_print_bands": 0,
         "essential_box_normalized": [
           0.27805,
-          0.27792,
-          0.69236,
-          0.63325
+          0.24831,
+          0.76634,
+          0.80351
         ],
         "essential_box_within_central_70_percent": true,
         "essential_box_method": "manual visual annotation, numeric containment check"
       },
       "outputs": {
         "nongqingzhong_ink.png": {
-          "sha256": "2f8842ef5aa1879ef67a9cebb8e548abccaf5e88ba4e38367cc170241be8b0fb",
-          "bytes": 115561
+          "sha256": "ad5ba756a4e92b06f0adac9d4f204a7e7a33f76d39d331f35e7dfea78de35271",
+          "bytes": 69561
         },
         "nongqingzhong_paper.png": {
-          "sha256": "bca519666b40302a6834268abdf34794cd5b8ee5802797e820e8566a93e2056c",
-          "bytes": 637952
+          "sha256": "4d10b56668413b64fb21b5c6aec8d061951529c39f31e1e1070ba4d778b0bcbb",
+          "bytes": 565852
         }
       }
     },
     "yanhai": {
-      "selected_raw": "yanhai_v3.png",
-      "raw_sha256": "5eb3157a64dc158c3de01a8243eb8ba18d3f364ffe5e3cfaf3c7f83df138852e",
+      "selected_raw": "yanhai_v5.png",
+      "raw_sha256": "c6ee8d67f577257e5905b62da509cd3322d7ea3dc820ee16039b52b02b9e68d1",
       "processing": {
         "source_size": [
           1672,
@@ -125,10 +127,10 @@
           187
         ],
         "threshold": 155,
-        "removed_black_components": 167,
-        "removed_black_pixels": 296,
-        "ink_fraction_of_canvas": 0.191053,
-        "original_black_components": 527
+        "removed_black_components": 85,
+        "removed_black_pixels": 140,
+        "ink_fraction_of_canvas": 0.380386,
+        "original_black_components": 207
       },
       "paper_print": {
         "seed": 20261021,
@@ -141,12 +143,12 @@
           -2,
           3
         ],
-        "white_dropouts": 397,
-        "white_dropouts_fraction_of_ink": 0.000998
+        "white_dropouts": 986,
+        "white_dropouts_fraction_of_ink": 0.0012476
       },
       "validation": {
         "pass": true,
-        "raw_versions": 3,
+        "raw_versions": 5,
         "ink_size": [
           2560,
           1440
@@ -160,6 +162,8 @@
           255
         ],
         "intermediate_alpha_pixels": 0,
+        "black_fraction_of_entire_canvas": 0.380386,
+        "director_black_mass_35_to_50_percent_pass": true,
         "paper_size": [
           1920,
           1080
@@ -173,27 +177,27 @@
         "paper_pixels_outside_two_print_bands": 0,
         "essential_box_normalized": [
           0.20776,
-          0.17798,
-          0.76634,
-          0.65546
+          0.1839,
+          0.84699,
+          0.66286
         ],
         "essential_box_within_central_70_percent": true,
         "essential_box_method": "manual visual annotation, numeric containment check"
       },
       "outputs": {
         "yanhai_ink.png": {
-          "sha256": "e9e0757712815ca2ae3f489830dee8dcea9296726612cf63997475f25678d97c",
-          "bytes": 81133
+          "sha256": "cad9312f93753772c5c94e2753ee24f1d6025c33d21723c6def234c74df0be05",
+          "bytes": 42931
         },
         "yanhai_paper.png": {
-          "sha256": "a1d6bc1c6d27fb0ddd747f29a4a616d1c89a8021cc907625822b02ba01430ab1",
-          "bytes": 619526
+          "sha256": "93cad3d5b85037e660fc30f8983d7f7b4acf5ce25310ec131f013b262bef2448",
+          "bytes": 543862
         }
       }
     },
     "neidi": {
-      "selected_raw": "neidi_v3.png",
-      "raw_sha256": "8c0f03fbf2af234cb4096b347d8096debab35b2948b8d092633df353272c5158",
+      "selected_raw": "neidi_v4.png",
+      "raw_sha256": "c3cccb6cfaec08f22a65262a18fc79505c74166cde6e1a6a39f409389b035a09",
       "processing": {
         "source_size": [
           1672,
@@ -204,14 +208,14 @@
           1066
         ],
         "plate_origin": [
-          333,
+          313,
           187
         ],
         "threshold": 155,
-        "removed_black_components": 562,
-        "removed_black_pixels": 1042,
-        "ink_fraction_of_canvas": 0.296474,
-        "original_black_components": 2146
+        "removed_black_components": 131,
+        "removed_black_pixels": 234,
+        "ink_fraction_of_canvas": 0.371206,
+        "original_black_components": 443
       },
       "paper_print": {
         "seed": 20261022,
@@ -224,12 +228,12 @@
           -2,
           3
         ],
-        "white_dropouts": 606,
-        "white_dropouts_fraction_of_ink": 0.000985
+        "white_dropouts": 911,
+        "white_dropouts_fraction_of_ink": 0.0011812
       },
       "validation": {
         "pass": true,
-        "raw_versions": 3,
+        "raw_versions": 4,
         "ink_size": [
           2560,
           1440
@@ -243,6 +247,8 @@
           255
         ],
         "intermediate_alpha_pixels": 0,
+        "black_fraction_of_entire_canvas": 0.371206,
+        "director_black_mass_35_to_50_percent_pass": true,
         "paper_size": [
           1920,
           1080
@@ -255,28 +261,28 @@
         ],
         "paper_pixels_outside_two_print_bands": 0,
         "essential_box_normalized": [
-          0.24845,
-          0.38896,
-          0.83663,
-          0.70728
+          0.21845,
+          0.34454,
+          0.84583,
+          0.73689
         ],
         "essential_box_within_central_70_percent": true,
         "essential_box_method": "manual visual annotation, numeric containment check"
       },
       "outputs": {
         "neidi_ink.png": {
-          "sha256": "ccb6dda66f927362f97de682b8f5e7c202fbab484beb5362a67a5a4628522c60",
-          "bytes": 136360
+          "sha256": "b22581d159279270a8f4feb415503618ed219701013c4b9a1433fa8e3b749b41",
+          "bytes": 64996
         },
         "neidi_paper.png": {
-          "sha256": "eb3293d90fbb296e5e08b9b4fdfd613b9d89c0feb775b5ade36fda51f2a0fff0",
-          "bytes": 633779
+          "sha256": "e9d50a319d6f805382c2b230661066c34019ecdf7ca59d2437e826af0421907d",
+          "bytes": 566811
         }
       }
     },
     "muji_maer": {
-      "selected_raw": "muji_maer_v3.png",
-      "raw_sha256": "e9102a88665c484c618b20092b1e67e502bdef2281ba73832afa0ec2cdda6871",
+      "selected_raw": "muji_maer_v4.png",
+      "raw_sha256": "7fd93eef7745cc231bfb876bebaf08013bfeb1f3d1ba1e0935b920290f95b461",
       "processing": {
         "source_size": [
           1672,
@@ -287,14 +293,14 @@
           1066
         ],
         "plate_origin": [
-          333,
+          313,
           187
         ],
         "threshold": 155,
-        "removed_black_components": 403,
-        "removed_black_pixels": 738,
-        "ink_fraction_of_canvas": 0.193666,
-        "original_black_components": 1315
+        "removed_black_components": 400,
+        "removed_black_pixels": 751,
+        "ink_fraction_of_canvas": 0.399575,
+        "original_black_components": 1381
       },
       "paper_print": {
         "seed": 20261023,
@@ -307,12 +313,12 @@
           -2,
           3
         ],
-        "white_dropouts": 396,
-        "white_dropouts_fraction_of_ink": 0.000985
+        "white_dropouts": 1054,
+        "white_dropouts_fraction_of_ink": 0.0012709
       },
       "validation": {
         "pass": true,
-        "raw_versions": 3,
+        "raw_versions": 4,
         "ink_size": [
           2560,
           1440
@@ -326,6 +332,8 @@
           255
         ],
         "intermediate_alpha_pixels": 0,
+        "black_fraction_of_entire_canvas": 0.399575,
+        "director_black_mass_35_to_50_percent_pass": true,
         "paper_size": [
           1920,
           1080
@@ -338,28 +346,28 @@
         ],
         "paper_pixels_outside_two_print_bands": 0,
         "essential_box_normalized": [
-          0.23736,
-          0.30753,
-          0.81073,
-          0.7665
+          0.20735,
+          0.27792,
+          0.84879,
+          0.7628
         ],
         "essential_box_within_central_70_percent": true,
         "essential_box_method": "manual visual annotation, numeric containment check"
       },
       "outputs": {
         "muji_maer_ink.png": {
-          "sha256": "5856904c1c02626bb910fe9e77b480c62d737bba0b27552ec7801825f13a1b2a",
-          "bytes": 93122
+          "sha256": "2f265073d0d4bb18e8b4d2d23ded995392f88fbb0b46d1d8570fcc7ce960f03c",
+          "bytes": 70560
         },
         "muji_maer_paper.png": {
-          "sha256": "1d5804e8d7cf7a578f987f65ea1074f76c858591a6d236c54d01023a0dbde4a8",
-          "bytes": 605151
+          "sha256": "98e97e593c51a7d281653e0d649e4e442148cd7e64c3953d467616962859b986",
+          "bytes": 548014
         }
       }
     },
     "aq": {
-      "selected_raw": "aq_v3.png",
-      "raw_sha256": "f5e5caf85d45d6591dca384642cfa9d73d7ee7333b2b1f526965df6fecc7996c",
+      "selected_raw": "aq_v5.png",
+      "raw_sha256": "72018641194e9c05f20be5fb6bf766c8aa06296063977fc24db7eac9bca8fcd1",
       "processing": {
         "source_size": [
           1672,
@@ -374,10 +382,10 @@
           187
         ],
         "threshold": 155,
-        "removed_black_components": 416,
-        "removed_black_pixels": 769,
-        "ink_fraction_of_canvas": 0.236547,
-        "original_black_components": 1357
+        "removed_black_components": 119,
+        "removed_black_pixels": 231,
+        "ink_fraction_of_canvas": 0.392511,
+        "original_black_components": 451
       },
       "paper_print": {
         "seed": 20261024,
@@ -390,12 +398,12 @@
           -2,
           3
         ],
-        "white_dropouts": 469,
-        "white_dropouts_fraction_of_ink": 0.0009542
+        "white_dropouts": 927,
+        "white_dropouts_fraction_of_ink": 0.0011371
       },
       "validation": {
         "pass": true,
-        "raw_versions": 3,
+        "raw_versions": 5,
         "ink_size": [
           2560,
           1440
@@ -409,6 +417,8 @@
           255
         ],
         "intermediate_alpha_pixels": 0,
+        "black_fraction_of_entire_canvas": 0.392511,
+        "director_black_mass_35_to_50_percent_pass": true,
         "paper_size": [
           1920,
           1080
@@ -421,28 +431,28 @@
         ],
         "paper_pixels_outside_two_print_bands": 0,
         "essential_box_normalized": [
-          0.33723,
-          0.29272,
-          0.65167,
-          0.7554
+          0.28175,
+          0.28532,
+          0.70864,
+          0.80351
         ],
         "essential_box_within_central_70_percent": true,
         "essential_box_method": "manual visual annotation, numeric containment check"
       },
       "outputs": {
         "aq_ink.png": {
-          "sha256": "163b2d6ccf51041ad8fc3d81aeed512bed81d4d1b54f5f269d37bd9b3d8b20ee",
-          "bytes": 88462
+          "sha256": "6bf7ee0fd2c7e303c0ad7f8832b6cbfdd24d89f1180670cbd42f02dbc77d8c9d",
+          "bytes": 61204
         },
         "aq_paper.png": {
-          "sha256": "8138c7a7c54c03483df35456dbcb0c2083a020487569dc7eb9f8050ade1d02ce",
-          "bytes": 618027
+          "sha256": "046eb1321a0758efbd9e3a816a2d4101e761ad3aa8c9de534c41a17d3a3fc464",
+          "bytes": 563966
         }
       }
     },
     "kongqi_senlin_baozang": {
-      "selected_raw": "kongqi_senlin_baozang_v3.png",
-      "raw_sha256": "3950a9f5231800d12acb5c72a87c98fb314ac481f068ec0cabc7bcd4fdd8108e",
+      "selected_raw": "kongqi_senlin_baozang_v4.png",
+      "raw_sha256": "292949695e833c315de1479bc6544a32e6857ccab0a46e018ab498b0acae049d",
       "processing": {
         "source_size": [
           1672,
@@ -457,10 +467,10 @@
           187
         ],
         "threshold": 155,
-        "removed_black_components": 811,
-        "removed_black_pixels": 1477,
-        "ink_fraction_of_canvas": 0.316938,
-        "original_black_components": 2484
+        "removed_black_components": 128,
+        "removed_black_pixels": 245,
+        "ink_fraction_of_canvas": 0.353625,
+        "original_black_components": 378
       },
       "paper_print": {
         "seed": 20261025,
@@ -473,12 +483,12 @@
           -2,
           3
         ],
-        "white_dropouts": 594,
-        "white_dropouts_fraction_of_ink": 0.0009028
+        "white_dropouts": 903,
+        "white_dropouts_fraction_of_ink": 0.0012291
       },
       "validation": {
         "pass": true,
-        "raw_versions": 3,
+        "raw_versions": 4,
         "ink_size": [
           2560,
           1440
@@ -492,6 +502,8 @@
           255
         ],
         "intermediate_alpha_pixels": 0,
+        "black_fraction_of_entire_canvas": 0.353625,
+        "director_black_mass_35_to_50_percent_pass": true,
         "paper_size": [
           1920,
           1080
@@ -504,22 +516,22 @@
         ],
         "paper_pixels_outside_two_print_bands": 0,
         "essential_box_normalized": [
-          0.33723,
-          0.15207,
-          0.70716,
-          0.80351
+          0.21146,
+          0.16687,
+          0.68496,
+          0.84053
         ],
         "essential_box_within_central_70_percent": true,
         "essential_box_method": "manual visual annotation, numeric containment check"
       },
       "outputs": {
         "kongqi_senlin_baozang_ink.png": {
-          "sha256": "2b4d4d9f54176d96c1fd1d42b07ab92c5dba70fa9bde0bcfb06a3ced984b6349",
-          "bytes": 170421
+          "sha256": "e0c733df60de4748480b4fd5f8fe43bfb898589977b7f4ba651f25e357fd1d4e",
+          "bytes": 67168
         },
         "kongqi_senlin_baozang_paper.png": {
-          "sha256": "fd2aa3d40452854a6237e580ee5a994942806a16a7888db2cfb27e86711fb0b6",
-          "bytes": 636604
+          "sha256": "3625887dcf823bb0647f82ee77738866253e358ac8b5414aa2c2bee0cf42185a",
+          "bytes": 546775
         }
       }
     }

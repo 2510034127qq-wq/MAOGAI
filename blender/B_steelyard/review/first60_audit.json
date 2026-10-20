@@ -1,0 +1,6 @@
+{
+  "frames_decoded": 60,
+  "background_max_mean_step_8bit": 0.002975206611580461,
+  "adjacent_mean_abs_difference_max_8bit": 0.25125771604938274,
+  "browser_test": "Edge media element: 1920x1080, duration=2s, playing=true, error=null; observed replay."
+}

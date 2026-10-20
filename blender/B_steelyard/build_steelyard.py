@@ -26,6 +26,13 @@ M_LOAD, M_WEIGHT, M_BEAM = 0.86, 0.18, 0.135
 BEAM_COM = X_MIN + .75 * (.012**2+2*.012*.0065+3*.0065**2)/(4*(.012**2+.012*.0065+.0065**2))
 X_BALANCE = (M_LOAD * -X_LOAD - M_BEAM * BEAM_COM) / M_WEIGHT
 X_START = 0.105
+ROD_THICKNESS = 1.15
+WEIGHT_HANG = .072
+WEIGHT_NAME = "实心梨形铸铁秤砣"
+B1_TARGET = Vector((.215, 0, .310))
+B1_OFFSET = Vector((1.66*math.sin(math.radians(15)),
+                    -1.66*math.cos(math.radians(15)), .44))
+B1_START = B1_TARGET + B1_OFFSET
 COLLECTIONS = {}
 MOTION = []
 
@@ -141,8 +148,8 @@ def make_materials():
     rough.inputs["To Max"].default_value=.48
     l.new(grain.outputs["Fac"],rough.inputs[0])
     l.new(rough.outputs[0],p.inputs["Roughness"])
-    p.inputs["Coat Weight"].default_value = .1
-    p.inputs["Coat Roughness"].default_value = .36
+    p.inputs["Coat Weight"].default_value = .2
+    p.inputs["Coat Roughness"].default_value = .27
     result["wood"] = m
     for key, color, rough in [("brass","8A6A3B",.43),("bright","A58A56",.3),
                                ("iron","33312D",.63),("edge","67655C",.4)]:
@@ -187,7 +194,30 @@ def make_materials():
         l.new(tex.outputs["Fac"],b.inputs["Height"])
         l.new(b.outputs[0],p.inputs["Normal"])
         result[key]=m
-    m,p,n,l=material("旧纸背景 #EDE5D4", "EDE5D4",rough=.95)
+    # Compensated albedo: the target #EDE5D4 is the lit, AgX-rendered paper,
+    # rather than feeding that display RGB directly into a bright studio.
+    m,p,n,l=material("旧纸背景 · 成像目标 #EDE5D4", "E3D3B0",rough=.95)
+    geo=n.new("ShaderNodeNewGeometry")
+    center=n.new("ShaderNodeVectorMath");center.operation="SUBTRACT"
+    center.inputs[1].default_value=(.2,.23,.30)
+    l.new(geo.outputs["Position"],center.inputs[0])
+    stretch=n.new("ShaderNodeVectorMath");stretch.operation="MULTIPLY"
+    stretch.inputs[1].default_value=(1.2,0,1.9)
+    l.new(center.outputs[0],stretch.inputs[0])
+    length=n.new("ShaderNodeVectorMath");length.operation="LENGTH"
+    l.new(stretch.outputs[0],length.inputs[0])
+    vignette=n.new("ShaderNodeMapRange")
+    vignette.inputs["From Min"].default_value=.18
+    vignette.inputs["From Max"].default_value=.82
+    vignette.inputs["To Min"].default_value=1
+    vignette.inputs["To Max"].default_value=.90
+    vignette.clamp=True
+    l.new(length.outputs["Value"],vignette.inputs[0])
+    tint=n.new("ShaderNodeMixRGB");tint.blend_type="MULTIPLY"
+    tint.inputs[0].default_value=1
+    tint.inputs[1].default_value=srgb("E3D3B0")
+    l.new(vignette.outputs[0],tint.inputs[2])
+    l.new(tint.outputs[0],p.inputs["Base Color"])
     tc=n.new("ShaderNodeTexCoord")
     tex=noise(n,l,1800,2,tc.outputs["Object"])
     b=n.new("ShaderNodeBump")
@@ -205,7 +235,7 @@ def lathe(name, profile, mat, coll, parent=None, center=(0,0,0), segments=96, di
         for i in range(segments):
             a=2*PI*i/segments
             variation = distress*(.6*math.sin(7*a+z*113)+.4*math.sin(11*a+z*41))
-            rr=max(0,r+variation)
+            rr=0 if r==0 else max(0,r+variation)
             verts.append((center[0]+rr*math.cos(a),center[1]+rr*math.sin(a),center[2]+z))
     for j in range(len(profile)-1):
         for i in range(segments):
@@ -311,7 +341,7 @@ def cylinder_between(name,a,b,r,mat,coll,parent=None,vertices=64):
 
 
 def beam_radius(x):
-    return .012-(x-X_MIN)/(X_MAX-X_MIN)*.0055
+    return ROD_THICKNESS*(.012-(x-X_MIN)/(X_MAX-X_MIN)*.0055)
 
 
 def build_rod(mats, coll):
@@ -398,7 +428,7 @@ def build_pan(mats, coll):
         a=2*PI*i/96
         hook_loop.append((-.004,.0031*math.sin(a),-.020+.0045*math.cos(a)))
     rope("三绳汇聚穿钩结",hook_loop,.00115,coll,root,mats,pitch=.004)
-    pan_z=-.253
+    pan_z=-.225
     profile=[(0,pan_z-.008),(.025,pan_z-.0078),(.055,pan_z-.005),
              (.087,pan_z+.0008),(.107,pan_z+.008),(.119,pan_z+.016),
              (.1202,pan_z+.018),(.1195,pan_z+.020),(.1175,pan_z+.020),
@@ -421,7 +451,7 @@ def build_pan(mats, coll):
     verts,faces=[],[]
     r_inner=.024
     profile_r=[.069,.069,.075,.0785,.0785,.075,.069,.069]
-    z0,z1=pan_z+.002,pan_z+.017
+    z0,z1=pan_z+.002,pan_z+.047
     # Outer bottom, outer top, inner bottom, inner top.
     for ring in range(4):
         for i in range(N):
@@ -457,19 +487,39 @@ def build_weight(mats,coll):
     for i in range(81):
         a=PI*i/80
         pts.append((.0015*math.sin(2*a),-loop_radius*math.cos(a),ROD_Z+loop_radius*math.sin(a)))
-    pts.extend([(0,.009,ROD_Z-.009),(0,.005,ROD_Z-.03),
-                (0,.0025,ROD_Z-.049),(0,0,ROD_Z-.051),
-                (0,-.0025,ROD_Z-.049),(0,-.005,ROD_Z-.03),(0,-.009,ROD_Z-.009),
+    pts.extend([(0,.011,ROD_Z-.012),(0,.005,ROD_Z-.04),
+                (0,.0025,ROD_Z-WEIGHT_HANG+.003),(0,0,ROD_Z-WEIGHT_HANG+.001),
+                (0,-.0025,ROD_Z-WEIGHT_HANG+.003),(0,-.005,ROD_Z-.04),(0,-.011,ROD_Z-.012),
                 (0,-loop_radius,ROD_Z)])
     rope("可滑动闭合麻绳套",pts,.00115,coll,saddle,mats,pitch=.0043)
-    torus("秤砣铁提环",(0,0,-.006),.0084,.0021,mats["iron"],coll,root)
-    torus("秤砣提环磨亮",(0,0,-.006),.0084,.00035,mats["edge"],coll,root)
-    profile=[(0,-.016),(.006,-.016),(.007,-.020),(.0075,-.026),
-             (.0105,-.031),(.0155,-.037),(.019,-.046),(.021,-.055),
-             (.022,-.062),(.025,-.067),(.027,-.069),(.0275,-.072),
-             (.027,-.075),(.024,-.078),(0,-.078)]
-    lathe("葫芦钟形铸铁秤砣",list(reversed(profile)),mats["iron"],coll,root,segments=112,distress=.00016)
-    torus("秤砣底沿磨耗",(0,0,-.073),.027,.00055,mats["edge"],coll,root,(0,0,0))
+    nose=torus("秤砣一体铸造鼻钮",(0,0,-.005),.0063,.0026,mats["iron"],coll,root)
+    nose.scale.x=.88
+    # Solid pear/truncated-cone weight. The base is a closed flat face with a
+    # thick vertical land. No separate rim, no skirt, no cavity, no bell mouth.
+    radius=PAN_R/3
+    # Smooth shoulders instead of lathe-like stepped rings.
+    controls=[(.010,-.014),(.0105,-.022),(.024,-.032),(.028,-.039),
+              (.0275,-.044),(.035,-.055),(radius,-.067),(radius,-.0785)]
+    profile=[(0,-.014),controls[0]]
+    for i in range(len(controls)-1):
+        r0,z0=controls[i];r1,z1=controls[i+1]
+        for j in range(1,9):
+            t=j/8
+            u=t*t*(3-2*t)
+            profile.append((r0+(r1-r0)*u,z0+(z1-z0)*t))
+    profile.extend([(.0392,-.079),(0,-.079)])
+    block=lathe(WEIGHT_NAME,list(reversed(profile)),mats["iron"],coll,root,segments=112,distress=.00012)
+    block.data.materials.append(mats["edge"])
+    bm=bmesh.new();bm.from_mesh(block.data)
+    bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=.000001)
+    bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces))
+    bm.to_mesh(block.data);bm.free()
+    for face in block.data.polygons:
+        if all(abs(block.data.vertices[i].co.z+.079)<1e-6 for i in face.vertices):
+            face.use_smooth=False
+    for face in block.data.polygons:
+        if all(block.data.vertices[i].co.z<-.07845 for i in face.vertices):
+            face.material_index=1
     return saddle,root
 
 
@@ -519,7 +569,7 @@ def derive_masses():
     global M_LOAD,M_WEIGHT,M_BEAM,X_BALANCE
     volumes={}
     for name in ("75cm 渐细硬木秤杆","手工锤打黄铜浅盘 · 实体厚度",
-                 "24齿铸铁齿轮 · 盘径三分之二","齿轮凸缘","葫芦钟形铸铁秤砣"):
+                 "24齿铸铁齿轮 · 盘径三分之二","齿轮凸缘",WEIGHT_NAME):
         ob=bpy.data.objects[name]
         bm=bmesh.new();bm.from_mesh(ob.data)
         volumes[name]=bm.calc_volume(signed=True)
@@ -529,7 +579,7 @@ def derive_masses():
     M_BEAM=volumes["75cm 渐细硬木秤杆"]*850
     M_LOAD=volumes["手工锤打黄铜浅盘 · 实体厚度"]*8500+(
         volumes["24齿铸铁齿轮 · 盘径三分之二"]+volumes["齿轮凸缘"])*7200
-    M_WEIGHT=volumes["葫芦钟形铸铁秤砣"]*7200
+    M_WEIGHT=volumes[WEIGHT_NAME]*7200
     X_BALANCE=(M_LOAD*-X_LOAD-M_BEAM*BEAM_COM)/M_WEIGHT
     if not .25<X_BALANCE<.56:
         raise RuntimeError(f"平衡点超出可用秤星范围：{X_BALANCE}")
@@ -615,7 +665,7 @@ def animate(beam,pan,saddle,weight,states):
         saddle.location=transform_point(x,sag,theta)
         saddle.rotation_euler=(0,-theta,0)
         # top of the weight ring intersects only the rope's empty loop aperture
-        wp=transform_point(x,ROD_Z-.052+sag,theta)
+        wp=transform_point(x,ROD_Z-WEIGHT_HANG+sag,theta)
         if last_pan_x is not None:
             pv=(anchor.x-last_pan_x)*FPS;wv=(wp.x-last_weight_x)*FPS
             pa=(pv-last_pan_v)*FPS;wa=(wv-last_weight_v)*FPS
@@ -706,16 +756,22 @@ def main():
     animate(beam,pan,saddle,weight,states)
     focus=empty("B1 焦点 · 提纽附近",camcoll)
     focus.location=(.035,0,.37)
-    cam=camera(camcoll,"B1 62mm · 缓推6%")
+    cam=camera(camcoll,"B1 62mm · 侧偏15度 · 缓推6%")
     cam.data.lens=62
     cam.data.dof.focus_object=focus
     cam.data.dof.aperture_fstop=7.1
-    target=Vector((.182,0,.245))
-    start=Vector((.182,-1.85,.83))
+    target=B1_TARGET
+    start=B1_START
     for f in range(1,301):
         t=smooth((f-1)/299)
-        cam.location=target+(start-target)*(1-.06*t)
-        aim(cam,target)
+        theta=states[f]["beam_angle_rad"]
+        # Compensate the changing center height so the beam remains near 40%
+        # of frame height while the physical pan rises. The viewpoint still
+        # keeps a 15-degree side azimuth and a 6% slow push.
+        tracking=.245*math.sin(theta)+ROD_Z*(math.cos(theta)-1)
+        frame_target=target+Vector((0,0,tracking))
+        cam.location=frame_target+(start-target)*(1-.06*t)
+        aim(cam,frame_target)
         key_transform(cam,f)
     scene.camera=cam
     configure(scene,300)
@@ -777,9 +833,12 @@ def main():
     bpy.context.window.scene=scene
     bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/"steelyard.blend"))
     manifest={"blend":str(ROOT/"steelyard.blend"),"scenes":[s.name for s in (scene,detail)],
-              "rod_length_m":.75,"rod_diameters_m":[.024,.013],"star_diameter_m":.0012,
+              "revision":"导演审核1修订：实心梨形秤砣、侧偏15度构图、纸色校正",
+              "rod_length_m":.75,"rod_diameters_m":[.024*ROD_THICKNESS,.013*ROD_THICKNESS],"star_diameter_m":.0012,
               "star_count":63,"gear_teeth":24,"gear_diameter_m":.157,
-              "pan_diameter_m":.238,"weight_final_x_m":X_BALANCE,
+              "pan_diameter_m":.238,"weight_diameter_m":2*PAN_R/3,"weight_final_x_m":X_BALANCE,
+              "B1_target":list(B1_TARGET),"B1_start":list(B1_START),"B1_side_angle_deg":15,
+              "B1_initial_target":list(B1_TARGET+Vector((0,0,.245*math.sin(math.radians(12))+ROD_Z*(math.cos(math.radians(12))-1)))),
               "render_engine":"Cycles","device":"OPTIX","samples":[128,160],
               "denoiser":"OPENIMAGEDENOISE","color":"AgX - Medium High Contrast",
               "objects":len(bpy.data.objects),"mesh_vertices":sum(len(m.vertices) for m in bpy.data.meshes)}

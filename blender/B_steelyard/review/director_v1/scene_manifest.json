@@ -1,0 +1,28 @@
+{
+  "blend": "D:\\MAOGAI\\blender\\B_steelyard\\steelyard.blend",
+  "scenes": [
+    "B1 · steelyard_balance",
+    "B2 · steelyard_detail"
+  ],
+  "rod_length_m": 0.75,
+  "rod_diameters_m": [
+    0.024,
+    0.013
+  ],
+  "star_diameter_m": 0.0012,
+  "star_count": 63,
+  "gear_teeth": 24,
+  "gear_diameter_m": 0.157,
+  "pan_diameter_m": 0.238,
+  "weight_final_x_m": 0.5060345095368018,
+  "render_engine": "Cycles",
+  "device": "OPTIX",
+  "samples": [
+    128,
+    160
+  ],
+  "denoiser": "OPENIMAGEDENOISE",
+  "color": "AgX - Medium High Contrast",
+  "objects": 358,
+  "mesh_vertices": 185548
+}
