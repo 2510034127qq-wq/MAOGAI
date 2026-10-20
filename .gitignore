@@ -6,3 +6,9 @@ video/public/renders/
 *.blend1
 __pycache__/
 .codex_logs/
+video/public/fonts/
+video/public/scans
+video/public/img
+
+video/public/renders/
+

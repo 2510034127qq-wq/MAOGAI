@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-10-20T04:58:37.993363+00:00",
+  "files": {
+    "steelyard.blend": {
+      "sha256": "653a86df5ca5f20ef28ca3adb4cfe64911bc0c1c6e07c4eb9aab0365db2bd6ad",
+      "bytes": 3147387
+    },
+    "build_steelyard.py": {
+      "sha256": "5c9da027b62d5bc6184b31e9b7b4e197dd86dffc265d0a0a2fa33f41683684bc",
+      "bytes": 33265
+    },
+    "render_steelyard.py": {
+      "sha256": "c8bc2cd715bf3d978aa427a55e38319c66679afe8f2f39bc2c19bff63a94bb48",
+      "bytes": 3784
+    },
+    "scene_manifest.json": {
+      "sha256": "68166d5d9c8ddc684905262821b8d2f4435c0d9263fe4a16054e57682e216b2d",
+      "bytes": 618
+    },
+    "motion_audit.json": {
+      "sha256": "2541fdc631cc1f3afbd6c1f2f110ab2828e1a8a821711f503b0eae0de0304d8b",
+      "bytes": 148482
+    }
+  }
+}

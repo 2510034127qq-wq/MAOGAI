@@ -1,0 +1,29 @@
+{
+  "font": "C:/Windows/Fonts/STSONG.TTF",
+  "seed": 1976,
+  "resolution": [
+    4096,
+    3072
+  ],
+  "paper_size_units": [
+    10.5,
+    8.0
+  ],
+  "stamp_characters_normal": [
+    "破",
+    "立"
+  ],
+  "stamp_centres": [
+    [
+      -1,
+      -2
+    ],
+    [
+      1,
+      -2
+    ]
+  ],
+  "ink_srgb": "#B5302A",
+  "paper_srgb": "#EDE5D4",
+  "physical_unit_metres": 0.004
+}

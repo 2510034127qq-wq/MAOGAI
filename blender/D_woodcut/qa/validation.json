@@ -1,0 +1,527 @@
+{
+  "all_numeric_checks_pass": true,
+  "visual_review": "See REVIEW.md; not inferred from pixel tests.",
+  "generated_original_count": 18,
+  "delivered_png_count": 12,
+  "environment": {
+    "python": "3.12.10",
+    "Pillow": "12.2.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "settings": {
+    "master_size": [
+      2560,
+      1440
+    ],
+    "paper_size": [
+      1920,
+      1080
+    ],
+    "plate_scale": 0.74,
+    "threshold": 155,
+    "minimum_black_component_area": 4,
+    "ink": "#1C1A17",
+    "paper": "#EDE5D4"
+  },
+  "subjects": {
+    "nongqingzhong": {
+      "selected_raw": "nongqingzhong_v3.png",
+      "raw_sha256": "23d4187009e281853d04603965d78dc480d1f6fee43f1d45593333bff6bbf561",
+      "processing": {
+        "source_size": [
+          1672,
+          941
+        ],
+        "plate_pixels": [
+          1894,
+          1066
+        ],
+        "plate_origin": [
+          333,
+          187
+        ],
+        "threshold": 155,
+        "removed_black_components": 344,
+        "removed_black_pixels": 666,
+        "ink_fraction_of_canvas": 0.224338,
+        "original_black_components": 1574
+      },
+      "paper_print": {
+        "seed": 20261020,
+        "paper_base": "#EDE5D4",
+        "paper_channel_variation": [
+          -2,
+          2
+        ],
+        "ink_channel_variation": [
+          -2,
+          3
+        ],
+        "white_dropouts": 426,
+        "white_dropouts_fraction_of_ink": 0.0009141
+      },
+      "validation": {
+        "pass": true,
+        "raw_versions": 3,
+        "ink_size": [
+          2560,
+          1440
+        ],
+        "ink_mode": "RGBA",
+        "ink_rgb_unique": [
+          "#1C1A17"
+        ],
+        "alpha_unique": [
+          0,
+          255
+        ],
+        "intermediate_alpha_pixels": 0,
+        "paper_size": [
+          1920,
+          1080
+        ],
+        "paper_mode": "RGB",
+        "paper_median_rgb": [
+          237,
+          229,
+          212
+        ],
+        "paper_pixels_outside_two_print_bands": 0,
+        "essential_box_normalized": [
+          0.27805,
+          0.27792,
+          0.69236,
+          0.63325
+        ],
+        "essential_box_within_central_70_percent": true,
+        "essential_box_method": "manual visual annotation, numeric containment check"
+      },
+      "outputs": {
+        "nongqingzhong_ink.png": {
+          "sha256": "2f8842ef5aa1879ef67a9cebb8e548abccaf5e88ba4e38367cc170241be8b0fb",
+          "bytes": 115561
+        },
+        "nongqingzhong_paper.png": {
+          "sha256": "bca519666b40302a6834268abdf34794cd5b8ee5802797e820e8566a93e2056c",
+          "bytes": 637952
+        }
+      }
+    },
+    "yanhai": {
+      "selected_raw": "yanhai_v3.png",
+      "raw_sha256": "5eb3157a64dc158c3de01a8243eb8ba18d3f364ffe5e3cfaf3c7f83df138852e",
+      "processing": {
+        "source_size": [
+          1672,
+          941
+        ],
+        "plate_pixels": [
+          1894,
+          1066
+        ],
+        "plate_origin": [
+          333,
+          187
+        ],
+        "threshold": 155,
+        "removed_black_components": 167,
+        "removed_black_pixels": 296,
+        "ink_fraction_of_canvas": 0.191053,
+        "original_black_components": 527
+      },
+      "paper_print": {
+        "seed": 20261021,
+        "paper_base": "#EDE5D4",
+        "paper_channel_variation": [
+          -2,
+          2
+        ],
+        "ink_channel_variation": [
+          -2,
+          3
+        ],
+        "white_dropouts": 397,
+        "white_dropouts_fraction_of_ink": 0.000998
+      },
+      "validation": {
+        "pass": true,
+        "raw_versions": 3,
+        "ink_size": [
+          2560,
+          1440
+        ],
+        "ink_mode": "RGBA",
+        "ink_rgb_unique": [
+          "#1C1A17"
+        ],
+        "alpha_unique": [
+          0,
+          255
+        ],
+        "intermediate_alpha_pixels": 0,
+        "paper_size": [
+          1920,
+          1080
+        ],
+        "paper_mode": "RGB",
+        "paper_median_rgb": [
+          237,
+          229,
+          212
+        ],
+        "paper_pixels_outside_two_print_bands": 0,
+        "essential_box_normalized": [
+          0.20776,
+          0.17798,
+          0.76634,
+          0.65546
+        ],
+        "essential_box_within_central_70_percent": true,
+        "essential_box_method": "manual visual annotation, numeric containment check"
+      },
+      "outputs": {
+        "yanhai_ink.png": {
+          "sha256": "e9e0757712815ca2ae3f489830dee8dcea9296726612cf63997475f25678d97c",
+          "bytes": 81133
+        },
+        "yanhai_paper.png": {
+          "sha256": "a1d6bc1c6d27fb0ddd747f29a4a616d1c89a8021cc907625822b02ba01430ab1",
+          "bytes": 619526
+        }
+      }
+    },
+    "neidi": {
+      "selected_raw": "neidi_v3.png",
+      "raw_sha256": "8c0f03fbf2af234cb4096b347d8096debab35b2948b8d092633df353272c5158",
+      "processing": {
+        "source_size": [
+          1672,
+          941
+        ],
+        "plate_pixels": [
+          1894,
+          1066
+        ],
+        "plate_origin": [
+          333,
+          187
+        ],
+        "threshold": 155,
+        "removed_black_components": 562,
+        "removed_black_pixels": 1042,
+        "ink_fraction_of_canvas": 0.296474,
+        "original_black_components": 2146
+      },
+      "paper_print": {
+        "seed": 20261022,
+        "paper_base": "#EDE5D4",
+        "paper_channel_variation": [
+          -2,
+          2
+        ],
+        "ink_channel_variation": [
+          -2,
+          3
+        ],
+        "white_dropouts": 606,
+        "white_dropouts_fraction_of_ink": 0.000985
+      },
+      "validation": {
+        "pass": true,
+        "raw_versions": 3,
+        "ink_size": [
+          2560,
+          1440
+        ],
+        "ink_mode": "RGBA",
+        "ink_rgb_unique": [
+          "#1C1A17"
+        ],
+        "alpha_unique": [
+          0,
+          255
+        ],
+        "intermediate_alpha_pixels": 0,
+        "paper_size": [
+          1920,
+          1080
+        ],
+        "paper_mode": "RGB",
+        "paper_median_rgb": [
+          237,
+          229,
+          212
+        ],
+        "paper_pixels_outside_two_print_bands": 0,
+        "essential_box_normalized": [
+          0.24845,
+          0.38896,
+          0.83663,
+          0.70728
+        ],
+        "essential_box_within_central_70_percent": true,
+        "essential_box_method": "manual visual annotation, numeric containment check"
+      },
+      "outputs": {
+        "neidi_ink.png": {
+          "sha256": "ccb6dda66f927362f97de682b8f5e7c202fbab484beb5362a67a5a4628522c60",
+          "bytes": 136360
+        },
+        "neidi_paper.png": {
+          "sha256": "eb3293d90fbb296e5e08b9b4fdfd613b9d89c0feb775b5ade36fda51f2a0fff0",
+          "bytes": 633779
+        }
+      }
+    },
+    "muji_maer": {
+      "selected_raw": "muji_maer_v3.png",
+      "raw_sha256": "e9102a88665c484c618b20092b1e67e502bdef2281ba73832afa0ec2cdda6871",
+      "processing": {
+        "source_size": [
+          1672,
+          941
+        ],
+        "plate_pixels": [
+          1894,
+          1066
+        ],
+        "plate_origin": [
+          333,
+          187
+        ],
+        "threshold": 155,
+        "removed_black_components": 403,
+        "removed_black_pixels": 738,
+        "ink_fraction_of_canvas": 0.193666,
+        "original_black_components": 1315
+      },
+      "paper_print": {
+        "seed": 20261023,
+        "paper_base": "#EDE5D4",
+        "paper_channel_variation": [
+          -2,
+          2
+        ],
+        "ink_channel_variation": [
+          -2,
+          3
+        ],
+        "white_dropouts": 396,
+        "white_dropouts_fraction_of_ink": 0.000985
+      },
+      "validation": {
+        "pass": true,
+        "raw_versions": 3,
+        "ink_size": [
+          2560,
+          1440
+        ],
+        "ink_mode": "RGBA",
+        "ink_rgb_unique": [
+          "#1C1A17"
+        ],
+        "alpha_unique": [
+          0,
+          255
+        ],
+        "intermediate_alpha_pixels": 0,
+        "paper_size": [
+          1920,
+          1080
+        ],
+        "paper_mode": "RGB",
+        "paper_median_rgb": [
+          237,
+          229,
+          212
+        ],
+        "paper_pixels_outside_two_print_bands": 0,
+        "essential_box_normalized": [
+          0.23736,
+          0.30753,
+          0.81073,
+          0.7665
+        ],
+        "essential_box_within_central_70_percent": true,
+        "essential_box_method": "manual visual annotation, numeric containment check"
+      },
+      "outputs": {
+        "muji_maer_ink.png": {
+          "sha256": "5856904c1c02626bb910fe9e77b480c62d737bba0b27552ec7801825f13a1b2a",
+          "bytes": 93122
+        },
+        "muji_maer_paper.png": {
+          "sha256": "1d5804e8d7cf7a578f987f65ea1074f76c858591a6d236c54d01023a0dbde4a8",
+          "bytes": 605151
+        }
+      }
+    },
+    "aq": {
+      "selected_raw": "aq_v3.png",
+      "raw_sha256": "f5e5caf85d45d6591dca384642cfa9d73d7ee7333b2b1f526965df6fecc7996c",
+      "processing": {
+        "source_size": [
+          1672,
+          941
+        ],
+        "plate_pixels": [
+          1894,
+          1066
+        ],
+        "plate_origin": [
+          333,
+          187
+        ],
+        "threshold": 155,
+        "removed_black_components": 416,
+        "removed_black_pixels": 769,
+        "ink_fraction_of_canvas": 0.236547,
+        "original_black_components": 1357
+      },
+      "paper_print": {
+        "seed": 20261024,
+        "paper_base": "#EDE5D4",
+        "paper_channel_variation": [
+          -2,
+          2
+        ],
+        "ink_channel_variation": [
+          -2,
+          3
+        ],
+        "white_dropouts": 469,
+        "white_dropouts_fraction_of_ink": 0.0009542
+      },
+      "validation": {
+        "pass": true,
+        "raw_versions": 3,
+        "ink_size": [
+          2560,
+          1440
+        ],
+        "ink_mode": "RGBA",
+        "ink_rgb_unique": [
+          "#1C1A17"
+        ],
+        "alpha_unique": [
+          0,
+          255
+        ],
+        "intermediate_alpha_pixels": 0,
+        "paper_size": [
+          1920,
+          1080
+        ],
+        "paper_mode": "RGB",
+        "paper_median_rgb": [
+          237,
+          229,
+          212
+        ],
+        "paper_pixels_outside_two_print_bands": 0,
+        "essential_box_normalized": [
+          0.33723,
+          0.29272,
+          0.65167,
+          0.7554
+        ],
+        "essential_box_within_central_70_percent": true,
+        "essential_box_method": "manual visual annotation, numeric containment check"
+      },
+      "outputs": {
+        "aq_ink.png": {
+          "sha256": "163b2d6ccf51041ad8fc3d81aeed512bed81d4d1b54f5f269d37bd9b3d8b20ee",
+          "bytes": 88462
+        },
+        "aq_paper.png": {
+          "sha256": "8138c7a7c54c03483df35456dbcb0c2083a020487569dc7eb9f8050ade1d02ce",
+          "bytes": 618027
+        }
+      }
+    },
+    "kongqi_senlin_baozang": {
+      "selected_raw": "kongqi_senlin_baozang_v3.png",
+      "raw_sha256": "3950a9f5231800d12acb5c72a87c98fb314ac481f068ec0cabc7bcd4fdd8108e",
+      "processing": {
+        "source_size": [
+          1672,
+          941
+        ],
+        "plate_pixels": [
+          1894,
+          1066
+        ],
+        "plate_origin": [
+          333,
+          187
+        ],
+        "threshold": 155,
+        "removed_black_components": 811,
+        "removed_black_pixels": 1477,
+        "ink_fraction_of_canvas": 0.316938,
+        "original_black_components": 2484
+      },
+      "paper_print": {
+        "seed": 20261025,
+        "paper_base": "#EDE5D4",
+        "paper_channel_variation": [
+          -2,
+          2
+        ],
+        "ink_channel_variation": [
+          -2,
+          3
+        ],
+        "white_dropouts": 594,
+        "white_dropouts_fraction_of_ink": 0.0009028
+      },
+      "validation": {
+        "pass": true,
+        "raw_versions": 3,
+        "ink_size": [
+          2560,
+          1440
+        ],
+        "ink_mode": "RGBA",
+        "ink_rgb_unique": [
+          "#1C1A17"
+        ],
+        "alpha_unique": [
+          0,
+          255
+        ],
+        "intermediate_alpha_pixels": 0,
+        "paper_size": [
+          1920,
+          1080
+        ],
+        "paper_mode": "RGB",
+        "paper_median_rgb": [
+          237,
+          229,
+          212
+        ],
+        "paper_pixels_outside_two_print_bands": 0,
+        "essential_box_normalized": [
+          0.33723,
+          0.15207,
+          0.70716,
+          0.80351
+        ],
+        "essential_box_within_central_70_percent": true,
+        "essential_box_method": "manual visual annotation, numeric containment check"
+      },
+      "outputs": {
+        "kongqi_senlin_baozang_ink.png": {
+          "sha256": "2b4d4d9f54176d96c1fd1d42b07ab92c5dba70fa9bde0bcfb06a3ced984b6349",
+          "bytes": 170421
+        },
+        "kongqi_senlin_baozang_paper.png": {
+          "sha256": "fd2aa3d40452854a6237e580ee5a994942806a16a7888db2cfb27e86711fb0b6",
+          "bytes": 636604
+        }
+      }
+    }
+  }
+}

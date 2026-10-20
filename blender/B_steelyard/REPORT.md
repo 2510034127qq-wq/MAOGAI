@@ -1,0 +1,55 @@
+# B 杆秤交付报告
+
+执行依据：已完整阅读 `BRIEF.md`、`blender/COMMON.md` 和 `docs/导演阐述.md`。制作范围限于本任务目录、两个指定镜头输出目录，以及通用规范指定的共享 GPU 锁；未执行 Git 提交。
+
+**当前状态：正式序列正在渲染。下表为目标清单，完整性及最终自审结论将在全部出帧、编码和验证后更新。**
+
+## 交付清单
+
+| 产出 | 路径（相对 `D:\MAOGAI`） | 规格 |
+|---|---|---|
+| B1 杆秤平衡序列 | `assets/renders/steelyard_balance/frames/0001.png` 至 `0300.png` | 300帧，1920×1080，30fps，PNG 8-bit RGB |
+| B1 预览 | `assets/renders/steelyard_balance/preview.mp4` | 10秒，H.264，CRF18 |
+| B1 联系表 | `assets/renders/steelyard_balance/contact.png` | 首帧加每30帧，共11张 |
+| B1 最终4K静帧 | `assets/renders/steelyard_balance/still_4k.png` | 第300帧，3840×2160，PNG RGB |
+| B2 微距序列 | `assets/renders/steelyard_detail/frames/0001.png` 至 `0150.png` | 150帧，1920×1080，30fps，PNG 8-bit RGB |
+| B2 预览 | `assets/renders/steelyard_detail/preview.mp4` | 5秒，H.264，CRF18 |
+| B2 联系表 | `assets/renders/steelyard_detail/contact.png` | 首帧加每30帧，共6张 |
+| 可编辑工程 | `blender/B_steelyard/steelyard.blend` | 两个独立场景，无外部贴图依赖 |
+| 重现说明 | `blender/B_steelyard/README.md` | 编辑入口、命令、续渲注意事项 |
+| 自审记录 | `blender/B_steelyard/REVIEW.md` | 各轮发现、修改、复核证据 |
+
+## 制作内容
+
+75厘米渐细木杆使用深红褐顺纹硬木材质，两端有旧铜帽；63颗直径约1.2毫米的黄铜秤星，包括12组五点刻度及三星起点。浅盘具有真实壁厚、卷边、三点系绳铜耳，承托24齿铸铁齿轮。右侧采用钟形铸铁秤砣及闭合麻绳套，提纽通过穿环结连向画外。
+
+主绳由三股真实几何捻合，并附细纤维；滑动时不缩放、不改变绳体长度。木材、黄铜、铁器、麻绳和纸背景均有独立的程序化微观粗糙度、颜色或凹凸变化。没有调用 Tripo，也没有引入外部生成模型。
+
+B1 保持侧面静物摄影构图，以左上暖色柔光和右侧弱补光表现旧木与旧铜；6%的缓慢推近贯穿10秒。B2沿秤杆平行移动约39.8厘米，扫过成组秤星，最后停在麻绳套上，焦点同步平移。
+
+## 力学与模型边界
+
+主要物件质量按模型净体积与估算密度计算：盘和齿轮合计约2.516千克、秤砣约0.497千克、木杆约0.176千克。负载为秤砣的约5.07倍。负载力臂11.2厘米，最终秤砣力臂50.60厘米；木杆自重也计入力矩。
+
+角度由力矩差、惯性、支承恢复力矩与阻尼积分得到，不直接线性插值杆角。每帧16个积分子步；盘与秤砣分别计算受悬挂点加速度驱动的微小摆动。B1末段过冲约−0.046°，回摆约0.010°；250–300帧严格水平保持。B2冻结B1第300帧姿态。
+
+**物理边界需保留：**任务要求偏重状态下倾斜约12°且静止，理想自由铰支杆秤无法独自维持该状态。本实现明确加入画外持秤者的稳定作用，是受控称量的简化力学演示，不能表述为完全自由的刚体实验。小铜环、绳结和铜帽未单独计入等效质量；密度和质量不是历史文物实测数据。
+
+## 渲染参数
+
+- Blender 5.2.1 LTS，Cycles，RTX 5060 Laptop GPU，OptiX。
+- B1最多128 samples；B2最多160 samples；4K静帧192 samples。
+- 自适应采样：最低48 samples；B1噪声阈值0.008，B2阈值0.007。
+- OpenImageDenoise，GPU降噪；固定采样种子2718，不启用逐帧随机种子。
+- AgX / Medium High Contrast，曝光+0.05，Gamma 1；PNG 8-bit RGB。
+- B1：62mm，f/7.1，焦点在提纽附近；B2：85mm，f/9，九片光圈。
+- 主体尺度采用米制。最终帧序列保留无字幕、无配乐画面，供导演合成。
+- 正式批量渲染以独占创建 `.gpu.lock` 获取共享GPU；每完成一帧更新锁时间，退出时释放。
+
+## 自审与验证
+
+已完成低清多轮看图和返工；独立场景检查验证了300帧的33股主绳长度、悬挂姿态、6%推近，以及B2与B1最终姿态的一致性。过程记录见 `REVIEW.md`。
+
+最终文件检查、完整视频回看、实际每帧耗时统计：待正式渲染完成后填写。
+
+参考：Cycles GPU和降噪配置依据本机实际可用设备及 [Blender官方GPU渲染说明](https://docs.blender.org/manual/en/latest/render/cycles/gpu_rendering.html)。杆秤的异臂结构参考 [Science Museum Group 杆秤藏品目录](https://collection.sciencemuseumgroup.org.uk/search/object_type/steelyard)，具体尺寸、材质、镜头和叙事以本任务书为准；未声称复刻某一件藏品。

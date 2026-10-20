@@ -1,0 +1,11 @@
+{
+  "blender": "5.2.1 LTS",
+  "backend": "OPTIX",
+  "scenes": [
+    "desk_open",
+    "desk_close"
+  ],
+  "objects": 123,
+  "images_packed": true,
+  "geometry": "14 individual leaves in the 28-page closed booklet; curved paper surfaces, two iron saddle staples; 140mm six-sided pencil; hollow enamel mug"
+}

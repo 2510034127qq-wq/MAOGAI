@@ -1,0 +1,23 @@
+{
+  "source_files": [
+    "assets/scans/cover.png",
+    "assets/scans/p06.png",
+    "assets/scans/p07.png"
+  ],
+  "cover_crop_xyxy": [
+    0,
+    20,
+    975,
+    1400
+  ],
+  "cover_aspect_ratio": 0.7065217391304348,
+  "physical_aspect_ratio": 0.7065217391304348,
+  "page_crop_xyxy": [
+    22,
+    45,
+    1452,
+    2069
+  ],
+  "operations": "Original scan glyphs retained. Uniform crops, scanner seam repair, paper tint and cinnabar mapping. No re-typesetting.",
+  "seed": 1976
+}

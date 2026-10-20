@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><title>任务 C · 成片审核</title>
+<style>
+body{margin:0;background:#1c1a17;color:#ede5d4;font:16px system-ui;padding:22px}
+main{max-width:1300px;margin:auto}video{width:100%;max-height:78vh;background:#000;display:block}
+button{font:inherit;margin:12px 10px 12px 0;padding:9px 18px;color:#ede5d4;background:#6b655b;border:0;border-radius:4px}
+p{color:#d4c7ae}#state{font-variant-numeric:tabular-nums}
+</style>
+<main>
+<h1>书桌小册子 · 连续播放审核</h1>
+<button id="open">播放展开镜头</button><button id="close">播放合本镜头</button><button id="replay">重播当前镜头</button>
+<video id="film" controls muted playsinline preload="auto" src="../../assets/renders/desk_open/preview.mp4"></video>
+<p id="state">等待播放</p>
+</main>
+<script>
+const film=document.querySelector('#film'),state=document.querySelector('#state');
+let shot='desk_open',ended=0,starts=0;
+function status(){const q=film.getVideoPlaybackQuality?.();state.textContent=`${shot} | ${film.currentTime.toFixed(3)} / ${film.duration?.toFixed(3)} 秒 | ${film.videoWidth}×${film.videoHeight} | ${film.paused?'暂停':'播放中'} | 已完整播放 ${ended} 次 | 启播 ${starts} 次 | 丢帧 ${q?.droppedVideoFrames??0}/${q?.totalVideoFrames??0}`;}
+function load(s){shot=s;film.src=`../../assets/renders/${s}/preview.mp4`;film.play();}
+document.querySelector('#open').onclick=()=>load('desk_open');
+document.querySelector('#close').onclick=()=>load('desk_close');
+document.querySelector('#replay').onclick=()=>{film.currentTime=0;film.play()};
+film.addEventListener('ended',()=>{ended++;status()});film.addEventListener('playing',()=>{starts++;status()});
+film.addEventListener('timeupdate',status);film.addEventListener('loadedmetadata',status);
+</script></html>

@@ -1,0 +1,97 @@
+{
+  "blender": "5.2.1 LTS",
+  "scenes": {
+    "desk_close": {
+      "frames": 330,
+      "fps": 30,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "engine": "CYCLES",
+      "samples": 128,
+      "adaptive_threshold": 0.012000000104308128,
+      "denoiser": "OPTIX",
+      "view_transform": "AgX",
+      "finite_geometry": true,
+      "paper_front_normals_up": true,
+      "pencil_min_ridge_clearance_mm": 0.025171786546707153,
+      "pencil_bottom_clearance_by_axial_mm": {
+        "19": 0.8320547640323639,
+        "25": 0.7057639304548502,
+        "40": 0.3653604071587324,
+        "60": 1.844944665208459,
+        "80": 1.374205225147307,
+        "100": 0.903465726878494,
+        "120": 0.4327265196479857,
+        "137": 0.032597868994344026
+      },
+      "camera_max_step_mm": 3.0965723365685345,
+      "camera_last_step_mm": 0.009650949610442381
+    },
+    "desk_open": {
+      "frames": 180,
+      "fps": 30,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "engine": "CYCLES",
+      "samples": 128,
+      "adaptive_threshold": 0.012000000104308128,
+      "denoiser": "OPTIX",
+      "view_transform": "AgX",
+      "finite_geometry": true,
+      "paper_front_normals_up": true,
+      "pencil_min_ridge_clearance_mm": 0.020626583136618137,
+      "pencil_bottom_clearance_by_axial_mm": {
+        "19": 0.39942190051078796,
+        "25": 0.5115056410431862,
+        "40": 0.4057823680341244,
+        "60": 0.07840432226657867,
+        "80": 1.0163580300286412,
+        "100": 0.668505672365427,
+        "120": 0.320653518429026,
+        "137": 0.024979104637168348
+      },
+      "camera_max_step_mm": 4.236204838972978,
+      "camera_last_step_mm": 0.02415799208544091,
+      "final_text_projection": {
+        "title": {
+          "bounds_px": [
+            642.8949165344238,
+            291.4546251296997,
+            1207.3107147216797,
+            369.76343393325806
+          ],
+          "height_px": 78.30880880355835,
+          "within_frame": true
+        },
+        "date": {
+          "bounds_px": [
+            604.8025703430176,
+            426.1453127861023,
+            1236.5336608886719,
+            479.81921195983887
+          ],
+          "height_px": 53.67389917373657,
+          "within_frame": true
+        }
+      }
+    }
+  },
+  "scan_text_inside_crop": {
+    "p06": true,
+    "p07": true
+  },
+  "packed_images": {
+    "cover_clean.png": true,
+    "elm_color.png": true,
+    "elm_height.png": true,
+    "elm_roughness.png": true,
+    "p06_aged.png": true,
+    "p07_aged.png": true,
+    "ruled.png": true
+  },
+  "pass_basic": true
+}
