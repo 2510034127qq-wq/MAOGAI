@@ -2,6 +2,8 @@
 import bpy
 import json
 import math
+import bmesh
+import numpy as np
 from pathlib import Path
 from mathutils import Vector
 
@@ -20,6 +22,9 @@ for o in rope_objects:
              for i in range(0,len(o.data.vertices),8)]
     baseline[o.name]=sum((b-a).length for a,b in zip(centers,centers[1:]))
 max_scale_error=0
+min_loop_clearance=1
+loop_meshes=[o for o in rope_objects if o.name.startswith("可滑动闭合麻绳套")]
+loop_vertices={o.name:np.array([(*v.co,1) for v in o.data.vertices]) for o in loop_meshes}
 for f in range(1,301):
     scene.frame_set(f)
     for o in rope_objects:
@@ -28,6 +33,13 @@ for f in range(1,301):
         max_scale_error=max(max_scale_error,err)
         assert err<1e-6,(f,o.name,scale)
         assert len(o.modifiers)==0,(f,o.name,"绳体具有未检查的变形修改器")
+    beam_inverse=objects["01 力矩驱动秤杆"].matrix_world.inverted()
+    for o in loop_meshes:
+        transform=np.array(beam_inverse @ o.matrix_world)
+        q=loop_vertices[o.name] @ transform.T
+        radius=1.15*(.012-(q[:,0]+.13)/.75*.0055)
+        gap=np.sqrt(q[:,1]**2+(q[:,2]+.023)**2)-radius
+        min_loop_clearance=min(min_loop_clearance,float(gap.min()))
     records.append({"frame":f,"pan_deg":math.degrees(objects["02 重力竖直 · 秤盘与齿轮"].rotation_euler.y),
                     "weight_deg":math.degrees(objects["04 重力竖直 · 铸铁秤砣"].rotation_euler.y),
                     "beam_deg":-math.degrees(objects["01 力矩驱动秤杆"].rotation_euler.y)})
@@ -35,6 +47,13 @@ for f in range(1,301):
     assert abs(records[-1]["pan_deg"])<1
     assert abs(records[-1]["weight_deg"])<2
     assert max(abs(a) for a in objects["03 可沿杆滑动 · 麻绳套"].rotation_euler)<1e-8
+assert min_loop_clearance>-.0002,("绳套穿杆超过接触容差",min_loop_clearance)
+solid=bpy.data.objects["实心梨形铸铁秤砣"]
+bm=bmesh.new();bm.from_mesh(solid.data)
+nonmanifold=sum(not e.is_manifold for e in bm.edges)
+solid_volume=bm.calc_volume(signed=True)
+bm.free()
+assert nonmanifold==0 and solid_volume>0,("秤砣必须闭合实心",nonmanifold,solid_volume)
 scene.frame_set(300)
 saved_matrices={o.name:o.matrix_world.copy() for o in objects.values()}
 bpy.context.window.scene=detail
@@ -70,6 +89,10 @@ out={"all_passed":True,"frames_checked":300,"rope_strands_checked":len(rope_obje
      "frozen_B2_matches_B1_frame300":frozen,"B1_camera_distance_ratio":ratio,
      "B2_camera_translation_m":list(d1-d0),"missing_external_images":external,
      "weight_rope_loop_vertical_all_frames":True,
+     "weight_loop_min_wood_clearance_m":min_loop_clearance,
+     "contact_tolerance_m":.0002,
+     "solid_weight_nonmanifold_edges":nonmanifold,
+     "solid_weight_net_volume_m3":solid_volume,
      "note":"逐帧检查刚性绳体长度、悬挂姿态及相机连续性；不将这些检查冒充通用碰撞求解。"}
 (ROOT/"rig_audit.json").write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding="utf-8")
 print("RIG_AUDIT_PASSED",len(rope_objects),ratio)

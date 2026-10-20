@@ -29,9 +29,9 @@ X_START = 0.105
 ROD_THICKNESS = 1.15
 WEIGHT_HANG = .072
 WEIGHT_NAME = "实心梨形铸铁秤砣"
-B1_TARGET = Vector((.215, 0, .325))
-B1_OFFSET = Vector((1.65*math.sin(math.radians(15)),
-                    -1.65*math.cos(math.radians(15)), .44))
+B1_TARGET = Vector((.215, 0, PIVOT.z+ROD_Z))
+B1_OFFSET = Vector((1.70*math.sin(math.radians(9)),
+                    -1.70*math.cos(math.radians(9)), 0))
 B1_START = B1_TARGET + B1_OFFSET
 COLLECTIONS = {}
 MOTION = []
@@ -428,7 +428,7 @@ def build_pan(mats, coll):
         a=2*PI*i/96
         hook_loop.append((-.004,.0031*math.sin(a),-.020+.0045*math.cos(a)))
     rope("三绳汇聚穿钩结",hook_loop,.00115,coll,root,mats,pitch=.004)
-    pan_z=-.225
+    pan_z=-.190
     profile=[(0,pan_z-.008),(.025,pan_z-.0078),(.055,pan_z-.005),
              (.087,pan_z+.0008),(.107,pan_z+.008),(.119,pan_z+.016),
              (.1202,pan_z+.018),(.1195,pan_z+.020),(.1175,pan_z+.020),
@@ -603,8 +603,8 @@ def model_motion():
     initial_delta=M_LOAD*-X_LOAD-M_BEAM*BEAM_COM-M_WEIGHT*X_START
     h=-ROD_Z
     k=G*(initial_delta*math.cos(theta0)-total*h*math.sin(theta0))/theta0
-    inertia=.25
-    damping=1.6
+    inertia=2
+    damping=2
     dt=1/(FPS*16)
     theta,omega=theta0,0
     states={}
@@ -618,7 +618,7 @@ def model_motion():
                 # At the endpoint the operator relaxes grip; small residual
                 # angular velocity produces the single damped settling lobe.
                 release=smooth((t-180)/20)
-                c=damping*(1-release)+1.3*release
+                c=damping*(1-release)+3*release
                 acc=(torque-k*theta-c*omega)/inertia
                 omega+=acc*dt
                 theta+=omega*dt
@@ -758,10 +758,11 @@ def main():
     animate(beam,pan,saddle,weight,states)
     focus=empty("B1 焦点 · 提纽附近",camcoll)
     focus.location=(.035,0,.37)
-    cam=camera(camcoll,"B1 62mm · 侧偏15度 · 缓推6%")
+    cam=camera(camcoll,"B1 62mm · 侧偏9度 · 齐杆高 · 零滚转")
     cam.data.lens=62
     cam.data.dof.focus_object=focus
     cam.data.dof.aperture_fstop=7.1
+    cam.data.shift_y=-.05625
     target=B1_TARGET
     start=B1_START
     for f in range(1,301):
@@ -769,7 +770,9 @@ def main():
         theta=states[f]["beam_angle_rad"]
         # Compensate the changing center height so the beam remains near 40%
         # of frame height while the physical pan rises. The viewpoint still
-        # keeps a 15-degree side azimuth and a 6% slow push.
+        # keeps a 9-degree side azimuth and a 6% slow push. Camera height equals
+        # rod center height and the optical axis stays level. The vertical
+        # lens shift, rather than camera pitch/roll, places the rod at 40%.
         tracking=.245*math.sin(theta)+ROD_Z*(math.cos(theta)-1)
         frame_target=target+Vector((0,0,tracking))
         cam.location=frame_target+(start-target)*(1-.06*t)
@@ -835,11 +838,12 @@ def main():
     bpy.context.window.scene=scene
     bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/"steelyard.blend"))
     manifest={"blend":str(ROOT/"steelyard.blend"),"scenes":[s.name for s in (scene,detail)],
-              "revision":"导演审核1修订：实心梨形秤砣、侧偏15度构图、纸色校正",
+              "revision":"导演审核2修订：齐杆高零滚转、侧偏9度、shift构图、可辨阻尼回摆",
               "rod_length_m":.75,"rod_diameters_m":[.024*ROD_THICKNESS,.013*ROD_THICKNESS],"star_diameter_m":.0012,
               "star_count":63,"gear_teeth":24,"gear_diameter_m":.157,
               "pan_diameter_m":.238,"weight_diameter_m":2*PAN_R/3,"weight_final_x_m":X_BALANCE,
-              "B1_target":list(B1_TARGET),"B1_start":list(B1_START),"B1_side_angle_deg":15,
+              "B1_target":list(B1_TARGET),"B1_start":list(B1_START),"B1_side_angle_deg":9,
+              "B1_lens_shift_y":-.05625,"B1_camera_pitch_deg":0,"B1_camera_roll_deg":0,
               "B1_initial_target":list(B1_TARGET+Vector((0,0,.245*math.sin(math.radians(12))+ROD_Z*(math.cos(math.radians(12))-1)))),
               "render_engine":"Cycles","device":"OPTIX","samples":[128,160],
               "denoiser":"OPENIMAGEDENOISE","color":"AgX - Medium High Contrast",

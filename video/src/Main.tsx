@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, Series, useVideoConfig } from "remotion";
 import { Grain, Paper } from "./lib/Paper";
 import { TL } from "./lib/timeline";
-import { Subtitles } from "./lib/ui";
+import { Narration, Subtitles } from "./lib/ui";
 import { SCENES } from "./scenes";
 
 export const Main: React.FC<{ subs: boolean }> = ({ subs }) => {
@@ -21,6 +21,7 @@ export const Main: React.FC<{ subs: boolean }> = ({ subs }) => {
       </Series>
       <Grain />
       {subs && <Subtitles />}
+      <Narration />
     </Paper>
   );
 };

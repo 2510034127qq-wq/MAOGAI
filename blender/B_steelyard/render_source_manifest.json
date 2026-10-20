@@ -1,26 +1,26 @@
 {
-  "revision": "director_feedback_1_final",
-  "created_utc": "2026-10-20T05:18:41.490260+00:00",
+  "revision": "director_feedback_2_screen_horizontal",
+  "created_utc": "2026-10-20T05:30:00.078460+00:00",
   "files": {
     "steelyard.blend": {
-      "sha256": "217f56d1bcc6fe259381f2da31d0c59006081374f184056ae437aa458fe2fc99",
-      "bytes": 3670077
+      "sha256": "8b9687672a0b0cd528b7806e57b45125b4cbf42f2f12f33b831c010493fcf9fe",
+      "bytes": 3631843
     },
     "build_steelyard.py": {
-      "sha256": "2c2ef326b2aa96289f32f4c04bddaab4f63b27b74e55443977d515b5336873e4",
-      "bytes": 36247
+      "sha256": "711b411718e7a39ced2ca73d7fabb52eed5f313241bf0e93645faf1e8c531b4b",
+      "bytes": 36856
     },
     "render_steelyard.py": {
-      "sha256": "b6eec8b0ef3b95482b644674710055de2abeb352a5f91f8d17f8aa3609861158",
-      "bytes": 3941
+      "sha256": "b876c6bdceed95958f61c35913895efefa5f390b46db18477ed88b18d6dfc6d5",
+      "bytes": 5492
     },
     "scene_manifest.json": {
-      "sha256": "48da62e1555703403fcc7e9a83ce8aac4eaec9c00a9a397f09473bbaec638aac",
-      "bytes": 1075
+      "sha256": "45b0f62689826d2f1c7811c9bf56831ff62a92e8dfa4857a269a8d2116baa8cb",
+      "bytes": 1174
     },
     "motion_audit.json": {
-      "sha256": "a6f2c44eb40c80688767016ed44301b7e45e17245838e79910942d48d03d60f1",
-      "bytes": 148063
+      "sha256": "842a2415b8091976a97cc254e9eb6ec51e51cd29946d05470a4c501781dac2a1",
+      "bytes": 147920
     }
   }
 }

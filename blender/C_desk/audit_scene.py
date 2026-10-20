@@ -1,10 +1,12 @@
 """Read-only geometry, camera, source-crop, packing and contact audit."""
-import bpy, json, math
+import bpy, json, math, sys
 from pathlib import Path
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 from bpy_extras.object_utils import world_to_camera_view
 ROOT=Path(__file__).resolve().parent
+sys.path.insert(0,str(ROOT))
+from surface import page_height
 result={"blender":bpy.app.version_string,"scenes":{}}
 ocr=json.loads((ROOT.parent.parent/"assets"/"scans"/"ocr_boxes.json").read_text(encoding="utf-8"))
 result["scan_text_inside_crop"]={}
@@ -59,7 +61,7 @@ for scene in bpy.data.scenes:
         sheet=next(o for o in pages if o.name=="Open right leaf 07")
         def world_at(sx,sy):
             u=(sx-22)/1430;v=1-(sy-45)/2024
-            z=.00035+6*.00014+.0046*math.exp(-((u-.12)/.19)**2)+.00045*math.sin(v*math.pi)*math.sin(u*math.pi)+.00028*math.sin(v*7+6*.2)*u*u
+            z=page_height(u,v,.00035+6*.00014,1,6)
             return Vector((-.035+u*.13,.015+(v-.5)*.184,z))
         screen={}
         for key,line in [("title",ocr["p07"]["lines"][0]),("date",ocr["p07"]["lines"][1])]:

@@ -1,11 +1,28 @@
 import React from "react";
-import { AbsoluteFill, Freeze, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Audio, Freeze, Img, OffthreadVideo, Sequence, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import manifestRaw from "../data/renders.json";
 import { C, F, env, io, ramp } from "./theme";
 import { TL } from "./timeline";
 
-const manifest = manifestRaw as Record<string, number>;
+const manifest = manifestRaw as Record<string, number | string>;
 export const hasAsset = (k: string) => !!manifest[k];
+
+/** recorded narration (assets/vo/<lineId>.wav), placed at each line's start */
+export const Narration: React.FC = () => (
+  <>
+    {TL.scenes.flatMap((s) =>
+      s.lines.map((l) => {
+        const file = manifest[`vo:${(l as { id?: string }).id}`];
+        if (typeof file !== "string") return null;
+        return (
+          <Sequence key={`${s.id}${l.from}`} from={s.from + l.from} durationInFrames={l.to - l.from + 30} layout="none">
+            <Audio src={staticFile(`vo/${file}`)} />
+          </Sequence>
+        );
+      }),
+    )}
+  </>
+);
 
 /** global subtitles, driven by timeline.json */
 const ALL_SUBS = TL.scenes.flatMap((s) => s.lines.flatMap((l) => l.subs.map((x) => ({ text: x.text, from: x.from + s.from, to: x.to + s.from, q: !!l.q }))));
@@ -38,7 +55,7 @@ export const Subtitles: React.FC = () => {
 /** play a Blender PNG sequence; shows a labelled placeholder until frames exist */
 export const FrameSeq: React.FC<{ shot: string; start?: number; rate?: number; style?: React.CSSProperties; hold?: boolean }> = ({ shot, start = 0, rate = 1, style, hold = true }) => {
   const f = useCurrentFrame();
-  const n = manifest[shot] ?? 0;
+  const n = Number(manifest[shot] ?? 0);
   if (!n) {
     return (
       <AbsoluteFill style={{ backgroundColor: "#2a2621", justifyContent: "center", alignItems: "center", ...style }}>

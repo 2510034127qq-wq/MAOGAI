@@ -1,6 +1,7 @@
 """Deterministic, local STSONG ink impressions and paper-fibre maps."""
 from pathlib import Path
 import json
+import math
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
@@ -33,14 +34,27 @@ def main():
     texture = .35 * coarse + .22 * medium + .13 * fine + .10 * grain + .20 * fibres
     Image.fromarray(np.uint8(texture * 255)).save(OUT / "paper_fibre.png")
     mask = Image.new("L", (W, H), 0)
-    for ch, x, y, degrees in [("破", -1.0, -2.0, -1.4), ("立", 1.0, -2.0, .7)]:
+    outlines=json.loads((OUT/"glyph_meshes.json").read_text(encoding="utf8")) if (OUT/"glyph_meshes.json").exists() else None
+    for ch, x, y, degrees in [("破", -1.0, -2.0, 1.4), ("立", 1.0, -2.0, -.7)]:
+        if outlines:
+            data=outlines[ch]
+            a=math.radians(degrees)
+            points=[]
+            for mx,my in data["points"]:
+                gx=-mx;gy=my
+                xx=x+gx*math.cos(a)-gy*math.sin(a)
+                yy=y+gx*math.sin(a)+gy*math.cos(a)
+                points.append(((xx/PW+.5)*W,(.5-yy/PH)*H))
+            draw=ImageDraw.Draw(mask)
+            for tri in data["triangles"]:draw.polygon([points[i] for i in tri],fill=255)
+            continue
         font = ImageFont.truetype("C:/Windows/Fonts/STSONG.TTF", 700)
         box = font.getbbox(ch)
         glyph = Image.new("L", (box[2] - box[0] + 30, box[3] - box[1] + 30), 0)
         ImageDraw.Draw(glyph).text((15 - box[0], 15 - box[1]), ch, font=font, fill=255)
         crop = glyph.getbbox()
         glyph = glyph.crop(crop)
-        glyph.thumbnail((int(1.30 / PW * W), int(1.30 / PH * H)), Image.Resampling.LANCZOS)
+        glyph.thumbnail((int(.82 / PW * W), int(.82 / PH * H)), Image.Resampling.LANCZOS)
         glyph = glyph.rotate(degrees, resample=Image.Resampling.BICUBIC, expand=True)
         cx, cy = int((x / PW + .5) * W), int((.5 - y / PH) * H)
         mask.paste(glyph, (cx - glyph.width // 2, cy - glyph.height // 2))
@@ -48,7 +62,7 @@ def main():
     crisp = np.asarray(mask, dtype=np.float32) / 255
     bleed = np.asarray(mask.filter(ImageFilter.GaussianBlur(1.1)), dtype=np.float32) / 255
     spread = np.asarray(mask.filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.GaussianBlur(1.3)), dtype=np.float32) / 255
-    patch = .68 + .20 * noise(W, H, 38) + .12 * fine
+    patch = .88 + .08 * noise(W, H, 38) + .04 * fine
     pinhole = np.clip((grain - .986) * 25, 0, .36)
     alpha = np.maximum(crisp * (patch - pinhole), spread * .25 + bleed * .22)
     alpha = np.clip(alpha, 0, 1)

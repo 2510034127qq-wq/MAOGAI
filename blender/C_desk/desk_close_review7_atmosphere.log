@@ -1,0 +1,11 @@
+00:00.578  blend            | Read blend: "D:\MAOGAI\blender\C_desk\C_desk.blend"
+00:02.266  render           | Saved: 'D:\MAOGAI\blender\C_desk\review7_atmosphere\desk_close\0001.png'
+FRAME_COMPLETE desk_close review7_atmosphere 1 1.582
+00:03.203  render           | Saved: 'D:\MAOGAI\blender\C_desk\review7_atmosphere\desk_close\0165.png'
+FRAME_COMPLETE desk_close review7_atmosphere 165 0.947
+00:04.031  render           | Saved: 'D:\MAOGAI\blender\C_desk\review7_atmosphere\desk_close\0330.png'
+FRAME_COMPLETE desk_close review7_atmosphere 330 0.829
+RENDER_COMPLETE desk_close review7_atmosphere
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+
+Blender quit

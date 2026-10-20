@@ -2,13 +2,15 @@
 Run: blender -b --python build_scene.py
 All dimensions in metres. Both animated scenes are saved in one packed .blend.
 """
-import bpy, math, random, json
+import bpy, math, random, json, sys
 from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 from pathlib import Path
 from math import sin, cos, pi, exp
 
 ROOT=Path(__file__).resolve().parent
+sys.path.insert(0,str(ROOT))
+from surface import page_height
 TEX=ROOT/"textures"
 random.seed(1976)
 bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -36,13 +38,14 @@ def noise_bump(m,scale,dist,strength=.2):
 def image_mat(name,file,rough=.75):
     m=mat(name,"EDE5D4",rough)
     n=m.node_tree.nodes;l=m.node_tree.links;p=n.get("Principled BSDF")
+    p.inputs["Specular IOR Level"].default_value=.16
     t=n.new("ShaderNodeTexImage");t.image=bpy.data.images.load(str(TEX/file),check_existing=True)
     t.interpolation="Linear";t.extension="EXTEND"
     l.new(t.outputs["Color"],p.inputs["Base Color"])
     noise_bump(m,850,.000012,.19)
     return m
 
-paper=mat("Old paper · cut edges","DFD2B5",.86)
+paper=mat("Old paper · cut edges","CABB96",.88)
 noise_bump(paper,950,.000015,.22)
 covermat=image_mat("1976 original cover · preserved printed glyphs","cover_clean.png")
 leftmat=image_mat("1976 contents · original scan p06","p06_aged.png")
@@ -54,9 +57,18 @@ metal=mat("Iron staples · oxidised","645445",.53,.78)
 noise_bump(metal,140,.000025,.28)
 brass=mat("Spectacles · patinated brass","8A6A3B",.4,.84)
 noise_bump(brass,190,.00002,.2)
-red=mat("Cinnabar pencil lacquer","B5302A",.34)
-p=red.node_tree.nodes.get("Principled BSDF");p.inputs["Coat Weight"].default_value=.18
-noise_bump(red,110,.00002,.2)
+red=mat("Cinnabar pencil lacquer","A33931",.63)
+p=red.node_tree.nodes.get("Principled BSDF");p.inputs["Coat Weight"].default_value=.025
+p.inputs["Specular IOR Level"].default_value=.24
+nt=red.node_tree;n=nt.nodes;l=nt.links
+worn=n.new("ShaderNodeTexNoise");worn.inputs["Scale"].default_value=11;worn.inputs["Detail"].default_value=3
+ramp=n.new("ShaderNodeValToRGB")
+ramp.color_ramp.elements[0].position=.18;ramp.color_ramp.elements[0].color=srgb("813536")
+ramp.color_ramp.elements[1].position=.82;ramp.color_ramp.elements[1].color=srgb("A73C42")
+l.new(worn.outputs["Fac"],ramp.inputs["Fac"]);l.new(ramp.outputs["Color"],p.inputs["Base Color"])
+rough=n.new("ShaderNodeMapRange");rough.inputs["To Min"].default_value=.50;rough.inputs["To Max"].default_value=.77
+l.new(worn.outputs["Fac"],rough.inputs["Value"]);l.new(rough.outputs["Result"],p.inputs["Roughness"])
+noise_bump(red,160,.000026,.25)
 cedar=mat("Exposed pencil cedar","B98952",.71)
 noise_bump(cedar,140,.00006,.3)
 graphite=mat("Graphite","24221F",.38,.2)
@@ -134,13 +146,7 @@ def sheet(name,loc,w,h,z,material,opened=0,index=0,angle=0,thick=.00009):
             yedge=max(0,abs(yy)-(h/2-corner))
             inset=corner-(max(0,corner*corner-yedge*yedge))**.5 if yedge>0 else 0
             xx*=1-inset/(w/2)
-            if opened:
-                # Gutter is low, page rises beside the fold, outer edge rests naturally.
-                t=u if opened==1 else 1-u
-                zz=z+.0046*exp(-((t-.12)/.19)**2)+.00045*sin(v*pi)*sin(t*pi)
-                zz+=.00028*sin(v*7+index*.2)*t*t
-            else:
-                zz=z+.00018*sin(u*4.3+index*.07)*sin(v*5)+.00030*(u**5)*sin(v*pi)
+            zz=page_height(u,v,z,opened,index)
             vs.append((xx,yy,zz));uv.append((u,v))
     fs=[]
     for j in range(ny):
@@ -161,8 +167,11 @@ def book(opened):
                       .130,.184,.00035+k*.00014,matl,side,index=k,thick=.00012)
             sheet("Soft cover under open leaves",(cx+side*.065,cy),.131,.185,.00018,backmat,side,index=0,thick=.00015)
         for y in (-.052,.052):
-            curve("Visible saddle-stitch inside gutter",[(cx-.0009,cy+y-.005,.0044),(cx,cy+y-.006,.00455),
-                (cx+.0006,cy+y+.006,.00455),(cx-.0004,cy+y+.0065,.0044)],.00016,metal)
+            pts=[]
+            for dx,dy in [(-.0009,y-.005),(0,y-.006),(.0006,y+.006),(-.0004,y+.0065)]:
+                zz=page_height(abs(dx)/.13,dy/.184+.5,.00119,1,6)+.00016
+                pts.append((cx+dx,cy+dy,zz))
+            curve("Visible saddle-stitch inside gutter",pts,.00016,metal)
     else:
         sheet("Back soft paper cover",(cx,cy),.130,.184,.00025,backmat,thick=.00015)
         for k in range(14):
@@ -225,7 +234,7 @@ def pencil(opened):
     orient(lathe("Sharpened cedar pencil tip",profile,cedar,segments=6))
     orient(lathe("Exposed graphite writing point",[(.00004,0),(.00078,.0039),(.00084,.0045)],graphite,segments=24))
     orient(lathe("Six-sided red lacquer pencil",[(r,.019),(r,.137),(.0032,.140)],red,segments=6))
-    orient(lathe("Unpainted pencil end",[(0,.1401),(.0032,.1401)],cedar,segments=6))
+    orient(lathe("Unpainted pencil end",[(.0032,.1401),(0,.1401)],cedar,segments=6))
     # Fine irregular paint loss along two ridges, not decorative lettering.
     for k in range(14):
         a=(k%6)*pi/3
@@ -247,7 +256,8 @@ def mug():
         pts.append((c[0]+.035+.027*cos(a),c[1],.044+.028*sin(a)))
     curve("Enamel mug loop handle",pts,.0042,enamel)
     for phi,z,size in [(-1.24,.065,.0020),(-2.13,.016,.0011)]:
-        vs=[(c[0]+.0375*cos(phi),c[1]+.0375*sin(phi),z)]
+        cr=.036+(z-.009)/.062*.002+.00013
+        vs=[(c[0]+cr*cos(phi),c[1]+cr*sin(phi),z)]
         for j in range(13):
             a=2*pi*j/12;rad=size*(.8+.2*sin(j*7))
             ph=phi+cos(a)*rad/.038;zz=z+sin(a)*rad
@@ -269,7 +279,7 @@ def glasses():
 def set_camera(scene,opened):
     d=bpy.data.cameras.new("Study camera");o=bpy.data.objects.new("Study camera",d);scene.collection.objects.link(o);scene.camera=o
     d.lens=50;d.sensor_width=36;d.clip_start=.005;d.clip_end=20
-    d.dof.use_dof=True;d.dof.aperture_fstop=10 if opened else 8
+    d.dof.use_dof=True;d.dof.aperture_fstop=8
     f=bpy.data.objects.new("Narrative focus",None);scene.collection.objects.link(f);d.dof.focus_object=f
     total=180 if opened else 330
     # Sample the director's easing curve exactly, then bake transforms every frame.
@@ -295,7 +305,14 @@ def set_camera(scene,opened):
         o.location=start.lerp(end,e)
         target=ta.lerp(tb,e)
         o.rotation_euler=(target-o.location).to_track_quat("-Z","Y").to_euler()
-        f.location=target
+        if opened:
+            focus_end=Vector((.030,.067,page_height(.5,(.067-.015)/.184+.5,.00119,1,6)))
+            f.location=Vector((-.015,.023,.005)).lerp(focus_end,e)
+            d.dof.aperture_fstop=9*(1-e)+7.1*e
+        else:
+            f.location=Vector((-.070,.030,.002)).lerp(Vector((-.060,.018,.002)),e)
+            d.dof.aperture_fstop=8*(1-e)+4.5*e
+        d.dof.keyframe_insert("aperture_fstop",frame=fr)
         o.keyframe_insert("location",frame=fr);o.keyframe_insert("rotation_euler",frame=fr);f.keyframe_insert("location",frame=fr)
     return o
 
@@ -320,10 +337,10 @@ def setup(name,opened):
     s.render.image_settings.compression=25;s.render.film_transparent=False
     s.render.use_persistent_data=True
     s.view_settings.view_transform="AgX";s.view_settings.look="AgX - Medium High Contrast"
-    s.view_settings.exposure=.35
+    s.view_settings.exposure=.20
     s.world=bpy.data.worlds.new(name+" ambient");s.world.use_nodes=True
-    s.world.node_tree.nodes["Background"].inputs["Color"].default_value=(.70,.73,.75,1)
-    s.world.node_tree.nodes["Background"].inputs["Strength"].default_value=.12
+    s.world.node_tree.nodes["Background"].inputs["Color"].default_value=(.58,.55,.48,1)
+    s.world.node_tree.nodes["Background"].inputs["Strength"].default_value=.15
     s.frame_start=1;s.frame_end=180 if opened else 330
     # Custom UV desk plane over a bevelled solid tabletop.
     cube("Solid old desk edge",(0,0,-.019),(.96,.73,.038),wood,.008)
@@ -334,15 +351,12 @@ def setup(name,opened):
               .00025+k*.00014,ruled if k==2 else paper,index=k,angle=-.14+k*.018,thick=.00012)
     book(opened);pencil(opened)
     if not opened:mug()
-    key=area("Soft left window",(-.43,.03,.52),(0,.01,0),4.8,(1.0,.94,.85),.40,"RECTANGLE",.58)
-    area("Gentle room reflection",(.27,-.18,.34),(0,0,0),.6,(.82,.86,1),.48)
-    # Broad off-camera window mullions produce understated soft divisions.
-    for x in (-.12,.13):
-        ob=cube("Window frame outside view",(-.32+x*.1,.03+x,.32),(.018,.022,.42),backmat,.002)
-        ob.visible_camera=False
+    key=area("Low warm left window",(-.34,.06,.22),(-.040,.018,0),.55,(1.0,.88,.69),.11,"RECTANGLE",.22)
+    key.data.spread=math.radians(65)
+    area("Subtle reflected room fill",(.18,-.24,.28),(-.03,.03,0),.12,(.90,.91,1),.42)
     if not opened:
-        key.data.color=(1.0,.95,.88);key.data.keyframe_insert("color",frame=1)
-        key.data.color=(1.0,.92,.82);key.data.keyframe_insert("color",frame=330)
+        key.data.color=(1.0,.89,.72);key.data.keyframe_insert("color",frame=1)
+        key.data.color=(1.0,.865,.675);key.data.keyframe_insert("color",frame=330)
     set_camera(s,opened);s.frame_set(1)
     s["specification"]="1976 People's Publishing House original scan booklet, 130x184mm, 28 pages, ~2mm closed thickness."
     s["palette"]="Old paper #EDE5D4 / #E4D9C3, ink #1C1A17, cinnabar #B5302A, sparse brass #8A6A3B"

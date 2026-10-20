@@ -163,12 +163,19 @@ def motion_check():
 
 def main():
     out={"checked_at":datetime.now().isoformat(),"shots":{}}
+    current_sources={
+        "blend_sha256":hashlib.sha256((ROOT/"steelyard.blend").read_bytes()).hexdigest(),
+        "build_sha256":hashlib.sha256((ROOT/"build_steelyard.py").read_bytes()).hexdigest(),
+        "renderer_sha256":hashlib.sha256((ROOT/"render_steelyard.py").read_bytes()).hexdigest()}
     for shot,count,title in SHOTS:
+        source=json.loads((RENDERS/shot/"render_source.json").read_text(encoding="utf-8"))
+        for key,value in current_sources.items():
+            assert source[key]==value,("最终帧来源不一致",shot,key)
         stats=inspect_pngs(shot,count)
         cmd=encode(shot,count)
         samples=contact(shot,count,title)
         video=inspect_video(shot,count)
-        out["shots"][shot]={"sequence":stats,"video":video,"contact_frames":samples,"encode_command":cmd}
+        out["shots"][shot]={"sequence":stats,"video":video,"contact_frames":samples,"encode_command":cmd,"source":source}
     still=RENDERS/"steelyard_balance"/"still_4k.png"
     header=png_header(still)
     assert header=={"width":3840,"height":2160,"depth":8,"color_type":2}

@@ -6,6 +6,7 @@ import random
 import json
 import sys
 import time
+import subprocess
 from pathlib import Path
 from mathutils import Vector
 from bpy_extras.object_utils import world_to_camera_view
@@ -84,27 +85,27 @@ def math_node(mat, op, a, b=None):
 
 
 def create_materials():
-    m, p = material("铅锑锡｜微氧化银灰", "#898983", .84, .39)
+    m, p = material("铅锑锡｜微氧化银灰", "#898983", .86, .42)
     # Metric object coordinates avoid stretching noise over the long type shank.
     tc = node(m, "ShaderNodeTexCoord")
     coord = node(m, "ShaderNodeVectorMath")
     coord.operation = "SCALE"
     coord.inputs["Scale"].default_value = 1/U
     connect(m, tc, "Object", coord, 0)
-    n = noise(m, 7)
+    n = noise(m, 4)
     connect(m, coord, "Vector", n, "Vector")
-    r = ramp(m, n, ["#686A65", "#888C86", "#A8ABA5"], [.12, .50, .88])
+    r = ramp(m, n, ["#80847F", "#898D88", "#92958F"], [.12, .50, .88])
     connect(m, r, "Color", p, "Base Color")
-    fine = noise(m, 155, 2)
+    fine = noise(m, 230, 2)
     connect(m, coord, "Vector", fine, "Vector")
     bump = node(m, "ShaderNodeBump")
-    bump.inputs["Strength"].default_value = .17
-    bump.inputs["Distance"].default_value = U * .0025
+    bump.inputs["Strength"].default_value = .10
+    bump.inputs["Distance"].default_value = U * .0004
     connect(m, fine, "Fac", bump, "Height")
     connect(m, bump, "Normal", p, "Normal")
     rough = node(m, "ShaderNodeMapRange")
-    rough.inputs["To Min"].default_value = .30
-    rough.inputs["To Max"].default_value = .61
+    rough.inputs["To Min"].default_value = .35
+    rough.inputs["To Max"].default_value = .50
     connect(m, n, "Fac", rough, "Value")
     connect(m, rough, "Result", p, "Roughness")
     MATS["lead"] = m
@@ -124,6 +125,23 @@ def create_materials():
         bump.inputs["Strength"].default_value = .18
         connect(m, grain, "Fac", bump, "Height")
         connect(m, bump, "Normal", p, "Normal")
+        # Most of the printing face carries opaque ink; occasional worn islands
+        # reveal the same lead alloy underneath, without turning the face grey.
+        worn = noise(m, 48, 3)
+        mask = node(m, "ShaderNodeValToRGB", "薄墨透银｜约百分之三")
+        mask.color_ramp.elements[0].position=.21
+        mask.color_ramp.elements[0].color=(0,0,0,1)
+        mask.color_ramp.elements[1].position=.32
+        mask.color_ramp.elements[1].color=(1,1,1,1)
+        connect(m,worn,"Fac",mask,"Fac")
+        metal = node(m,"ShaderNodeBsdfPrincipled","磨薄处露出的铅")
+        metal.inputs["Base Color"].default_value=sRGB("#858983")
+        metal.inputs["Metallic"].default_value=.86
+        metal.inputs["Roughness"].default_value=.4
+        mix=node(m,"ShaderNodeMixShader","覆墨与露铅")
+        connect(m,mask,"Color",mix,0)
+        connect(m,metal,"BSDF",mix,1);connect(m,p,"BSDF",mix,2)
+        connect(m,mix,0,m.node_tree.nodes.get("Material Output"),"Surface")
         MATS[key] = m
     m, p = material("老木｜顺纹磨损", "#58452E", 0, .67)
     tex = node(m, "ShaderNodeTexCoord")
@@ -261,19 +279,28 @@ def glyph_mesh(ch):
         d=(pts[b]-pts[a]).normalized()
         n=Vector((d.y,-d.x))
         offsets[a]+=n;offsets[b]+=n
-    verts=[(p.x*U,p.y*U,.20*U) for p in pts]
-    for p,off in zip(pts,offsets):
-        if off.length:off=off.normalized()*.018
-        verts.append(((p.x+off.x)*U,(p.y+off.y)*U,0))
+    # A 0.175-face relief with a flared, filleted foot; no vertical extrusion.
+    heights=[.175,.158,.026,0]
+    spreads=[0,.003,.018,.032]
+    verts=[]
+    for height,spread in zip(heights,spreads):
+        for p,off in zip(pts,offsets):
+            d=off.normalized()*spread if off.length else off
+            verts.append(((p.x+d.x)*U,(p.y+d.y)*U,height*U))
     count=len(pts)
     faces=[tuple(t) for t in triangles]
     top_count=len(faces)
-    faces += [tuple(i+count for i in reversed(t)) for t in triangles]
-    faces += [(a,b,b+count,a+count) for a,b in boundary]
+    faces += [tuple(i+3*count for i in reversed(t)) for t in triangles]
+    for ring in range(3):
+        off=ring*count;low=(ring+1)*count
+        faces += [(b+off,a+off,a+low,b+low) for a,b in boundary]
     mesh=bpy.data.meshes.new("镜像阳文_"+ch)
     mesh.from_pydata(verts,[],faces);mesh.update()
     mesh.materials.append(MATS["lead"]);mesh.materials.append(MATS["black"])
     for i,p in enumerate(mesh.polygons):p.material_index=1 if i<top_count else 0
+    bm=bmesh.new();bm.from_mesh(mesh)
+    bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces))
+    bm.to_mesh(mesh);bm.free()
     bpy.data.objects.remove(o,do_unlink=True)
     TEMPLATE[ch]=(mesh,top_count)
     return TEMPLATE[ch]
@@ -289,9 +316,9 @@ def type_piece(ch, x, y, base=.20, ink="black", angle=0, hero=True):
     g.parent=parent;g.location.z=BODY_HEIGHT*U
     g.data.materials[1]=MATS[ink]
     bevel=g.modifiers.new("笔画顶端微磨损","BEVEL")
-    bevel.width=.004*U;bevel.segments=2
-    g["source_character"]=ch;g["mirrored_x"]=True;g["relief_height_mm"]=.8
-    g["taper_base_expansion_mm"]=.072
+    bevel.width=.006*U;bevel.segments=3
+    g["source_character"]=ch;g["mirrored_x"]=True;g["relief_height_mm"]=.7
+    g["taper_base_expansion_mm"]=.128
     # Discrete shoulder ink specks; fixed seed, deliberately sparse.
     for j in range(9 if hero else 2):
         xx=random.uniform(-.46,.46);yy=random.choice([-1,1])*random.uniform(.425,.47)
@@ -378,10 +405,10 @@ def animate_cam(shot):
             t=smoother((frame-1)/149)
             x=lerp(-2.12,2.12,t)
             pull=smoother((frame-150)/60)
-            pos=Vector((lerp(x,0,pull),lerp(-5.4,-14.0,pull),lerp(8.35,17.5,pull)))
+            pos=Vector((lerp(x,0,pull),lerp(-6.3,-14.0,pull),lerp(10.0,17.5,pull)))
             target=Vector((lerp(x,0,pull),0,lerp(6.23,3.4,pull)))
-            focal=Vector((lerp(x,0,pull),0,6.245))
-            aperture=lerp(8,14,pull)
+            focal=Vector((lerp(x,0,pull),0,6.23))
+            aperture=lerp(11,14,pull)
         else:
             t=smoother((frame-1)/(end-1))
             angle=math.radians(lerp(-7.5,7.5,t))
@@ -437,7 +464,7 @@ def make_scene(shot):
     scene.render.threads_mode="FIXED";scene.render.threads=12
     scene.view_settings.view_transform="AgX"
     scene.view_settings.look="AgX - Medium High Contrast"
-    scene.view_settings.exposure=-.75
+    scene.view_settings.exposure=-1.05 if shot=="title" else -1.0
     scene.world=bpy.data.worlds.new("暖灰环境")
     scene.world.use_nodes=True
     world=scene.world.node_tree.nodes.get("Background")
@@ -454,20 +481,31 @@ def make_scene(shot):
             type_piece(ch,x,y,.02,angle=random.uniform(-5,5),hero=False)
         cube("远处字盘挡边",(0,6.3,2),(14,.28,4),MATS["wood"],.05)
         area("左侧低角度暖光",(-7,-2,8.6),(0,0,6),.035,5.5,(1,.85,.69),2.5)
-        area("右侧弱补光",(6,-2,10),(0,0,5),.010,5,(.86,.88,.86),6)
-        area("上后方窄柔光",(1,5,12),(0,0,6),.021,6,(1,.89,.73),2)
+        area("右侧弱补光",(6,-2,10),(0,0,5),.004,5,(.86,.88,.86),6)
+        area("上后方窄柔光",(1,5,12),(0,0,6),.010,6,(1,.89,.73),2)
     else:
         cube("桌面",(0,0,-.45),(40,30,.8),MATS["wood"],.06)
-        paper(True)
         type_piece("破",-1.0,.7,paper_z(-1,.7),ink="red",angle=-1.4)
         type_piece("立",1.0,.7,paper_z(1,.7),ink="red",angle=.7)
+        # Printing masks come from the very same mesh triangles as the raised
+        # faces, reflected back to normal reading direction at physical size.
+        outlines={}
+        for ch in "破立":
+            me,n=glyph_mesh(ch)
+            pts=[(v.co.x/U,v.co.y/U) for v in me.vertices[:len(me.vertices)//4]]
+            outlines[ch]={"points":pts,"triangles":[list(p.vertices) for p in me.polygons[:n]]}
+        (ROOT/"textures"/"glyph_meshes.json").write_text(json.dumps(outlines,ensure_ascii=False),encoding="utf8")
+        subprocess.run([r"C:\Users\Admin\AppData\Local\Programs\Python\Python312\python.exe",str(ROOT/"make_textures.py")],check=True)
+        for im in bpy.data.images:
+            if im.source=="FILE":im.reload()
+        paper(True)
         area("左侧窗光",(-6,-4,14),(0,0,1),.055,9,(1,.94,.86),7)
         area("右方纸面反光",(7,0,10),(0,0,3),.018,8,(1,.96,.89),6)
         area("后侧窗缘",(0,6,12),(0,0,4),.035,7,(1,.89,.72),3)
     animate_cam(shot)
     scene.frame_start=1;scene.frame_set(1)
     scene["brief"]="D:/MAOGAI/blender/A_leadtype/BRIEF.md"
-    scene["geometry_scale"]="4 mm face; 23.5 mm body; 0.8 mm relief"
+    scene["geometry_scale"]="4 mm face; 23.5 mm body; 0.7 mm relief"
     scene["source_font"]="C:/Windows/Fonts/STSONG.TTF"
     scene["backend"]=backend
     output=ASSETS/("leadtype_"+shot);output.mkdir(parents=True,exist_ok=True)

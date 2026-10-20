@@ -29,7 +29,7 @@ def source_guard(folder):
     source={"blend_sha256":hashlib.sha256((ROOT/"steelyard.blend").read_bytes()).hexdigest(),
             "build_sha256":hashlib.sha256((ROOT/"build_steelyard.py").read_bytes()).hexdigest(),
             "renderer_sha256":hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-            "revision":"director_feedback_1_with_vertical_rope"}
+            "revision":"director_feedback_2_screen_horizontal"}
     if tag.exists():
         previous=json.loads(tag.read_text(encoding="utf-8"))
         if previous!=source:
@@ -101,6 +101,8 @@ try:
         # Never more than five <=960x540 test stills per batch.
         folder=ROOT/"review"/mode
         shots=[(b1,1,"B1_0001"),(b1,130,"B1_0130"),(b1,300,"B1_0300")]
+        if "director4" in mode:
+            shots=[(b1,1,"B1_0001"),(b1,230,"B1_0230"),(b1,300,"B1_0300")]
         if mode.endswith("_B2"):
             shots=[(b2,1,"B2_0001"),(b2,75,"B2_0075"),(b2,150,"B2_0150")]
         elif not mode.endswith("_B1"):

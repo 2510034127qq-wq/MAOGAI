@@ -47,14 +47,19 @@ def fmt(sec):
 
 t = 0.0
 timeline = {"fps": FPS, "scenes": []}
-srt, doc = [], ["# 配音稿（带时间码）", "", "语速基准：叙述约 4.4 字/秒，原文引用约 3.9 字/秒；每句之间留约 0.45 秒气口。", "引号内为《论十大关系》原文，请放慢、读得更沉稳；“研读追问”段落语气转为思考、提问。", ""]
+srt = []
+doc = ["# 配音稿（带时间码）", "",
+       f"语速基准：叙述约 {M['cps']} 字/秒，原文引用约 {M['cpsQuote']} 字/秒；每句之间留约 {M['gap']} 秒气口。",
+       "【原文】为《论十大关系》原句，请放慢、读得沉稳；【研读】是我们小组的追问与体会，语气转为思考、提问。",
+       "每句录成一条音频，按句首编号命名（如 `B1_07.wav`）放进 `assets/vo/`，再运行 `python tools/fit_voice.py`，整片会按真实配音时长自动重排。", ""]
 n = 1
 for sc in S["scenes"]:
     start = t
     t += sc.get("pre", 0)
     lines = []
-    for ln in sc["lines"]:
-        d = line_secs(ln)
+    for li, ln in enumerate(sc["lines"]):
+        ln = {**ln, "id": f"{sc['id']}_{li + 1:02d}"}
+        d = ln.get("sec") or line_secs(ln)
         cs = chunks(ln["t"])
         weights = [max(spoken_len(c), 1) for c in cs]
         tot = sum(weights)
@@ -81,7 +86,7 @@ for sc in S["scenes"]:
     doc.append("")
     for l in lines:
         tag = "【原文】" if l.get("q") else ("【研读】" if l.get("ask") else "")
-        doc.append(f"- `{fmt(l['from'] / FPS)[3:-4]}` {tag}{l['t']}")
+        doc.append(f"- `{l['id']}` `{fmt(l['from'] / FPS)[3:-4]}` {tag}{l['t']}")
         doc.append(f"  - 画面：{l.get('v', '')}")
     doc.append("")
 

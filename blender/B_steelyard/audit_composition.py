@@ -24,11 +24,14 @@ def bounds(ob):
 
 
 rows=[]
-for f in (1,130,300):
+for f in (1,130,200,205,210,220,230,240,250,300):
     s.frame_set(f)
     a=project(beam.matrix_world @ Vector((-.13,0,-.023)))
     b=project(beam.matrix_world @ Vector((.62,0,-.023)))
     rows.append({"frame":f,"rod_endpoints":[a,b],"rod_width_fraction":b[0]-a[0],
-                 "rod_mid_height_from_top":(a[1]+b[1])/2,"pan_bounds":bounds(pan),"weight_bounds":bounds(weight)})
+                 "rod_mid_height_from_top":(a[1]+b[1])/2,
+                 "rod_endpoint_height_difference_pixels_1080":(b[1]-a[1])*1080,
+                 "pan_bounds":bounds(pan),"weight_bounds":bounds(weight)})
+assert abs(rows[-1]["rod_endpoint_height_difference_pixels_1080"])<.01
 (ROOT/"composition_audit.json").write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding="utf-8")
 print("COMPOSITION",json.dumps(rows))

@@ -57,5 +57,10 @@ for d in sorted((ROOT / "assets/renders").glob("*/frames")):
         subprocess.run([FF, "-y", "-loglevel", "error", "-framerate", "30", "-i", str(d / "%04d.png"), "-c:v", "libx264", "-crf", "10", "-preset", "slow", "-pix_fmt", "yuv420p", str(out)], check=True)
     m[shot] = len(frames)
 
+for p in sorted((ROOT / "assets/vo").glob("*")) if (ROOT / "assets/vo").exists() else []:
+    if p.suffix.lower() in (".wav", ".mp3", ".m4a", ".flac"):
+        copy_newer(p, PUB / "vo" / p.name)
+        m["vo:" + p.stem] = p.name
+
 (ROOT / "video/src/data/renders.json").write_text(json.dumps(m, indent=1), encoding="utf8")
 print(m)

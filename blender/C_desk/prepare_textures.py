@@ -18,6 +18,30 @@ def noise(w, h, small, amp=1):
     x = rng.random((max(2, h//small), max(2, w//small))).astype(np.float32)
     return (cv2.resize(x, (w,h), interpolation=cv2.INTER_CUBIC)-.5)*amp
 
+def aged_stock(w,h,seed):
+    """Warm rag paper with restrained edge oxidation and sparse foxing."""
+    prng=np.random.default_rng(seed)
+    yy,xx=np.mgrid[0:h,0:w].astype(np.float32)
+    x=xx/w;y=yy/h
+    edge=np.minimum.reduce([x,1-x,y,1-y])
+    yellow=np.exp(-edge*31)*(1+.20*np.sin(y*15+x*9))
+    cloud=noise(w,h,190,1)
+    tone=np.ones((h,w,3))*np.array([237,226,200])
+    tone-=yellow[:,:,None]*np.array([24,29,39])
+    tone+=cloud[:,:,None]*np.array([6,7,8])
+    tone+=noise(w,h,3,3)[:,:,None]
+    for k in range(24):
+        side=k%4
+        sx=float(prng.uniform(.015,.98));sy=float(prng.uniform(.02,.98))
+        if side==0:sx=float(prng.uniform(.012,.055))
+        if side==1:sx=float(prng.uniform(.94,.99))
+        if side==2:sy=float(prng.uniform(.012,.055))
+        if side==3:sy=float(prng.uniform(.95,.99))
+        rad=float(prng.uniform(.0017,.0065))
+        spot=np.exp(-(((x-sx)/rad)**2+((y-sy)/(rad*.72))**2))
+        tone-=spot[:,:,None]*np.array([13,18,24])*float(prng.uniform(.35,.9))
+    return tone
+
 # Paper rectangle excludes the scanner bed at right/bottom. The final rectangle
 # is EXACTLY 975:1380 = 130:184, without nonuniform scaling of the original ink.
 cover = np.array(Image.open(SRC/"cover.png").convert("RGB"))
@@ -31,10 +55,12 @@ cover = cv2.inpaint(cover, mask, 4, cv2.INPAINT_TELEA).astype(np.float32)
 lum = .25*cover[:,:,0]+.6*cover[:,:,1]+.15*cover[:,:,2]
 red = np.clip((cover[:,:,0]-cover[:,:,1]-18)/90,0,1)
 # Compress saturated scan reds to the director's cinnabar; keep all ink edges.
-paper = np.array([237,229,212], np.float32)
+paper = aged_stock(975,1380,1977).astype(np.float32)
 ink = np.array([28,26,23], np.float32)
-base = ink[None,None,:]+(paper-ink)[None,None,:]*(lum/255)[:,:,None]
-redcolor = np.array([181,48,42],np.float32)[None,None,:]*(.85+.15*lum/255)[:,:,None]
+base = ink[None,None,:]+(paper-ink[None,None,:])*(lum/255)[:,:,None]
+# Compensate the warm low window illumination so the photographed red stays
+# near the director's #B5302A rather than turning into a bright orange-red.
+redcolor = np.array([154,44,58],np.float32)[None,None,:]*(.85+.15*lum/255)[:,:,None]
 cover = base*(1-red[:,:,None])+redcolor*red[:,:,None]
 save(cover,"cover_clean.png")
 
@@ -43,11 +69,8 @@ for page in ("p06","p07"):
     # Remove outer scanner noise with whitespace intact around all printed glyphs.
     a = np.array(Image.open(SRC/(page+".png")).convert("L"))[45:2069,22:1452]
     h,w = a.shape
-    yy,xx = np.mgrid[0:h,0:w]
-    edge = np.minimum.reduce([xx/w,(w-1-xx)/w,yy/h,(h-1-yy)/h])
-    aging = 1-.034*np.exp(-edge*55)+noise(w,h,160,.009)+noise(w,h,3,.008)
-    tone = np.array([237,229,212])[None,None,:]*aging[:,:,None]
-    black = np.array([28,26,23])[None,None,:]
+    tone=aged_stock(w,h,1978 if page=="p06" else 1979)
+    black = np.array([32,29,24])[None,None,:]
     result = black+(tone-black)*(a/255)[:,:,None]
     save(result,page+"_aged.png")
 
@@ -117,7 +140,7 @@ manifest = {
     "cover_aspect_ratio":975/1380,
     "physical_aspect_ratio":130/184,
     "page_crop_xyxy":[22,45,1452,2069],
-    "operations":"Original scan glyphs retained. Uniform crops, scanner seam repair, paper tint and cinnabar mapping. No re-typesetting.",
+    "operations":"Director revision 1: original scan glyphs retained; uniform crops, scanner seam repair, warm aged paper with yellow oxidised edges and sparse foxing, soft ink-black, cinnabar cover. No re-typesetting.",
     "seed":1976
 }
 (OUT/"manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")

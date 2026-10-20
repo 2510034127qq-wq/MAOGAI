@@ -31,7 +31,9 @@ $taskDir = 'D:\MAOGAI\blender\B_steelyard'
 python "$taskDir\finish_delivery.py"
 ```
 
-渲染器支持中断后继续，默认跳过已经存在的大于 10 KB 的帧。**修改模型、灯光或动画后，应先将两个镜头的旧 `frames` 目录移至自行指定的备份位置，再渲染，避免新旧帧混用。** 同一场景的中断恢复才可直接续渲。
+渲染器支持中断后继续，校验镜头目录中的 `render_source.json`，并检查PNG结束标记后跳过已完成帧。**修改模型、灯光或动画后，应先将旧 `frames` 目录及对应 `render_source.json` 一起移至自行指定的备份位置，再渲染，避免新旧帧混用。** 同一场景和同一脚本的中断恢复才可直接续渲。
+
+需要正常停渲时，可在本任务目录创建名为 `STOP_RENDER` 的文件。渲染器会在当前帧结束后退出并释放GPU锁；继续渲染前移走该标记。
 
 本次最终场景与源脚本的 SHA-256 记录在 `render_source_manifest.json`；各帧哈希记录在两个 `*_frame_hashes.json` 中。
 
